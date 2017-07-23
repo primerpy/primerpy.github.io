@@ -36,7 +36,7 @@ BS3_THEME = 'https://bootswatch.com/default/bootstrap.min.css'
 
 MENUITEMS = [
     ('Home', '/'),
-    ('Articles By', [
+    ('Posts By', [
         ('Categories', '/categories.html'),
         ('Chronological', '/archives.html'),
         ('Tags', '/tags.html'),
@@ -59,6 +59,16 @@ MENUITEMS = [
         ('Pandas Data Analysis', '/pandas-data-analysis.html'),
         ('Pandas Data Visualization', '/pandas-data-visualization.html'),        
         ]),
+    ('R', [
+        ('Basics', '/r-basics.html'),
+        ('Intermediate', '/r-intermediate.html'),
+        ('Functions', '/r-functions.html'),
+        ('Data Import', '/r-data-import.html'),
+        ('Data Cleansing', '/r-data-cleansing.html'),
+        ('dplyr', '/r-dplyr.html'),
+        ('ggplot2', '/r-ggplot2.html'),
+        ('Reporting', '/r-reporting.html'),
+        ]),    
     ('SQL', [
         ('SELECT', '/SQL-select.html'),
         ('FILTER', '/SQL-filter.html'),
