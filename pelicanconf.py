@@ -68,6 +68,14 @@ MENUITEMS = [
         ('dplyr', '/r-dplyr.html'),
         ('ggplot2', '/r-ggplot2.html'),
         ('Reporting', '/r-reporting.html'),
+        ]),
+    ('Visualization', [
+        ('Bokeh', '/visualization-python-bokeh.html'),
+        ('Matplotlib', '/visualization-python-matplotlib.html'),
+        ('Seaborn', '/visualization-python-seaborn.html'),
+        ('Cufflinks', '/visualization-python-cufflinks.html'),
+        ('Plotly', '/visualization-python-plotly.html'),
+        ('ggplot2', '/visualization-r-ggplot2.html'),
         ]),    
     ('SQL', [
         ('SELECT', '/SQL-select.html'),
