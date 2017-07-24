@@ -99,3 +99,6 @@ MENUITEMS = [
 FAVICON = u'https://photos-5.dropbox.com/t/2/AAApnB-1cvGXYPU5TzIpWjw2XO8gopGCMRMDpPUgANgneg/12/669394314/png/32x32/1/_/1/2/primerpyfavicon.png/EJzL47sFGI7MEyACKAI/ifTZBqf1Hxef7jG8ne_8la0vY3YzQTcFZUJL0Th_vi4?size=2048x1536&size_mode=3'
 
 FAVICON_TYPE = u'png'
+
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
