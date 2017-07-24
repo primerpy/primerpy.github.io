@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Isaac Zhou'
-SITENAME = 'A Data Science Blog'
+SITENAME = 'Data Science Fundamentals'
 SITEURL = ''
 
 PATH = 'content'
@@ -69,7 +69,7 @@ MENUITEMS = [
         ('ggplot2', '/r-ggplot2.html'),
         ('Reporting', '/r-reporting.html'),
         ]),
-    ('Visualization', [
+    ('Vis', [
         ('Bokeh', '/visualization-python-bokeh.html'),
         ('Matplotlib', '/visualization-python-matplotlib.html'),
         ('Seaborn', '/visualization-python-seaborn.html'),
@@ -84,7 +84,7 @@ MENUITEMS = [
         ('GROUP', '/SQL-group.html'),
         ('JOIN', '/SQL-join.html'),
         ]),
-    ('Machine Learning', [
+    ('ML', [
         ('Linear Regression', '/linear-regression.html'),
         ('Logistic Regression', '/logistic-regression.html'),
         ('K Nearest Neighbors', '/knn.html'),
