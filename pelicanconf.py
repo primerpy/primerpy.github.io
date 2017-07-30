@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Isaac Zhou'
-SITENAME = 'Data Science Fundamentals'
+SITENAME = 'PrimerPy: A Primer to Data Science'
 SITEURL = ''
 
 PATH = 'content'
