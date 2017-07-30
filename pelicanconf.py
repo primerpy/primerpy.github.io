@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Isaac Zhou'
-SITENAME = 'PrimerPy: A Primer to Data Science'
+SITENAME = 'PrimerPy: A Primer on Data Science'
 SITEURL = ''
 
 PATH = 'content'
@@ -42,22 +42,13 @@ MENUITEMS = [
         ('Tags', '/tags.html'),
         ]),
     ('Python', [
-        ('Loop', '/loop.html'),
-        ('Function', '/function.html'),
-        ('Class', '/class.html'),
+        ('Loop', '/python-loop.html'),
+        ('Function', '/python-function.html'),
+        ('OOP', '/python-oop.html'),
         ('List Comprehension', '/list-comprehension.html'),
-        ]),
-    ('Numpy', [
-        ('Numpy Array', '/numpy-array.html'),
-        ('Numpy Operation', '/numpy-operation.html'),
-        ]),
-    ('Pandas', [
-        ('Pandas DataFrame', '/pandas-dataframe.html'),
-        ('Pandas Read Data', '/pandas-read-data.html'),
-        ('Pandas Data Cleaning', '/pandas-data-cleaning.html'),
-        ('Pandas Data Manipulation', '/pandas-data-manipulation.html'),
-        ('Pandas Data Analysis', '/pandas-data-analysis.html'),
-        ('Pandas Data Visualization', '/pandas-data-visualization.html'),        
+        ('Decorator', "/python-decorator.html"),
+        ('Numpy', '/numpy.html'),
+        ('Pandas', '/pandas.html'),        
         ]),
     ('R', [
         ('Basics', '/r-basics.html'),
@@ -69,7 +60,7 @@ MENUITEMS = [
         ('ggplot2', '/r-ggplot2.html'),
         ('Reporting', '/r-reporting.html'),
         ]),
-    ('Vis', [
+    ('Visualization', [
         ('Bokeh', '/visualization-python-bokeh.html'),
         ('Matplotlib', '/visualization-python-matplotlib.html'),
         ('Seaborn', '/visualization-python-seaborn.html'),
