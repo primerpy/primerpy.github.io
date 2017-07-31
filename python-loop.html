@@ -7,7 +7,7 @@
     <meta name="author" content="Isaac Zhou">
     <link rel="icon" type="image/png" href="https://photos-5.dropbox.com/t/2/AAApnB-1cvGXYPU5TzIpWjw2XO8gopGCMRMDpPUgANgneg/12/669394314/png/32x32/1/_/1/2/primerpyfavicon.png/EJzL47sFGI7MEyACKAI/ifTZBqf1Hxef7jG8ne_8la0vY3YzQTcFZUJL0Th_vi4?size=2048x1536&size_mode=3">
 
-        <title>Python Dictionary · PrimerPy: A Primer on Data Science</title>
+        <title>Python Loop · PrimerPy: A Primer on Data Science</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -75,14 +75,14 @@
                   </li>
                 </ul>
               </li>
-              <li class="btn-group">
+              <li class="btn-group active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python<b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu" role="menu">
                   <li >
                     <a href="./python-dictionary.html" >Dictionary</a>
                   </li>
-                  <li >
+                  <li class="active">
                     <a href="./python-loop.html" >Loop</a>
                   </li>
                   <li >
@@ -225,7 +225,7 @@
       <div class="col-md-8">
         <div class="row">
               <div class="page-header">
-        <h1><a href="./pandas-dictionary.html">Python Dictionary</a></h1>
+        <h1><a href="./python-loop.html">Python Loop</a></h1>
     </div>
 
         </div>
@@ -239,7 +239,7 @@
         <a class="label label-primary"
           href="./tag/python.html">python</a>
         <a class="label label-primary"
-          href="./tag/dictionary.html">dictionary</a>
+          href="./tag/loop.html">loop</a>
     <!--<span class="glyphicon glyphicon-calendar"></span>-->
       <b> · </b>
       <a href="./archives.html#Year2017">2017</a>-<a href="./archives.html#Year2017Month07">07</a>-<a href="./archives.html#Year2017Month07">31</a>
@@ -1229,7 +1229,9 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Dictionary">Dictionary<a class="anchor-link" href="#Dictionary">¶</a></h1><h2 id="List-approach">List approach<a class="anchor-link" href="#List-approach">¶</a></h2>
+<h1 id="Loop">Loop<a class="anchor-link" href="#Loop">¶</a></h1><h2 id="Looping-Data-Structures">Looping Data Structures<a class="anchor-link" href="#Looping-Data-Structures">¶</a></h2><h3 id="Loop-over-dictionary">Loop over dictionary<a class="anchor-link" href="#Loop-over-dictionary">¶</a></h3><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">world</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
+    <span class="n">code</span> <span class="n">here</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -1238,14 +1240,13 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># To find the corresponding value for label B</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">39</span><span class="p">]</span>
-<span class="n">label</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">]</span>
-<span class="c1"># find the label b index</span>
-<span class="n">key_B</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">"B"</span><span class="p">)</span>
-<span class="n">value_B</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">key_B</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">value_B</span><span class="p">)</span>
-<span class="c1"># Not convenient or intuitive</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Definition of dictionary</span>
+<span class="n">europe</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'spain'</span><span class="p">:</span><span class="s1">'madrid'</span><span class="p">,</span> <span class="s1">'france'</span><span class="p">:</span><span class="s1">'paris'</span><span class="p">,</span> <span class="s1">'germany'</span><span class="p">:</span><span class="s1">'bonn'</span><span class="p">,</span> 
+          <span class="s1">'norway'</span><span class="p">:</span><span class="s1">'oslo'</span><span class="p">,</span> <span class="s1">'italy'</span><span class="p">:</span><span class="s1">'rome'</span><span class="p">,</span> <span class="s1">'poland'</span><span class="p">:</span><span class="s1">'warsaw'</span><span class="p">,</span> <span class="s1">'australia'</span><span class="p">:</span><span class="s1">'vienna'</span> <span class="p">}</span>
+          
+<span class="c1"># Iterate over europe</span>
+<span class="k">for</span> <span class="n">country</span><span class="p">,</span> <span class="n">capital</span> <span class="ow">in</span> <span class="n">europe</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{a}</span><span class="s2">'s capital is </span><span class="si">{b}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">country</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">capital</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1255,70 +1256,13 @@ h6:hover .anchor-link {
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [2]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">data</span><span class="p">)}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data_dict</span><span class="p">[</span><span class="s2">"B"</span><span class="p">])</span>
-<span class="c1">#add new element</span>
-<span class="n">data_dict</span><span class="p">[</span><span class="s2">"D"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">27</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data_dict</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"D"</span> <span class="ow">in</span> <span class="n">data_dict</span><span class="p">)</span>
-
-<span class="c1">#delete element</span>
-<span class="k">del</span><span class="p">(</span><span class="n">data_dict</span><span class="p">[</span><span class="s2">"D"</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data_dict</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-{'C': 39, 'D': 27, 'B': 2, 'A': 30}
-True
-{'C': 39, 'B': 2, 'A': 30}
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [3]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dictionary of dictionaries</span>
-<span class="n">europe</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'spain'</span><span class="p">:</span> <span class="p">{</span> <span class="s1">'capital'</span><span class="p">:</span><span class="s1">'madrid'</span><span class="p">,</span> <span class="s1">'population'</span><span class="p">:</span><span class="mf">46.77</span> <span class="p">},</span>
-           <span class="s1">'france'</span><span class="p">:</span> <span class="p">{</span> <span class="s1">'capital'</span><span class="p">:</span><span class="s1">'paris'</span><span class="p">,</span> <span class="s1">'population'</span><span class="p">:</span><span class="mf">66.03</span> <span class="p">},</span>
-           <span class="s1">'germany'</span><span class="p">:</span> <span class="p">{</span> <span class="s1">'capital'</span><span class="p">:</span><span class="s1">'berlin'</span><span class="p">,</span> <span class="s1">'population'</span><span class="p">:</span><span class="mf">80.62</span> <span class="p">},</span>
-           <span class="s1">'norway'</span><span class="p">:</span> <span class="p">{</span> <span class="s1">'capital'</span><span class="p">:</span><span class="s1">'oslo'</span><span class="p">,</span> <span class="s1">'population'</span><span class="p">:</span><span class="mf">5.084</span> <span class="p">}</span> <span class="p">}</span>
-
-<span class="c1">#Print out the capital of France</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">europe</span><span class="p">[</span><span class="s2">"france"</span><span class="p">][</span><span class="s2">"capital"</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>paris
+<pre>australia's capital is vienna
+italy's capital is rome
+spain's capital is madrid
+germany's capital is bonn
+poland's capital is warsaw
+norway's capital is oslo
+france's capital is paris
 </pre>
 </div>
 </div>
@@ -1330,32 +1274,29 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dictionary-to-Pandas-Dataframes">Dictionary to Pandas Dataframes<a class="anchor-link" href="#Dictionary-to-Pandas-Dataframes">¶</a></h2>
+<h3 id="Loop-over-Numpy-array">Loop over Numpy array<a class="anchor-link" href="#Loop-over-Numpy-array">¶</a></h3><p>If you're dealing with a 1D Numpy array, looping over all elements can be as simple as:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">my_array</span> <span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+<p>If you're dealing with a 2D Numpy array, it's more complicated. A 2D array is built up of multiple 1D arrays. To explicitly iterate over all separate elements of a multi-dimensional array, you'll need this syntax:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">(</span><span class="n">my_array</span><span class="p">)</span> <span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import numpy as np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="c1"># Build cars DataFrame</span>
-<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'United States'</span><span class="p">,</span> <span class="s1">'Australia'</span><span class="p">,</span> <span class="s1">'Japan'</span><span class="p">,</span> <span class="s1">'India'</span><span class="p">,</span> <span class="s1">'Russia'</span><span class="p">,</span> <span class="s1">'Morocco'</span><span class="p">,</span> <span class="s1">'Egypt'</span><span class="p">]</span>
-<span class="n">dr</span> <span class="o">=</span>  <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
-<span class="n">cpc</span> <span class="o">=</span> <span class="p">[</span><span class="mi">809</span><span class="p">,</span> <span class="mi">731</span><span class="p">,</span> <span class="mi">588</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span>
-<span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'country'</span><span class="p">:</span><span class="n">names</span><span class="p">,</span> <span class="s1">'drives_right'</span><span class="p">:</span><span class="n">dr</span><span class="p">,</span> <span class="s1">'cars_per_cap'</span><span class="p">:</span><span class="n">cpc</span> <span class="p">}</span>
-<span class="n">cars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
-
-<span class="c1"># Definition of row_labels</span>
-<span class="n">row_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'US'</span><span class="p">,</span> <span class="s1">'AUS'</span><span class="p">,</span> <span class="s1">'JAP'</span><span class="p">,</span> <span class="s1">'IN'</span><span class="p">,</span> <span class="s1">'RU'</span><span class="p">,</span> <span class="s1">'MOR'</span><span class="p">,</span> <span class="s1">'EG'</span><span class="p">]</span>
-
-<span class="c1"># Specify row labels of cars</span>
-<span class="n">cars</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">row_labels</span>
-<span class="c1"># Print cars again</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
+<span class="c1"># For loop over rand_1d</span>
+<span class="n">rand_1d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">rand_1d</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1365,23 +1306,990 @@ True
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>   cars_per_cap        country  drives_right
-0           809  United States          True
-1           731      Australia         False
-2           588          Japan         False
-3            18          India         False
-4           200         Russia          True
-5            70        Morocco          True
-6            45          Egypt          True
-     cars_per_cap        country  drives_right
-US            809  United States          True
-AUS           731      Australia         False
-JAP           588          Japan         False
-IN             18          India         False
-RU            200         Russia          True
-MOR            70        Morocco          True
-EG             45          Egypt          True
+<pre>0.0277066719767
+0.565342129993
+0.246867839245
+0.693330323204
+0.173823244411
+0.216526572351
+0.924296008524
+0.243447846157
+0.212433779243
+0.585218499416
 </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rand_2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># For loop over rand_2d</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="p">(</span><span class="n">rand_2d</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ 0.01295309  0.41630104]
+[ 0.39832819  0.08128262]
+[ 0.5987957   0.41718892]
+[ 0.59157439  0.62928409]
+[ 0.72003707  0.45421513]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For loop over rand_2d elements</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">(</span><span class="n">rand_2d</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.012953094449703717
+0.41630104397729006
+0.3983281927604809
+0.08128261542699311
+0.5987956955838
+0.4171889176497322
+0.5915743882644279
+0.6292840925963898
+0.7200370706059674
+0.4542151289043952
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Loop-over-Pandas-Dataframes">Loop over Pandas Dataframes<a class="anchor-link" href="#Loop-over-Pandas-Dataframes">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">brics</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/brics.csv"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">brics</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>country</th>
+<th>capital</th>
+<th>area</th>
+<th>population</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>BR</th>
+<td>Brazil</td>
+<td>Brasilia</td>
+<td>8.516</td>
+<td>200.40</td>
+</tr>
+<tr>
+<th>RU</th>
+<td>Russia</td>
+<td>Moscow</td>
+<td>17.100</td>
+<td>143.50</td>
+</tr>
+<tr>
+<th>IN</th>
+<td>India</td>
+<td>New Delhi</td>
+<td>3.286</td>
+<td>1252.00</td>
+</tr>
+<tr>
+<th>CH</th>
+<td>China</td>
+<td>Beijing</td>
+<td>9.597</td>
+<td>1357.00</td>
+</tr>
+<tr>
+<th>SA</th>
+<td>South Africa</td>
+<td>Pretoria</td>
+<td>1.221</td>
+<td>52.98</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># below for loop won't work well with the pandas framework</span>
+<span class="c1"># will only print the column names</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">brics</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>country
+capital
+area
+population
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># use .iterrows() method to print out each label and row</span>
+<span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">brics</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{a}</span><span class="s2">: </span><span class="se">\n</span><span class="si">{b}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">label</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">row</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>BR: 
+country         Brazil
+capital       Brasilia
+area             8.516
+population       200.4
+Name: BR, dtype: object
+RU: 
+country       Russia
+capital       Moscow
+area            17.1
+population     143.5
+Name: RU, dtype: object
+IN: 
+country           India
+capital       New Delhi
+area              3.286
+population         1252
+Name: IN, dtype: object
+CH: 
+country         China
+capital       Beijing
+area            9.597
+population       1357
+Name: CH, dtype: object
+SA: 
+country       South Africa
+capital           Pretoria
+area                 1.221
+population           52.98
+Name: SA, dtype: object
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Only print the label and capital</span>
+<span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">brics</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{a}</span><span class="s2">'s capital is </span><span class="si">{b}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s2">"country"</span><span class="p">],</span> <span class="n">b</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s2">"capital"</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Brazil's capital is Brasilia
+Russia's capital is Moscow
+India's capital is New Delhi
+China's capital is Beijing
+South Africa's capital is Pretoria
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add a column, country name length</span>
+<span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">brics</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">brics</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">label</span><span class="p">,</span> <span class="s2">"Country Name Length"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">"country"</span><span class="p">])</span>
+<span class="n">brics</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>country</th>
+<th>capital</th>
+<th>area</th>
+<th>population</th>
+<th>Country Name Length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>BR</th>
+<td>Brazil</td>
+<td>Brasilia</td>
+<td>8.516</td>
+<td>200.40</td>
+<td>6.0</td>
+</tr>
+<tr>
+<th>RU</th>
+<td>Russia</td>
+<td>Moscow</td>
+<td>17.100</td>
+<td>143.50</td>
+<td>6.0</td>
+</tr>
+<tr>
+<th>IN</th>
+<td>India</td>
+<td>New Delhi</td>
+<td>3.286</td>
+<td>1252.00</td>
+<td>5.0</td>
+</tr>
+<tr>
+<th>CH</th>
+<td>China</td>
+<td>Beijing</td>
+<td>9.597</td>
+<td>1357.00</td>
+<td>5.0</td>
+</tr>
+<tr>
+<th>SA</th>
+<td>South Africa</td>
+<td>Pretoria</td>
+<td>1.221</td>
+<td>52.98</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">brics</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">brics</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">label</span><span class="p">,</span> <span class="s2">"Capital Name Length"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">"capital"</span><span class="p">])</span>
+<span class="n">brics</span>
+<span class="c1"># Not efficient though</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>country</th>
+<th>capital</th>
+<th>area</th>
+<th>population</th>
+<th>Country Name Length</th>
+<th>Capital Name Length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>BR</th>
+<td>Brazil</td>
+<td>Brasilia</td>
+<td>8.516</td>
+<td>200.40</td>
+<td>6.0</td>
+<td>8.0</td>
+</tr>
+<tr>
+<th>RU</th>
+<td>Russia</td>
+<td>Moscow</td>
+<td>17.100</td>
+<td>143.50</td>
+<td>6.0</td>
+<td>6.0</td>
+</tr>
+<tr>
+<th>IN</th>
+<td>India</td>
+<td>New Delhi</td>
+<td>3.286</td>
+<td>1252.00</td>
+<td>5.0</td>
+<td>9.0</td>
+</tr>
+<tr>
+<th>CH</th>
+<td>China</td>
+<td>Beijing</td>
+<td>9.597</td>
+<td>1357.00</td>
+<td>5.0</td>
+<td>7.0</td>
+</tr>
+<tr>
+<th>SA</th>
+<td>South Africa</td>
+<td>Pretoria</td>
+<td>1.221</td>
+<td>52.98</td>
+<td>12.0</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alternatively, use apply to perform elementwise calculation</span>
+<span class="n">brics</span><span class="p">[</span><span class="s2">"capital_name_length"</span><span class="p">]</span> <span class="o">=</span> <span class="n">brics</span><span class="p">[</span><span class="s2">"capital"</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+<span class="n">brics</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>country</th>
+<th>capital</th>
+<th>area</th>
+<th>population</th>
+<th>Country Name Length</th>
+<th>Capital Name Length</th>
+<th>capital_name_length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>BR</th>
+<td>Brazil</td>
+<td>Brasilia</td>
+<td>8.516</td>
+<td>200.40</td>
+<td>6.0</td>
+<td>8.0</td>
+<td>8</td>
+</tr>
+<tr>
+<th>RU</th>
+<td>Russia</td>
+<td>Moscow</td>
+<td>17.100</td>
+<td>143.50</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>6</td>
+</tr>
+<tr>
+<th>IN</th>
+<td>India</td>
+<td>New Delhi</td>
+<td>3.286</td>
+<td>1252.00</td>
+<td>5.0</td>
+<td>9.0</td>
+<td>9</td>
+</tr>
+<tr>
+<th>CH</th>
+<td>China</td>
+<td>Beijing</td>
+<td>9.597</td>
+<td>1357.00</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>7</td>
+</tr>
+<tr>
+<th>SA</th>
+<td>South Africa</td>
+<td>Pretoria</td>
+<td>1.221</td>
+<td>52.98</td>
+<td>12.0</td>
+<td>8.0</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import cars data</span>
+<span class="n">cars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/cars.csv'</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Iterate over rows of cars</span>
+<span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cars</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>US
+cars_per_cap              809
+country         United States
+drives_right             True
+Name: US, dtype: object
+AUS
+cars_per_cap          731
+country         Australia
+drives_right        False
+Name: AUS, dtype: object
+JAP
+cars_per_cap      588
+country         Japan
+drives_right    False
+Name: JAP, dtype: object
+IN
+cars_per_cap       18
+country         India
+drives_right    False
+Name: IN, dtype: object
+RU
+cars_per_cap       200
+country         Russia
+drives_right      True
+Name: RU, dtype: object
+MOR
+cars_per_cap         70
+country         Morocco
+drives_right       True
+Name: MOR, dtype: object
+EG
+cars_per_cap       45
+country         Egypt
+drives_right     True
+Name: EG, dtype: object
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Adapt for loop</span>
+<span class="k">for</span> <span class="n">lab</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cars</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">lab</span><span class="o">+</span><span class="s2">": "</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">"cars_per_cap"</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>US: 809
+AUS: 731
+JAP: 588
+IN: 18
+RU: 200
+MOR: 70
+EG: 45
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Code for loop that adds COUNTRY column</span>
+<span class="k">for</span> <span class="n">lab</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cars</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">cars</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">lab</span><span class="p">,</span> <span class="s2">"COUNTRY"</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">"country"</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="n">cars</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>cars_per_cap</th>
+<th>country</th>
+<th>drives_right</th>
+<th>COUNTRY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>US</th>
+<td>809</td>
+<td>United States</td>
+<td>True</td>
+<td>UNITED STATES</td>
+</tr>
+<tr>
+<th>AUS</th>
+<td>731</td>
+<td>Australia</td>
+<td>False</td>
+<td>AUSTRALIA</td>
+</tr>
+<tr>
+<th>JAP</th>
+<td>588</td>
+<td>Japan</td>
+<td>False</td>
+<td>JAPAN</td>
+</tr>
+<tr>
+<th>IN</th>
+<td>18</td>
+<td>India</td>
+<td>False</td>
+<td>INDIA</td>
+</tr>
+<tr>
+<th>RU</th>
+<td>200</td>
+<td>Russia</td>
+<td>True</td>
+<td>RUSSIA</td>
+</tr>
+<tr>
+<th>MOR</th>
+<td>70</td>
+<td>Morocco</td>
+<td>True</td>
+<td>MOROCCO</td>
+</tr>
+<tr>
+<th>EG</th>
+<td>45</td>
+<td>Egypt</td>
+<td>True</td>
+<td>EGYPT</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using iterrows() to iterate over every observation of a Pandas DataFrame is easy to understand, </span>
+<span class="c1"># but not very efficient. On every iteration, you're creating a new Pandas Series.</span>
+<span class="c1"># Can use apply</span>
+<span class="n">cars</span><span class="p">[</span><span class="s2">"Drive Direction"</span><span class="p">]</span> <span class="o">=</span> <span class="n">cars</span><span class="p">[</span><span class="s2">"drives_right"</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s2">"Right"</span> <span class="k">if</span> <span class="n">x</span> <span class="k">else</span> <span class="s2">"Left"</span><span class="p">)</span>
+<span class="n">cars</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>cars_per_cap</th>
+<th>country</th>
+<th>drives_right</th>
+<th>COUNTRY</th>
+<th>Drive Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>US</th>
+<td>809</td>
+<td>United States</td>
+<td>True</td>
+<td>UNITED STATES</td>
+<td>Right</td>
+</tr>
+<tr>
+<th>AUS</th>
+<td>731</td>
+<td>Australia</td>
+<td>False</td>
+<td>AUSTRALIA</td>
+<td>Left</td>
+</tr>
+<tr>
+<th>JAP</th>
+<td>588</td>
+<td>Japan</td>
+<td>False</td>
+<td>JAPAN</td>
+<td>Left</td>
+</tr>
+<tr>
+<th>IN</th>
+<td>18</td>
+<td>India</td>
+<td>False</td>
+<td>INDIA</td>
+<td>Left</td>
+</tr>
+<tr>
+<th>RU</th>
+<td>200</td>
+<td>Russia</td>
+<td>True</td>
+<td>RUSSIA</td>
+<td>Right</td>
+</tr>
+<tr>
+<th>MOR</th>
+<td>70</td>
+<td>Morocco</td>
+<td>True</td>
+<td>MOROCCO</td>
+<td>Right</td>
+</tr>
+<tr>
+<th>EG</th>
+<td>45</td>
+<td>Egypt</td>
+<td>True</td>
+<td>EGYPT</td>
+<td>Right</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [16]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cars</span><span class="p">[</span><span class="s2">"country_min"</span><span class="p">]</span> <span class="o">=</span> <span class="n">cars</span><span class="p">[</span><span class="s2">"country"</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">)</span>
+<span class="n">cars</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[16]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>cars_per_cap</th>
+<th>country</th>
+<th>drives_right</th>
+<th>COUNTRY</th>
+<th>Drive Direction</th>
+<th>country_min</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>US</th>
+<td>809</td>
+<td>United States</td>
+<td>True</td>
+<td>UNITED STATES</td>
+<td>Right</td>
+<td>united states</td>
+</tr>
+<tr>
+<th>AUS</th>
+<td>731</td>
+<td>Australia</td>
+<td>False</td>
+<td>AUSTRALIA</td>
+<td>Left</td>
+<td>australia</td>
+</tr>
+<tr>
+<th>JAP</th>
+<td>588</td>
+<td>Japan</td>
+<td>False</td>
+<td>JAPAN</td>
+<td>Left</td>
+<td>japan</td>
+</tr>
+<tr>
+<th>IN</th>
+<td>18</td>
+<td>India</td>
+<td>False</td>
+<td>INDIA</td>
+<td>Left</td>
+<td>india</td>
+</tr>
+<tr>
+<th>RU</th>
+<td>200</td>
+<td>Russia</td>
+<td>True</td>
+<td>RUSSIA</td>
+<td>Right</td>
+<td>russia</td>
+</tr>
+<tr>
+<th>MOR</th>
+<td>70</td>
+<td>Morocco</td>
+<td>True</td>
+<td>MOROCCO</td>
+<td>Right</td>
+<td>morocco</td>
+</tr>
+<tr>
+<th>EG</th>
+<td>45</td>
+<td>Egypt</td>
+<td>True</td>
+<td>EGYPT</td>
+<td>Right</td>
+<td>egypt</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -1422,12 +2330,12 @@ EG             45          Egypt          True
   <hr/>
 
       <ul class="pager">
-        <li class="previous disabled">
-          <a >
+        <li class="previous">
+          <a href="./python-dictionary.html">
           &laquo; Newer</a>
         </li>
         <li class="next">
-          <a href="./pandas-loop.html">
+          <a href="./visualization-python-seaborn.html">
           Older &raquo;</a>
         </li>
       </ul>
