@@ -42,6 +42,7 @@ MENUITEMS = [
         ('Tags', '/tags.html'),
         ]),
     ('Python', [
+        ('Dictionary', '/python-dictionary.html'),
         ('Loop', '/python-loop.html'),
         ('Function', '/python-function.html'),
         ('OOP', '/python-oop.html'),
@@ -61,6 +62,7 @@ MENUITEMS = [
         ('Reporting', '/r-reporting.html'),
         ]),
     ('Visualization', [
+        ('D3', '/visualization-d3.html'),
         ('Bokeh', '/visualization-python-bokeh.html'),
         ('Matplotlib', '/visualization-python-matplotlib.html'),
         ('Seaborn', '/visualization-python-seaborn.html'),
