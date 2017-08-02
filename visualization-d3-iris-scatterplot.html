@@ -7,7 +7,7 @@
     <meta name="author" content="Isaac Zhou">
     <link rel="icon" type="image/png" href="https://photos-5.dropbox.com/t/2/AAApnB-1cvGXYPU5TzIpWjw2XO8gopGCMRMDpPUgANgneg/12/669394314/png/32x32/1/_/1/2/primerpyfavicon.png/EJzL47sFGI7MEyACKAI/ifTZBqf1Hxef7jG8ne_8la0vY3YzQTcFZUJL0Th_vi4?size=2048x1536&size_mode=3">
 
-        <title>Python Dictionary · PrimerPy: A Primer on Data Science</title>
+        <title>D3 Visualization: Iris Scatterplot · PrimerPy: A Primer on Data Science</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -75,11 +75,11 @@
                   </li>
                 </ul>
               </li>
-              <li class="btn-group active">
+              <li class="btn-group">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python<b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu" role="menu">
-                  <li class="active">
+                  <li >
                     <a href="./python-dictionary.html" >Dictionary</a>
                   </li>
                   <li >
@@ -225,7 +225,7 @@
       <div class="col-md-8">
         <div class="row">
               <div class="page-header">
-        <h1><a href="./python-dictionary.html">Python Dictionary</a></h1>
+        <h1><a href="./visualization-d3-iris-scatterplot.html">D3 Visualization: Iris Scatterplot</a></h1>
     </div>
 
         </div>
@@ -234,15 +234,17 @@
 
     <span id="article_info">
     <a class="label label-primary"
-      href="./category/python.html">python</a>
+      href="./category/visualization.html">Visualization</a>
       <b> · </b>
         <a class="label label-primary"
-          href="./tag/python.html">python</a>
+          href="./tag/visualization.html">visualization</a>
         <a class="label label-primary"
-          href="./tag/dictionary.html">dictionary</a>
+          href="./tag/d3.html">D3</a>
+        <a class="label label-primary"
+          href="./tag/javascript.html">javascript</a>
     <!--<span class="glyphicon glyphicon-calendar"></span>-->
       <b> · </b>
-      <a href="./archives.html#Year2017">2017</a>-<a href="./archives.html#Year2017Month07">07</a>-<a href="./archives.html#Year2017Month07">31</a>
+      <a href="./archives.html#Year2017">2017</a>-<a href="./archives.html#Year2017Month08">08</a>-<a href="./archives.html#Year2017Month08">01</a>
 
     <!--<span class="glyphicon glyphicon-user"></span>-->
       <b> · </b>
@@ -1229,7 +1231,25 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Dictionary">Dictionary<a class="anchor-link" href="#Dictionary">¶</a></h1><h2 id="List-approach">List approach<a class="anchor-link" href="#List-approach">¶</a></h2>
+<h1 id="Iris-Scatterplot">Iris Scatterplot<a class="anchor-link" href="#Iris-Scatterplot">¶</a></h1><h3 id="A-simple-example-of-using-a-bl.ock-as-the-basis-for-a-D3-visualization-in-Jupyter">A simple example of using a bl.ock as the basis for a D3 visualization in Jupyter<a class="anchor-link" href="#A-simple-example-of-using-a-bl.ock-as-the-basis-for-a-D3-visualization-in-Jupyter">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using this <a href="http://bl.ocks.org/mbostock/3887118">bl.ocks example</a> as a template, we will construct a scatterplot of the canonical Iris dataset.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Notebook-Config">Notebook Config<a class="anchor-link" href="#Notebook-Config">¶</a></h4>
 </div>
 </div>
 </div>
@@ -1238,26 +1258,11 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># To find the corresponding value for label B</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">39</span><span class="p">]</span>
-<span class="n">label</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">]</span>
-<span class="c1"># find the label b index</span>
-<span class="n">key_B</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">"B"</span><span class="p">)</span>
-<span class="n">value_B</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">key_B</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">value_B</span><span class="p">)</span>
-<span class="c1"># Not convenient or intuitive</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">string</span> <span class="k">import</span> <span class="n">Template</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">random</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -1267,16 +1272,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">data</span><span class="p">)}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data_dict</span><span class="p">[</span><span class="s2">"B"</span><span class="p">])</span>
-<span class="c1">#add new element</span>
-<span class="n">data_dict</span><span class="p">[</span><span class="s2">"D"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">27</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data_dict</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"D"</span> <span class="ow">in</span> <span class="n">data_dict</span><span class="p">)</span>
-
-<span class="c1">#delete element</span>
-<span class="k">del</span><span class="p">(</span><span class="n">data_dict</span><span class="p">[</span><span class="s2">"D"</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data_dict</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">'<script src="lib/d3/d3.min.js"></script>'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1284,42 +1280,9 @@ h6:hover .anchor-link {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-{'C': 39, 'D': 27, 'B': 2, 'A': 30}
-True
-{'C': 39, 'B': 2, 'A': 30}
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [3]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dictionary of dictionaries</span>
-<span class="n">europe</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'spain'</span><span class="p">:</span> <span class="p">{</span> <span class="s1">'capital'</span><span class="p">:</span><span class="s1">'madrid'</span><span class="p">,</span> <span class="s1">'population'</span><span class="p">:</span><span class="mf">46.77</span> <span class="p">},</span>
-           <span class="s1">'france'</span><span class="p">:</span> <span class="p">{</span> <span class="s1">'capital'</span><span class="p">:</span><span class="s1">'paris'</span><span class="p">,</span> <span class="s1">'population'</span><span class="p">:</span><span class="mf">66.03</span> <span class="p">},</span>
-           <span class="s1">'germany'</span><span class="p">:</span> <span class="p">{</span> <span class="s1">'capital'</span><span class="p">:</span><span class="s1">'berlin'</span><span class="p">,</span> <span class="s1">'population'</span><span class="p">:</span><span class="mf">80.62</span> <span class="p">},</span>
-           <span class="s1">'norway'</span><span class="p">:</span> <span class="p">{</span> <span class="s1">'capital'</span><span class="p">:</span><span class="s1">'oslo'</span><span class="p">,</span> <span class="s1">'population'</span><span class="p">:</span><span class="mf">5.084</span> <span class="p">}</span> <span class="p">}</span>
-
-<span class="c1">#Print out the capital of France</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">europe</span><span class="p">[</span><span class="s2">"france"</span><span class="p">][</span><span class="s2">"capital"</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>paris
-</pre>
+<div class="prompt output_prompt">Out[2]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<script src="lib/d3/d3.min.js"></script>
 </div>
 </div>
 </div>
@@ -1330,7 +1293,103 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dictionary-to-Pandas-Dataframes">Dictionary to Pandas Dataframes<a class="anchor-link" href="#Dictionary-to-Pandas-Dataframes">¶</a></h2>
+<h4 id="Data">Data<a class="anchor-link" href="#Data">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The bl.ocks example uses a tsv file with the iris dataset. If you click on the block number at the top of the bl.ocks post, it will take you to the <a href="https://gist.github.com/mbostock/3887118">github gist</a> upon which this bl.ocks entry is based. From there you can navigate to the raw version of the tsv file, and read that into a Pandas dataframe, as below. (Mind you, there are also many many other ways of getting this canonical dataset.)</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s1">'https://gist.githubusercontent.com/mbostock/3887118/raw/2e68ffbeb23fe4dadd9b0f6bca62e9def6ee9e17/data.tsv'</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">iris</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>sepalLength</th>
+<th>sepalWidth</th>
+<th>petalLength</th>
+<th>petalWidth</th>
+<th>species</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>5.1</td>
+<td>3.5</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<th>1</th>
+<td>4.9</td>
+<td>3.0</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<th>2</th>
+<td>4.7</td>
+<td>3.2</td>
+<td>1.3</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4.6</td>
+<td>3.1</td>
+<td>1.5</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+<tr>
+<th>4</th>
+<td>5.0</td>
+<td>3.6</td>
+<td>1.4</td>
+<td>0.2</td>
+<td>setosa</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A trick of the D3 trade is to know that its file readers usually output the data in the form of an array of dictionaries. As such, we will reformat our tabular data that way in preparation for it to be used in the graph below.</p>
 </div>
 </div>
 </div>
@@ -1339,23 +1398,8 @@ True
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="c1"># Build cars DataFrame</span>
-<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'United States'</span><span class="p">,</span> <span class="s1">'Australia'</span><span class="p">,</span> <span class="s1">'Japan'</span><span class="p">,</span> <span class="s1">'India'</span><span class="p">,</span> <span class="s1">'Russia'</span><span class="p">,</span> <span class="s1">'Morocco'</span><span class="p">,</span> <span class="s1">'Egypt'</span><span class="p">]</span>
-<span class="n">dr</span> <span class="o">=</span>  <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
-<span class="n">cpc</span> <span class="o">=</span> <span class="p">[</span><span class="mi">809</span><span class="p">,</span> <span class="mi">731</span><span class="p">,</span> <span class="mi">588</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span>
-<span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'country'</span><span class="p">:</span><span class="n">names</span><span class="p">,</span> <span class="s1">'drives_right'</span><span class="p">:</span><span class="n">dr</span><span class="p">,</span> <span class="s1">'cars_per_cap'</span><span class="p">:</span><span class="n">cpc</span> <span class="p">}</span>
-<span class="n">cars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
-
-<span class="c1"># Definition of row_labels</span>
-<span class="n">row_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'US'</span><span class="p">,</span> <span class="s1">'AUS'</span><span class="p">,</span> <span class="s1">'JAP'</span><span class="p">,</span> <span class="s1">'IN'</span><span class="p">,</span> <span class="s1">'RU'</span><span class="p">,</span> <span class="s1">'MOR'</span><span class="p">,</span> <span class="s1">'EG'</span><span class="p">]</span>
-
-<span class="c1"># Specify row labels of cars</span>
-<span class="n">cars</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">row_labels</span>
-<span class="c1"># Print cars again</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iris_array_of_dicts</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">'records'</span><span class="p">)</span>
+<span class="n">iris_array_of_dicts</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1363,26 +1407,345 @@ True
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>   cars_per_cap        country  drives_right
-0           809  United States          True
-1           731      Australia         False
-2           588          Japan         False
-3            18          India         False
-4           200         Russia          True
-5            70        Morocco          True
-6            45          Egypt          True
-     cars_per_cap        country  drives_right
-US            809  United States          True
-AUS           731      Australia         False
-JAP           588          Japan         False
-IN             18          India         False
-RU            200         Russia          True
-MOR            70        Morocco          True
-EG             45          Egypt          True
-</pre>
+<div class="prompt output_prompt">Out[4]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>[{'petalLength': 1.4,
+  'petalWidth': 0.2,
+  'sepalLength': 5.1,
+  'sepalWidth': 3.5,
+  'species': 'setosa'},
+ {'petalLength': 1.4,
+  'petalWidth': 0.2,
+  'sepalLength': 4.9,
+  'sepalWidth': 3.0,
+  'species': 'setosa'},
+ {'petalLength': 1.3,
+  'petalWidth': 0.2,
+  'sepalLength': 4.7,
+  'sepalWidth': 3.2,
+  'species': 'setosa'},
+ {'petalLength': 1.5,
+  'petalWidth': 0.2,
+  'sepalLength': 4.6,
+  'sepalWidth': 3.1,
+  'species': 'setosa'},
+ {'petalLength': 1.4,
+  'petalWidth': 0.2,
+  'sepalLength': 5.0,
+  'sepalWidth': 3.6,
+  'species': 'setosa'}]</pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="CSS-and-JavaScript-based-on-bl.ocks-example">CSS and JavaScript based on bl.ocks example<a class="anchor-link" href="#CSS-and-JavaScript-based-on-bl.ocks-example">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that in the below css_text, we have removed the 'body' style reference from the original bl.ocks text. This is to avoid this style changing the rest of the notebook.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">css_text</span> <span class="o">=</span> <span class="s1">'''</span>
+<span class="s1">.axis path,</span>
+<span class="s1">.axis line {</span>
+<span class="s1">  fill: none;</span>
+<span class="s1">  stroke: #000;</span>
+<span class="s1">  shape-rendering: crispEdges;</span>
+<span class="s1">}</span>
+
+<span class="s1">.dot {</span>
+<span class="s1">  stroke: #000;</span>
+<span class="s1">}</span>
+<span class="s1">'''</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The javascript below was copied directly from the bl.ocks script text, and then six lines were changed, as noted by // <em>**</em> (the double-backslash is a comment in javascript, so these lines will not be executed). The first set of changes is to the width and height of the image. The second change is simply to reference a different DOM element as the starting point. The remaining changes are to replace the data-file reading step with a direct infusion of data into the script. (Note that the $ characters denote replacement points in the Template object.)</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">js_text_template</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">'''</span>
+<span class="s1">var margin = {top: 20, right: 20, bottom: 30, left: 40},</span>
+<span class="s1">// ****    width = 960 - margin.left - margin.right, ****</span>
+<span class="s1">// ****    height = 500 - margin.top - margin.bottom; ****</span>
+<span class="s1">    width = 720 - margin.left - margin.right,</span>
+<span class="s1">    height = 375 - margin.top - margin.bottom;</span>
+
+<span class="s1">var x = d3.scale.linear()</span>
+<span class="s1">    .range([0, width]);</span>
+
+<span class="s1">var y = d3.scale.linear()</span>
+<span class="s1">    .range([height, 0]);</span>
+
+<span class="s1">var color = d3.scale.category10();</span>
+
+<span class="s1">var xAxis = d3.svg.axis()</span>
+<span class="s1">    .scale(x)</span>
+<span class="s1">    .orient("bottom");</span>
+
+<span class="s1">var yAxis = d3.svg.axis()</span>
+<span class="s1">    .scale(y)</span>
+<span class="s1">    .orient("left");</span>
+
+<span class="s1">// **** var svg = d3.select("body").append("svg") ****</span>
+<span class="s1">var svg = d3.select("#$graphdiv").append("svg")</span>
+<span class="s1">    .attr("width", width + margin.left + margin.right)</span>
+<span class="s1">    .attr("height", height + margin.top + margin.bottom)</span>
+<span class="s1">  .append("g")</span>
+<span class="s1">    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");</span>
+
+<span class="s1">// **** d3.tsv("data.tsv", function(error, data) { ****</span>
+<span class="s1">// ****  if (error) throw error; ****</span>
+
+<span class="s1">var data = $python_data ;</span>
+
+<span class="s1">  data.forEach(function(d) {</span>
+<span class="s1">    d.sepalLength = +d.sepalLength;</span>
+<span class="s1">    d.sepalWidth = +d.sepalWidth;</span>
+<span class="s1">  });</span>
+
+<span class="s1">  x.domain(d3.extent(data, function(d) { return d.sepalWidth; })).nice();</span>
+<span class="s1">  y.domain(d3.extent(data, function(d) { return d.sepalLength; })).nice();</span>
+
+<span class="s1">  svg.append("g")</span>
+<span class="s1">      .attr("class", "x axis")</span>
+<span class="s1">      .attr("transform", "translate(0," + height + ")")</span>
+<span class="s1">      .call(xAxis)</span>
+<span class="s1">    .append("text")</span>
+<span class="s1">      .attr("class", "label")</span>
+<span class="s1">      .attr("x", width)</span>
+<span class="s1">      .attr("y", -6)</span>
+<span class="s1">      .style("text-anchor", "end")</span>
+<span class="s1">      .text("Sepal Width (cm)");</span>
+
+<span class="s1">  svg.append("g")</span>
+<span class="s1">      .attr("class", "y axis")</span>
+<span class="s1">      .call(yAxis)</span>
+<span class="s1">    .append("text")</span>
+<span class="s1">      .attr("class", "label")</span>
+<span class="s1">      .attr("transform", "rotate(-90)")</span>
+<span class="s1">      .attr("y", 6)</span>
+<span class="s1">      .attr("dy", ".71em")</span>
+<span class="s1">      .style("text-anchor", "end")</span>
+<span class="s1">      .text("Sepal Length (cm)")</span>
+
+<span class="s1">  svg.selectAll(".dot")</span>
+<span class="s1">      .data(data)</span>
+<span class="s1">    .enter().append("circle")</span>
+<span class="s1">      .attr("class", "dot")</span>
+<span class="s1">      .attr("r", 3.5)</span>
+<span class="s1">      .attr("cx", function(d) { return x(d.sepalWidth); })</span>
+<span class="s1">      .attr("cy", function(d) { return y(d.sepalLength); })</span>
+<span class="s1">      .style("fill", function(d) { return color(d.species); });</span>
+
+<span class="s1">  var legend = svg.selectAll(".legend")</span>
+<span class="s1">      .data(color.domain())</span>
+<span class="s1">    .enter().append("g")</span>
+<span class="s1">      .attr("class", "legend")</span>
+<span class="s1">      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });</span>
+
+<span class="s1">  legend.append("rect")</span>
+<span class="s1">      .attr("x", width - 18)</span>
+<span class="s1">      .attr("width", 18)</span>
+<span class="s1">      .attr("height", 18)</span>
+<span class="s1">      .style("fill", color);</span>
+
+<span class="s1">  legend.append("text")</span>
+<span class="s1">      .attr("x", width - 24)</span>
+<span class="s1">      .attr("y", 9)</span>
+<span class="s1">      .attr("dy", ".35em")</span>
+<span class="s1">      .style("text-anchor", "end")</span>
+<span class="s1">      .text(function(d) { return d; });</span>
+
+<span class="s1">// **** }); ****</span>
+
+<span class="s1">'''</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="And-finally,-the-viz">And finally, the viz<a class="anchor-link" href="#And-finally,-the-viz">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">html_template</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">'''</span>
+<span class="s1"><style> $css_text </style></span>
+<span class="s1"><div id="graph-div"></div></span>
+<span class="s1"><script> $js_text </script></span>
+<span class="s1">'''</span><span class="p">)</span>
+<span class="n">js_text</span> <span class="o">=</span> <span class="n">js_text_template</span><span class="o">.</span><span class="n">substitute</span><span class="p">({</span><span class="s1">'python_data'</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">iris_array_of_dicts</span><span class="p">),</span>
+                                       <span class="s1">'graphdiv'</span><span class="p">:</span> <span class="s1">'graph-div'</span><span class="p">})</span>
+<span class="n">HTML</span><span class="p">(</span><span class="n">html_template</span><span class="o">.</span><span class="n">substitute</span><span class="p">({</span><span class="s1">'css_text'</span><span class="p">:</span> <span class="n">css_text</span><span class="p">,</span> <span class="s1">'js_text'</span><span class="p">:</span> <span class="n">js_text</span><span class="p">}))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<style> 
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+ </style>
+<div id="graph-div"></div>
+<script> 
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+// ****    width = 960 - margin.left - margin.right, ****
+// ****    height = 500 - margin.top - margin.bottom; ****
+    width = 720 - margin.left - margin.right,
+    height = 375 - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var color = d3.scale.category10();
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+// **** var svg = d3.select("body").append("svg") ****
+var svg = d3.select("#graph-div").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// **** d3.tsv("data.tsv", function(error, data) { ****
+// ****  if (error) throw error; ****
+
+var data = [{"sepalLength": 5.1, "sepalWidth": 3.5, "petalLength": 1.4, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.9, "sepalWidth": 3.0, "petalLength": 1.4, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.7, "sepalWidth": 3.2, "petalLength": 1.3, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.6, "sepalWidth": 3.1, "petalLength": 1.5, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.0, "sepalWidth": 3.6, "petalLength": 1.4, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.4, "sepalWidth": 3.9, "petalLength": 1.7, "petalWidth": 0.4, "species": "setosa"}, {"sepalLength": 4.6, "sepalWidth": 3.4, "petalLength": 1.4, "petalWidth": 0.3, "species": "setosa"}, {"sepalLength": 5.0, "sepalWidth": 3.4, "petalLength": 1.5, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.4, "sepalWidth": 2.9, "petalLength": 1.4, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.9, "sepalWidth": 3.1, "petalLength": 1.5, "petalWidth": 0.1, "species": "setosa"}, {"sepalLength": 5.4, "sepalWidth": 3.7, "petalLength": 1.5, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.8, "sepalWidth": 3.4, "petalLength": 1.6, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.8, "sepalWidth": 3.0, "petalLength": 1.4, "petalWidth": 0.1, "species": "setosa"}, {"sepalLength": 4.3, "sepalWidth": 3.0, "petalLength": 1.1, "petalWidth": 0.1, "species": "setosa"}, {"sepalLength": 5.8, "sepalWidth": 4.0, "petalLength": 1.2, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.7, "sepalWidth": 4.4, "petalLength": 1.5, "petalWidth": 0.4, "species": "setosa"}, {"sepalLength": 5.4, "sepalWidth": 3.9, "petalLength": 1.3, "petalWidth": 0.4, "species": "setosa"}, {"sepalLength": 5.1, "sepalWidth": 3.5, "petalLength": 1.4, "petalWidth": 0.3, "species": "setosa"}, {"sepalLength": 5.7, "sepalWidth": 3.8, "petalLength": 1.7, "petalWidth": 0.3, "species": "setosa"}, {"sepalLength": 5.1, "sepalWidth": 3.8, "petalLength": 1.5, "petalWidth": 0.3, "species": "setosa"}, {"sepalLength": 5.4, "sepalWidth": 3.4, "petalLength": 1.7, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.1, "sepalWidth": 3.7, "petalLength": 1.5, "petalWidth": 0.4, "species": "setosa"}, {"sepalLength": 4.6, "sepalWidth": 3.6, "petalLength": 1.0, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.1, "sepalWidth": 3.3, "petalLength": 1.7, "petalWidth": 0.5, "species": "setosa"}, {"sepalLength": 4.8, "sepalWidth": 3.4, "petalLength": 1.9, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.0, "sepalWidth": 3.0, "petalLength": 1.6, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.0, "sepalWidth": 3.4, "petalLength": 1.6, "petalWidth": 0.4, "species": "setosa"}, {"sepalLength": 5.2, "sepalWidth": 3.5, "petalLength": 1.5, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.2, "sepalWidth": 3.4, "petalLength": 1.4, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.7, "sepalWidth": 3.2, "petalLength": 1.6, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.8, "sepalWidth": 3.1, "petalLength": 1.6, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.4, "sepalWidth": 3.4, "petalLength": 1.5, "petalWidth": 0.4, "species": "setosa"}, {"sepalLength": 5.2, "sepalWidth": 4.1, "petalLength": 1.5, "petalWidth": 0.1, "species": "setosa"}, {"sepalLength": 5.5, "sepalWidth": 4.2, "petalLength": 1.4, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.9, "sepalWidth": 3.1, "petalLength": 1.5, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.0, "sepalWidth": 3.2, "petalLength": 1.2, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.5, "sepalWidth": 3.5, "petalLength": 1.3, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.9, "sepalWidth": 3.6, "petalLength": 1.4, "petalWidth": 0.1, "species": "setosa"}, {"sepalLength": 4.4, "sepalWidth": 3.0, "petalLength": 1.3, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.1, "sepalWidth": 3.4, "petalLength": 1.5, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.0, "sepalWidth": 3.5, "petalLength": 1.3, "petalWidth": 0.3, "species": "setosa"}, {"sepalLength": 4.5, "sepalWidth": 2.3, "petalLength": 1.3, "petalWidth": 0.3, "species": "setosa"}, {"sepalLength": 4.4, "sepalWidth": 3.2, "petalLength": 1.3, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.0, "sepalWidth": 3.5, "petalLength": 1.6, "petalWidth": 0.6, "species": "setosa"}, {"sepalLength": 5.1, "sepalWidth": 3.8, "petalLength": 1.9, "petalWidth": 0.4, "species": "setosa"}, {"sepalLength": 4.8, "sepalWidth": 3.0, "petalLength": 1.4, "petalWidth": 0.3, "species": "setosa"}, {"sepalLength": 5.1, "sepalWidth": 3.8, "petalLength": 1.6, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 4.6, "sepalWidth": 3.2, "petalLength": 1.4, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.3, "sepalWidth": 3.7, "petalLength": 1.5, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 5.0, "sepalWidth": 3.3, "petalLength": 1.4, "petalWidth": 0.2, "species": "setosa"}, {"sepalLength": 7.0, "sepalWidth": 3.2, "petalLength": 4.7, "petalWidth": 1.4, "species": "versicolor"}, {"sepalLength": 6.4, "sepalWidth": 3.2, "petalLength": 4.5, "petalWidth": 1.5, "species": "versicolor"}, {"sepalLength": 6.9, "sepalWidth": 3.1, "petalLength": 4.9, "petalWidth": 1.5, "species": "versicolor"}, {"sepalLength": 5.5, "sepalWidth": 2.3, "petalLength": 4.0, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 6.5, "sepalWidth": 2.8, "petalLength": 4.6, "petalWidth": 1.5, "species": "versicolor"}, {"sepalLength": 5.7, "sepalWidth": 2.8, "petalLength": 4.5, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 6.3, "sepalWidth": 3.3, "petalLength": 4.7, "petalWidth": 1.6, "species": "versicolor"}, {"sepalLength": 4.9, "sepalWidth": 2.4, "petalLength": 3.3, "petalWidth": 1.0, "species": "versicolor"}, {"sepalLength": 6.6, "sepalWidth": 2.9, "petalLength": 4.6, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 5.2, "sepalWidth": 2.7, "petalLength": 3.9, "petalWidth": 1.4, "species": "versicolor"}, {"sepalLength": 5.0, "sepalWidth": 2.0, "petalLength": 3.5, "petalWidth": 1.0, "species": "versicolor"}, {"sepalLength": 5.9, "sepalWidth": 3.0, "petalLength": 4.2, "petalWidth": 1.5, "species": "versicolor"}, {"sepalLength": 6.0, "sepalWidth": 2.2, "petalLength": 4.0, "petalWidth": 1.0, "species": "versicolor"}, {"sepalLength": 6.1, "sepalWidth": 2.9, "petalLength": 4.7, "petalWidth": 1.4, "species": "versicolor"}, {"sepalLength": 5.6, "sepalWidth": 2.9, "petalLength": 3.6, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 6.7, "sepalWidth": 3.1, "petalLength": 4.4, "petalWidth": 1.4, "species": "versicolor"}, {"sepalLength": 5.6, "sepalWidth": 3.0, "petalLength": 4.5, "petalWidth": 1.5, "species": "versicolor"}, {"sepalLength": 5.8, "sepalWidth": 2.7, "petalLength": 4.1, "petalWidth": 1.0, "species": "versicolor"}, {"sepalLength": 6.2, "sepalWidth": 2.2, "petalLength": 4.5, "petalWidth": 1.5, "species": "versicolor"}, {"sepalLength": 5.6, "sepalWidth": 2.5, "petalLength": 3.9, "petalWidth": 1.1, "species": "versicolor"}, {"sepalLength": 5.9, "sepalWidth": 3.2, "petalLength": 4.8, "petalWidth": 1.8, "species": "versicolor"}, {"sepalLength": 6.1, "sepalWidth": 2.8, "petalLength": 4.0, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 6.3, "sepalWidth": 2.5, "petalLength": 4.9, "petalWidth": 1.5, "species": "versicolor"}, {"sepalLength": 6.1, "sepalWidth": 2.8, "petalLength": 4.7, "petalWidth": 1.2, "species": "versicolor"}, {"sepalLength": 6.4, "sepalWidth": 2.9, "petalLength": 4.3, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 6.6, "sepalWidth": 3.0, "petalLength": 4.4, "petalWidth": 1.4, "species": "versicolor"}, {"sepalLength": 6.8, "sepalWidth": 2.8, "petalLength": 4.8, "petalWidth": 1.4, "species": "versicolor"}, {"sepalLength": 6.7, "sepalWidth": 3.0, "petalLength": 5.0, "petalWidth": 1.7, "species": "versicolor"}, {"sepalLength": 6.0, "sepalWidth": 2.9, "petalLength": 4.5, "petalWidth": 1.5, "species": "versicolor"}, {"sepalLength": 5.7, "sepalWidth": 2.6, "petalLength": 3.5, "petalWidth": 1.0, "species": "versicolor"}, {"sepalLength": 5.5, "sepalWidth": 2.4, "petalLength": 3.8, "petalWidth": 1.1, "species": "versicolor"}, {"sepalLength": 5.5, "sepalWidth": 2.4, "petalLength": 3.7, "petalWidth": 1.0, "species": "versicolor"}, {"sepalLength": 5.8, "sepalWidth": 2.7, "petalLength": 3.9, "petalWidth": 1.2, "species": "versicolor"}, {"sepalLength": 6.0, "sepalWidth": 2.7, "petalLength": 5.1, "petalWidth": 1.6, "species": "versicolor"}, {"sepalLength": 5.4, "sepalWidth": 3.0, "petalLength": 4.5, "petalWidth": 1.5, "species": "versicolor"}, {"sepalLength": 6.0, "sepalWidth": 3.4, "petalLength": 4.5, "petalWidth": 1.6, "species": "versicolor"}, {"sepalLength": 6.7, "sepalWidth": 3.1, "petalLength": 4.7, "petalWidth": 1.5, "species": "versicolor"}, {"sepalLength": 6.3, "sepalWidth": 2.3, "petalLength": 4.4, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 5.6, "sepalWidth": 3.0, "petalLength": 4.1, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 5.5, "sepalWidth": 2.5, "petalLength": 4.0, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 5.5, "sepalWidth": 2.6, "petalLength": 4.4, "petalWidth": 1.2, "species": "versicolor"}, {"sepalLength": 6.1, "sepalWidth": 3.0, "petalLength": 4.6, "petalWidth": 1.4, "species": "versicolor"}, {"sepalLength": 5.8, "sepalWidth": 2.6, "petalLength": 4.0, "petalWidth": 1.2, "species": "versicolor"}, {"sepalLength": 5.0, "sepalWidth": 2.3, "petalLength": 3.3, "petalWidth": 1.0, "species": "versicolor"}, {"sepalLength": 5.6, "sepalWidth": 2.7, "petalLength": 4.2, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 5.7, "sepalWidth": 3.0, "petalLength": 4.2, "petalWidth": 1.2, "species": "versicolor"}, {"sepalLength": 5.7, "sepalWidth": 2.9, "petalLength": 4.2, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 6.2, "sepalWidth": 2.9, "petalLength": 4.3, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 5.1, "sepalWidth": 2.5, "petalLength": 3.0, "petalWidth": 1.1, "species": "versicolor"}, {"sepalLength": 5.7, "sepalWidth": 2.8, "petalLength": 4.1, "petalWidth": 1.3, "species": "versicolor"}, {"sepalLength": 6.3, "sepalWidth": 3.3, "petalLength": 6.0, "petalWidth": 2.5, "species": "virginica"}, {"sepalLength": 5.8, "sepalWidth": 2.7, "petalLength": 5.1, "petalWidth": 1.9, "species": "virginica"}, {"sepalLength": 7.1, "sepalWidth": 3.0, "petalLength": 5.9, "petalWidth": 2.1, "species": "virginica"}, {"sepalLength": 6.3, "sepalWidth": 2.9, "petalLength": 5.6, "petalWidth": 1.8, "species": "virginica"}, {"sepalLength": 6.5, "sepalWidth": 3.0, "petalLength": 5.8, "petalWidth": 2.2, "species": "virginica"}, {"sepalLength": 7.6, "sepalWidth": 3.0, "petalLength": 6.6, "petalWidth": 2.1, "species": "virginica"}, {"sepalLength": 4.9, "sepalWidth": 2.5, "petalLength": 4.5, "petalWidth": 1.7, "species": "virginica"}, {"sepalLength": 7.3, "sepalWidth": 2.9, "petalLength": 6.3, "petalWidth": 1.8, "species": "virginica"}, {"sepalLength": 6.7, "sepalWidth": 2.5, "petalLength": 5.8, "petalWidth": 1.8, "species": "virginica"}, {"sepalLength": 7.2, "sepalWidth": 3.6, "petalLength": 6.1, "petalWidth": 2.5, "species": "virginica"}, {"sepalLength": 6.5, "sepalWidth": 3.2, "petalLength": 5.1, "petalWidth": 2.0, "species": "virginica"}, {"sepalLength": 6.4, "sepalWidth": 2.7, "petalLength": 5.3, "petalWidth": 1.9, "species": "virginica"}, {"sepalLength": 6.8, "sepalWidth": 3.0, "petalLength": 5.5, "petalWidth": 2.1, "species": "virginica"}, {"sepalLength": 5.7, "sepalWidth": 2.5, "petalLength": 5.0, "petalWidth": 2.0, "species": "virginica"}, {"sepalLength": 5.8, "sepalWidth": 2.8, "petalLength": 5.1, "petalWidth": 2.4, "species": "virginica"}, {"sepalLength": 6.4, "sepalWidth": 3.2, "petalLength": 5.3, "petalWidth": 2.3, "species": "virginica"}, {"sepalLength": 6.5, "sepalWidth": 3.0, "petalLength": 5.5, "petalWidth": 1.8, "species": "virginica"}, {"sepalLength": 7.7, "sepalWidth": 3.8, "petalLength": 6.7, "petalWidth": 2.2, "species": "virginica"}, {"sepalLength": 7.7, "sepalWidth": 2.6, "petalLength": 6.9, "petalWidth": 2.3, "species": "virginica"}, {"sepalLength": 6.0, "sepalWidth": 2.2, "petalLength": 5.0, "petalWidth": 1.5, "species": "virginica"}, {"sepalLength": 6.9, "sepalWidth": 3.2, "petalLength": 5.7, "petalWidth": 2.3, "species": "virginica"}, {"sepalLength": 5.6, "sepalWidth": 2.8, "petalLength": 4.9, "petalWidth": 2.0, "species": "virginica"}, {"sepalLength": 7.7, "sepalWidth": 2.8, "petalLength": 6.7, "petalWidth": 2.0, "species": "virginica"}, {"sepalLength": 6.3, "sepalWidth": 2.7, "petalLength": 4.9, "petalWidth": 1.8, "species": "virginica"}, {"sepalLength": 6.7, "sepalWidth": 3.3, "petalLength": 5.7, "petalWidth": 2.1, "species": "virginica"}, {"sepalLength": 7.2, "sepalWidth": 3.2, "petalLength": 6.0, "petalWidth": 1.8, "species": "virginica"}, {"sepalLength": 6.2, "sepalWidth": 2.8, "petalLength": 4.8, "petalWidth": 1.8, "species": "virginica"}, {"sepalLength": 6.1, "sepalWidth": 3.0, "petalLength": 4.9, "petalWidth": 1.8, "species": "virginica"}, {"sepalLength": 6.4, "sepalWidth": 2.8, "petalLength": 5.6, "petalWidth": 2.1, "species": "virginica"}, {"sepalLength": 7.2, "sepalWidth": 3.0, "petalLength": 5.8, "petalWidth": 1.6, "species": "virginica"}, {"sepalLength": 7.4, "sepalWidth": 2.8, "petalLength": 6.1, "petalWidth": 1.9, "species": "virginica"}, {"sepalLength": 7.9, "sepalWidth": 3.8, "petalLength": 6.4, "petalWidth": 2.0, "species": "virginica"}, {"sepalLength": 6.4, "sepalWidth": 2.8, "petalLength": 5.6, "petalWidth": 2.2, "species": "virginica"}, {"sepalLength": 6.3, "sepalWidth": 2.8, "petalLength": 5.1, "petalWidth": 1.5, "species": "virginica"}, {"sepalLength": 6.1, "sepalWidth": 2.6, "petalLength": 5.6, "petalWidth": 1.4, "species": "virginica"}, {"sepalLength": 7.7, "sepalWidth": 3.0, "petalLength": 6.1, "petalWidth": 2.3, "species": "virginica"}, {"sepalLength": 6.3, "sepalWidth": 3.4, "petalLength": 5.6, "petalWidth": 2.4, "species": "virginica"}, {"sepalLength": 6.4, "sepalWidth": 3.1, "petalLength": 5.5, "petalWidth": 1.8, "species": "virginica"}, {"sepalLength": 6.0, "sepalWidth": 3.0, "petalLength": 4.8, "petalWidth": 1.8, "species": "virginica"}, {"sepalLength": 6.9, "sepalWidth": 3.1, "petalLength": 5.4, "petalWidth": 2.1, "species": "virginica"}, {"sepalLength": 6.7, "sepalWidth": 3.1, "petalLength": 5.6, "petalWidth": 2.4, "species": "virginica"}, {"sepalLength": 6.9, "sepalWidth": 3.1, "petalLength": 5.1, "petalWidth": 2.3, "species": "virginica"}, {"sepalLength": 5.8, "sepalWidth": 2.7, "petalLength": 5.1, "petalWidth": 1.9, "species": "virginica"}, {"sepalLength": 6.8, "sepalWidth": 3.2, "petalLength": 5.9, "petalWidth": 2.3, "species": "virginica"}, {"sepalLength": 6.7, "sepalWidth": 3.3, "petalLength": 5.7, "petalWidth": 2.5, "species": "virginica"}, {"sepalLength": 6.7, "sepalWidth": 3.0, "petalLength": 5.2, "petalWidth": 2.3, "species": "virginica"}, {"sepalLength": 6.3, "sepalWidth": 2.5, "petalLength": 5.0, "petalWidth": 1.9, "species": "virginica"}, {"sepalLength": 6.5, "sepalWidth": 3.0, "petalLength": 5.2, "petalWidth": 2.0, "species": "virginica"}, {"sepalLength": 6.2, "sepalWidth": 3.4, "petalLength": 5.4, "petalWidth": 2.3, "species": "virginica"}, {"sepalLength": 5.9, "sepalWidth": 3.0, "petalLength": 5.1, "petalWidth": 1.8, "species": "virginica"}] ;
+
+  data.forEach(function(d) {
+    d.sepalLength = +d.sepalLength;
+    d.sepalWidth = +d.sepalWidth;
+  });
+
+  x.domain(d3.extent(data, function(d) { return d.sepalWidth; })).nice();
+  y.domain(d3.extent(data, function(d) { return d.sepalLength; })).nice();
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+    .append("text")
+      .attr("class", "label")
+      .attr("x", width)
+      .attr("y", -6)
+      .style("text-anchor", "end")
+      .text("Sepal Width (cm)");
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Sepal Length (cm)")
+
+  svg.selectAll(".dot")
+      .data(data)
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("r", 3.5)
+      .attr("cx", function(d) { return x(d.sepalWidth); })
+      .attr("cy", function(d) { return y(d.sepalLength); })
+      .style("fill", function(d) { return color(d.species); });
+
+  var legend = svg.selectAll(".legend")
+      .data(color.domain())
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", color);
+
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d; });
+
+// **** }); ****
+
+ </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 </div>
 </div>
 </div>
@@ -1423,11 +1786,11 @@ EG             45          Egypt          True
 
       <ul class="pager">
         <li class="previous">
-          <a href="./visualization-d3-iris-scatterplot.html">
+          <a href="./visualization-d3.html">
           &laquo; Newer</a>
         </li>
         <li class="next">
-          <a href="./python-loop.html">
+          <a href="./python-dictionary.html">
           Older &raquo;</a>
         </li>
       </ul>
