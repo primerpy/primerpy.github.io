@@ -991,11 +991,23 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [10]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;load_ext&lt;/span&gt; py_d3
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;The py_d3 extension is already loaded. To reload it, use:
+  %reload_ext py_d3
+&lt;/pre&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1010,7 +1022,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;d3&lt;/span&gt;
@@ -1043,17 +1055,17 @@ require(['d3'], function(d3) {
 &lt;script&gt;
 _select = d3.select;
 
-d3.select0 = function(selection) {
-    return _select("#d3-cell-0").select(selection);
+d3.select2 = function(selection) {
+    return _select("#d3-cell-2").select(selection);
 }
-d3.selectAll0 = function(selection) {
-    return _select("#d3-cell-0").selectAll(selection);
+d3.selectAll2 = function(selection) {
+    return _select("#d3-cell-2").selectAll(selection);
 }
 &lt;/script&gt;
-&lt;g id="d3-cell-0"&gt;
+&lt;g id="d3-cell-2"&gt;
 &lt;g&gt;&lt;/g&gt;
 &lt;script&gt;
-d3.select0("g").text("Hello World");
+d3.select2("g").text("Hello World");
 &lt;/script&gt;
 &lt;/g&gt;
 &lt;/div&gt;
@@ -1072,7 +1084,7 @@ d3.select0("g").text("Hello World");
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;d3&lt;/span&gt;
@@ -1129,14 +1141,14 @@ require(['d3'], function(d3) {
 &lt;script&gt;
 _select = d3.select;
 
-d3.select1 = function(selection) {
-    return _select("#d3-cell-1").select(selection);
+d3.select3 = function(selection) {
+    return _select("#d3-cell-3").select(selection);
 }
-d3.selectAll1 = function(selection) {
-    return _select("#d3-cell-1").selectAll(selection);
+d3.selectAll3 = function(selection) {
+    return _select("#d3-cell-3").selectAll(selection);
 }
 &lt;/script&gt;
-&lt;g id="d3-cell-1"&gt;
+&lt;g id="d3-cell-3"&gt;
 &lt;g&gt;&lt;/g&gt;
 &lt;style&gt;
 element {
@@ -1154,7 +1166,7 @@ div.bar {
 var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
                 11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
-d3.select1("g").selectAll("div")
+d3.select3("g").selectAll("div")
     .data(dataset)
     .enter()
     .append("div")
@@ -1172,11 +1184,90 @@ d3.select1("g").selectAll("div")
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [13]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IPython.core.display&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTML&lt;/span&gt;
+&lt;span class="n"&gt;HTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;span class="s1"&gt;&lt;h1&gt;Hello DOM!&lt;/h1&gt;&lt;/span&gt;
+&lt;span class="s1"&gt;'''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[13]:&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+&lt;h1&gt;Hello DOM!&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [14]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;HTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;script src="lib/d3/d3.min.js"&gt;&lt;/script&gt;'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;HTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;span class="s1"&gt;   &lt;div class="legend"&gt;SVG circle with animation - to see it again, refresh the browser:&lt;/div&gt;   &lt;/span&gt;
+&lt;span class="s1"&gt;   &lt;div id="bogo_animation"&gt;&lt;/div&gt;&lt;/span&gt;
+&lt;span class="s1"&gt;     &lt;script type="text/javascript"&gt;&lt;/span&gt;
+&lt;span class="s1"&gt;       var bogoSVG = d3.select("#bogo_animation")&lt;/span&gt;
+&lt;span class="s1"&gt;          .append("svg")&lt;/span&gt;
+&lt;span class="s1"&gt;          .attr("width", 300)&lt;/span&gt;
+&lt;span class="s1"&gt;          .attr("height", 300);    &lt;/span&gt;
+
+&lt;span class="s1"&gt;       bogoSVG.append("circle")&lt;/span&gt;
+&lt;span class="s1"&gt;          .style("stroke", "gray")&lt;/span&gt;
+&lt;span class="s1"&gt;          .style("fill", "cyan")&lt;/span&gt;
+&lt;span class="s1"&gt;          .attr("r", 130)&lt;/span&gt;
+&lt;span class="s1"&gt;          .attr("cx", 150)&lt;/span&gt;
+&lt;span class="s1"&gt;          .attr("cy", 150)&lt;/span&gt;
+&lt;span class="s1"&gt;          .transition()&lt;/span&gt;
+&lt;span class="s1"&gt;             .delay(100)&lt;/span&gt;
+&lt;span class="s1"&gt;             .duration(10000)  &lt;/span&gt;
+&lt;span class="s1"&gt;             .attr("r", 10)&lt;/span&gt;
+&lt;span class="s1"&gt;             .attr("cx", 150)&lt;/span&gt;
+&lt;span class="s1"&gt;             .style("fill", "blue"); &lt;/span&gt;
+
+&lt;span class="s1"&gt;     &lt;/script&gt;&lt;/span&gt;
+&lt;span class="s1"&gt;'''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[14]:&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+&lt;div class="legend"&gt;SVG circle with animation - to see it again, refresh the browser:&lt;/div&gt;
+&lt;div id="bogo_animation"&gt;&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+       var bogoSVG = d3.select("#bogo_animation")
+          .append("svg")
+          .attr("width", 300)
+          .attr("height", 300);    
+
+       bogoSVG.append("circle")
+          .style("stroke", "gray")
+          .style("fill", "cyan")
+          .attr("r", 130)
+          .attr("cx", 150)
+          .attr("cy", 150)
+          .transition()
+             .delay(100)
+             .duration(10000)  
+             .attr("r", 10)
+             .attr("cx", 150)
+             .style("fill", "blue"); 
+
+     &lt;/script&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -25192,10 +25283,10 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="85cc9a09-ab60-4cf4-b90a-d1b0a17ceefb"&gt;&lt;/div&gt;
+&lt;div id="2d7942c5-0281-4cc8-8919-29c4c3bb6e7a"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#85cc9a09-ab60-4cf4-b90a-d1b0a17ceefb');
+var element = $('#2d7942c5-0281-4cc8-8919-29c4c3bb6e7a');
 
 (function(global) {
   function now() {
