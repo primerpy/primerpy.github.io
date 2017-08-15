@@ -1236,11 +1236,23 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [1]:</div>
+<div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> py_d3
 </pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The py_d3 extension is already loaded. To reload it, use:
+  %reload_ext py_d3
+</pre>
+</div>
 </div>
 </div>
 </div>
@@ -1255,7 +1267,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">d3</span>
@@ -1288,17 +1300,17 @@ require(['d3'], function(d3) {
 <script>
 _select = d3.select;
 
-d3.select0 = function(selection) {
-    return _select("#d3-cell-0").select(selection);
+d3.select2 = function(selection) {
+    return _select("#d3-cell-2").select(selection);
 }
-d3.selectAll0 = function(selection) {
-    return _select("#d3-cell-0").selectAll(selection);
+d3.selectAll2 = function(selection) {
+    return _select("#d3-cell-2").selectAll(selection);
 }
 </script>
-<g id="d3-cell-0">
+<g id="d3-cell-2">
 <g></g>
 <script>
-d3.select0("g").text("Hello World");
+d3.select2("g").text("Hello World");
 </script>
 </g>
 </div>
@@ -1317,7 +1329,7 @@ d3.select0("g").text("Hello World");
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">d3</span>
@@ -1374,14 +1386,14 @@ require(['d3'], function(d3) {
 <script>
 _select = d3.select;
 
-d3.select1 = function(selection) {
-    return _select("#d3-cell-1").select(selection);
+d3.select3 = function(selection) {
+    return _select("#d3-cell-3").select(selection);
 }
-d3.selectAll1 = function(selection) {
-    return _select("#d3-cell-1").selectAll(selection);
+d3.selectAll3 = function(selection) {
+    return _select("#d3-cell-3").selectAll(selection);
 }
 </script>
-<g id="d3-cell-1">
+<g id="d3-cell-3">
 <g></g>
 <style>
 element {
@@ -1399,7 +1411,7 @@ div.bar {
 var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
                 11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
-d3.select1("g").selectAll("div")
+d3.select3("g").selectAll("div")
     .data(dataset)
     .enter()
     .append("div")
@@ -1417,11 +1429,90 @@ d3.select1("g").selectAll("div")
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s1">'''</span>
+<span class="s1"><h1>Hello DOM!</h1></span>
+<span class="s1">'''</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[13]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<h1>Hello DOM!</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">'<script src="lib/d3/d3.min.js"></script>'</span><span class="p">)</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s1">'''</span>
+<span class="s1">   <div class="legend">SVG circle with animation - to see it again, refresh the browser:</div>   </span>
+<span class="s1">   <div id="bogo_animation"></div></span>
+<span class="s1">     <script type="text/javascript"></span>
+<span class="s1">       var bogoSVG = d3.select("#bogo_animation")</span>
+<span class="s1">          .append("svg")</span>
+<span class="s1">          .attr("width", 300)</span>
+<span class="s1">          .attr("height", 300);    </span>
+
+<span class="s1">       bogoSVG.append("circle")</span>
+<span class="s1">          .style("stroke", "gray")</span>
+<span class="s1">          .style("fill", "cyan")</span>
+<span class="s1">          .attr("r", 130)</span>
+<span class="s1">          .attr("cx", 150)</span>
+<span class="s1">          .attr("cy", 150)</span>
+<span class="s1">          .transition()</span>
+<span class="s1">             .delay(100)</span>
+<span class="s1">             .duration(10000)  </span>
+<span class="s1">             .attr("r", 10)</span>
+<span class="s1">             .attr("cx", 150)</span>
+<span class="s1">             .style("fill", "blue"); </span>
+
+<span class="s1">     </script></span>
+<span class="s1">'''</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div class="legend">SVG circle with animation - to see it again, refresh the browser:</div>
+<div id="bogo_animation"></div>
+<script type="text/javascript">
+       var bogoSVG = d3.select("#bogo_animation")
+          .append("svg")
+          .attr("width", 300)
+          .attr("height", 300);    
+
+       bogoSVG.append("circle")
+          .style("stroke", "gray")
+          .style("fill", "cyan")
+          .attr("r", 130)
+          .attr("cx", 150)
+          .attr("cy", 150)
+          .transition()
+             .delay(100)
+             .duration(10000)  
+             .attr("r", 10)
+             .attr("cx", 150)
+             .style("fill", "blue"); 
+
+     </script>
+</div>
 </div>
 </div>
 </div>
