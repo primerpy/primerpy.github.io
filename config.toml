@@ -11,19 +11,20 @@ metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 #disqusShortname = "XXX"
-#googleAnalytics = "XXX"
+googleAnalytics = "UA-103009539-1"
 
 [Params]
-  subtitle = "A Primer on Python and Data Science"
+  subtitle = "A Primer on Programming Languages that are Relevant"
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
   commit = false
   rss = true
   comments = true
-#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+  gcse = "000580855040544163791%3Arl5nzawcqq8" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
-#[[Params.bigimg]]
+[[Params.bigimg]]
+  src = "img/lambda-performance.jpg"
 #  src = "img/triangle.jpg"
 #  desc = "Triangle"
 #[[Params.bigimg]]
@@ -40,22 +41,45 @@ pygmentCodeFences = true
   twitter = "username"
   reddit = "username"
   linkedin = "username"
-  stackoverflow = "users/XXXXXXX/username"
+#  stackoverflow = "users/XXXXXXX/username"
 
 [[menu.main]]
-    name = "Blog"
-    url = ""
+    identifier = "python"
+    name = "Python"
     weight = 1
 
 [[menu.main]]
-    name = "About"
-    url = "page/about/"
+    parent = "python"
+    name = "Basic Python"
+    url = "/tags/basic-python"
+    weight = 1
+
+[[menu.main]]
+    identifier = "r"
+    name = "R"
+    weight = 2
+
+[[menu.main]]
+    parent = "r"
+    name = "Basic R"
+    url = "/tags/basic-r"
+    weight = 1
+
+[[menu.main]]
+    identifier = "js"
+    name = "Javascript"
     weight = 3
 
 [[menu.main]]
+    parent = "js"
+    name = "Advanced JS"
+    url = "/tags/advanced-javascript"
+    weight = 1
+    
+[[menu.main]]
     identifier = "samples"
     name = "Samples"
-    weight = 2
+    weight = 4
 
 [[menu.main]]
     parent = "samples"
@@ -76,12 +100,11 @@ pygmentCodeFences = true
     weight = 3
 
 [[menu.main]]
-    parent = "samples"
-    name = "Advanced Javascript"
-    url = "/tags/advanced-javascript"
-    weight = 4
+    name = "About"
+    url = "page/about/"
+    weight = 5
 
 [[menu.main]]
     name = "Tags"
     url = "tags"
-    weight = 3
+    weight = 6

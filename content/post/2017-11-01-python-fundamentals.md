@@ -2,7 +2,7 @@
 title: "Python Fundamentals"
 slug: "python-fundamentals"
 date: "2017-11-01"
-tags: ["python-basics"]
+tags: ["basic-python"]
 ---
 
 This post will cover the absolutely basics of Python language
