@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.primerpy.com/post/advanced-javascript-ajax/</loc>
+    <lastmod>2017-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.primerpy.com/post/advanced-array-methods/</loc>
+    <lastmod>2017-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.primerpy.com/post/js-closure/</loc>
     <lastmod>2017-11-02T00:00:00+00:00</lastmod>
   </url>
   

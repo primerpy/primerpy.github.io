@@ -131,6 +131,89 @@
         <div class="posts-list">
           
             <article class="post-preview">
+              <a href="http://www.primerpy.com/post/advanced-javascript-ajax/">
+                <h2 class="post-title">Advanced Javascript Ajax</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on November 2, 2017
+              </p>
+              <div class="post-entry">
+                
+                  
+
+<h2 id="html">HTML</h2>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;    
+  &lt;title&gt;Title of the document&lt;/title&gt;
+  &lt;script
+     src=&quot;https://code.jquery.com/jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;button id=&quot;getBtn&quot;&gt;GET()&lt;/button&gt;
+  &lt;button id=&quot;postBtn&quot;&gt;POST()&lt;/button&gt;
+  &lt;button id=&quot;getJSONBtn&quot;&gt;GETJSON()&lt;/button&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<h2 id="js">JS</h2>
+
+<pre><code class="language-javascript">$(&quot;#getBtn&quot;).click(function(){
+  $.get(&quot;https://api.github.com/users/isaaczhou&quot;)
+      .done(function(data){
+          console.log(data.blog);
+      }).fail(function(){
+          {
+              console.log(&quot;Error!&quot;)
+          }
+      })
+})
+
+$(&quot;#postBtn&quot;).click(function(){
+  var data = {
+      name: &quot;Isaac&quot;,
+      city: &quot;New York&quot;
+  };
+  $.post(&quot;www.isaaczhou.com&quot;, data)
+      .done(function(data){
+          console.log(&quot;Hi Isaac!&quot;)
+      }).fail(function(error){
+          console.log(error);
+      })
+})
+
+$(&quot;#getJSONBtn&quot;).click(function(){
+  $.getJSON(&quot;https://raw.githubusercontent.com/RobertLowe/nvd3/master/examples/nations.json&quot;)
+      .done(function(data){
+          console.log(data[153]);
+      }).fail(function(error){
+          console.log(error)
+      })
+})
+</code></pre>
+
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/advanced-javascript">advanced-javascript</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
               <a href="http://www.primerpy.com/post/advanced-array-methods/">
                 <h2 class="post-title">Advanced Javascript Array Methods</h2>
     
@@ -144,6 +227,33 @@
                 
                   forEach  Iterates through an array Runs a callback function on each value in the array always returns &ldquo;undefined&rdquo;  var arr = [1,2,3,5] arr.forEach(function(d,i,arr){ console.log(d,i); });   How does forEach work  var forEach = (arr, callback) =&gt; { for(var i = 0; i &lt; arr.length; i++) { callback(arr[i],i,arr); } }   Using forEach in a function  var halfValues = (arr) =&gt; { let newArr = []; arr.
                   <a href="http://www.primerpy.com/post/advanced-array-methods/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/advanced-javascript">advanced-javascript</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/js-closure/">
+                <h2 class="post-title">JS Closure</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on November 2, 2017
+              </p>
+              <div class="post-entry">
+                
+                  Definition  A closure is a function that makes use of variables defined in outer functions that have previously returned We have to &ldquo;return&rdquo; the inner function for this to work We can either call the inner function right away by using an extra () or we can store the result of the function in a variable Closure only exists when an inner function makes use of variables defined from an outer function that has returned.
+                  <a href="http://www.primerpy.com/post/js-closure/" class="post-read-more">[Read More]</a>
                 
               </div>
     
@@ -493,52 +603,6 @@ Here is a secondary heading Here&rsquo;s a useless table:
                     #<a href="http://www.primerpy.com/tags/markdown">markdown</a>&nbsp;
                   
                 </span>
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/2015-02-13-hamlet-monologue/">
-                <h2 class="post-title">To be</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    ... or not to be?
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on February 13, 2015
-              </p>
-              <div class="post-entry">
-                
-                  To be, or not to be&ndash;that is the question: Whether &lsquo;tis nobler in the mind to suffer The slings and arrows of outrageous fortune Or to take arms against a sea of troubles And by opposing end them. To die, to sleep&ndash; No more&ndash;and by a sleep to say we end The heartache, and the thousand natural shocks That flesh is heir to. &lsquo;Tis a consummation Devoutly to be wished. To die, to sleep&ndash; To sleep&ndash;perchance to dream: ay, there&rsquo;s the rub, For in that sleep of death what dreams may come When we have shuffled off this mortal coil, Must give us pause.
-                  <a href="http://www.primerpy.com/post/2015-02-13-hamlet-monologue/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/2015-01-27-dear-diary/">
-                <h2 class="post-title">Dear diary</h2>
-    
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on January 27, 2015
-              </p>
-              <div class="post-entry">
-                
-                  What is it with that Mary girl? Dragging me to school every day. As if I had a choice. What you don&rsquo;t hear in those nursery rhymes is that she starves me if I don&rsquo;t go to school with her; it&rsquo;s the only way I can stay alive! I&rsquo;m thinking about being adopted by Little Bo Peep, sure I may get lost, but anything is better than being with Mary and those little brats at school (shudder, shudder).
-                  <a href="http://www.primerpy.com/post/2015-01-27-dear-diary/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
               
     
             </article>
