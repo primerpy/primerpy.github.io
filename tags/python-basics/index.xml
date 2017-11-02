@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python Basics on PrimerPy</title>
-    <link>https://pages.gitlab.io/hugo/tags/python-basics/</link>
+    <link>http://www.primerpy.com/tags/python-basics/</link>
     <description>Recent content in Python Basics on PrimerPy</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
     <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
     <lastBuildDate>Wed, 01 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://pages.gitlab.io/hugo/tags/python-basics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.primerpy.com/tags/python-basics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Python Fundamentals</title>
-      <link>https://pages.gitlab.io/hugo/post/python-fundamentals/</link>
+      <link>http://www.primerpy.com/post/python-fundamentals/</link>
       <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>https://pages.gitlab.io/hugo/post/python-fundamentals/</guid>
+      <guid>http://www.primerpy.com/post/python-fundamentals/</guid>
       <description>This post will cover the absolutely basics of Python language
 Types, Statements Unlike others, there&amp;rsquo;s no need to declare variables in Python
 ## No Need to declare Python variables answer = 42 name = &amp;quot;Python&amp;quot; print(answer) print(name) ## Integers and Floats can operate with each other answer = 42 pi = 3.14159 print(answer + pi)  String We can use single, double and tripple quotes to create strings

@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on PrimerPy</title>
-    <link>https://pages.gitlab.io/hugo/categories/</link>
+    <link>http://www.primerpy.com/categories/</link>
     <description>Recent content in Categories on PrimerPy</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
     <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
     
-	<atom:link href="https://pages.gitlab.io/hugo/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.primerpy.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
