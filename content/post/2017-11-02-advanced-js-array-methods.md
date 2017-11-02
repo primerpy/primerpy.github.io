@@ -2,7 +2,7 @@
 title: "Advanced Javascript Array Methods"
 slug: "advanced-array-methods"
 date: "2017-11-02"
-tag: ["advanced-javascript"]
+tags: ["advanced-javascript"]
 ---
 
 ## forEach

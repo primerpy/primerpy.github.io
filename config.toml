@@ -78,7 +78,7 @@ pygmentCodeFences = true
 [[menu.main]]
     parent = "samples"
     name = "Advanced Javascript"
-    url = "/tags/javascript/advanced-javascript"
+    url = "/tags/advanced-javascript"
     weight = 4
 
 [[menu.main]]
