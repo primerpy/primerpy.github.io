@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Python Fundamentals</title>
+  <meta property="og:title" content="Python Fundamentals" />
+  <meta name="twitter:title" content="Python Fundamentals" />
+  <meta name="description" content="This post will cover the absolutely basics of Python language
+Types, Statements Unlike others, there&rsquo;s no need to declare variables in Python
+## No Need to declare Python variables answer = 42 name = &quot;Python&quot; print(answer) print(name) ## Integers and Floats can operate with each other answer = 42 pi = 3.14159 print(answer &#43; pi)  String We can use single, double and tripple quotes to create strings
+&#39;Hello World&#39; == &quot;Hello World&quot; == &quot;&quot;&quot;Hello World&quot;&quot;&quot;  There are a number of useful string methods">
+  <meta property="og:description" content="This post will cover the absolutely basics of Python language
+Types, Statements Unlike others, there&rsquo;s no need to declare variables in Python
+## No Need to declare Python variables answer = 42 name = &quot;Python&quot; print(answer) print(name) ## Integers and Floats can operate with each other answer = 42 pi = 3.14159 print(answer &#43; pi)  String We can use single, double and tripple quotes to create strings
+&#39;Hello World&#39; == &quot;Hello World&quot; == &quot;&quot;&quot;Hello World&quot;&quot;&quot;  There are a number of useful string methods">
+  <meta name="twitter:description" content="This post will cover the absolutely basics of Python language
+Types, Statements Unlike others, there&rsquo;s no need to declare variables in Python
+## No Need to declare Python variables answer = 42 …">
+  <meta name="author" content="Isaac Zhou"/>
+  <link href='https://pages.gitlab.io/hugo/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://pages.gitlab.io/hugo/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://pages.gitlab.io/hugo/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@username" />
+  <meta name="twitter:creator" content="@username" />
+  <meta property="og:url" content="https://pages.gitlab.io/post/python-fundamentals/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PrimerPy" />
+
+  <meta name="generator" content="Hugo 0.30.2" />
+  <link rel="canonical" href="https://pages.gitlab.io/post/python-fundamentals/" />
+  <link rel="alternate" href="https://pages.gitlab.io/hugo/index.xml" type="application/rss+xml" title="PrimerPy">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pages.gitlab.io/hugo/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://pages.gitlab.io/hugo/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://pages.gitlab.io/hugo/css/highlight.min.css" />
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://pages.gitlab.io/hugo/">PrimerPy</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="https://pages.gitlab.io/hugo/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Samples</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://pages.gitlab.io/hugo/post/2017-03-07-bigimg-sample">Big Image Sample</a>
+                
+                  <a href="https://pages.gitlab.io/hugo/post/2017-03-05-math-sample">Math Sample</a>
+                
+                  <a href="https://pages.gitlab.io/hugo/post/2016-03-08-code-sample">Code Sample</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="https://pages.gitlab.io/hugo/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="https://pages.gitlab.io/hugo/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="PrimerPy" href="https://pages.gitlab.io/hugo/">
+            <img class="avatar-img" src="https://pages.gitlab.io/hugo/img/avatar-icon.png" alt="PrimerPy" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Python Fundamentals</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on November 1, 2017
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>This post will cover the absolutely basics of Python language</p>
+
+<h2 id="types-statements">Types, Statements</h2>
+
+<p>Unlike others, there&rsquo;s no need to declare variables in Python</p>
+
+<pre><code class="language-ipython">## No Need to declare Python variables
+answer = 42
+name = &quot;Python&quot;
+
+print(answer)
+print(name)
+
+## Integers and Floats can operate with each other
+answer = 42
+pi = 3.14159
+
+print(answer + pi)
+</code></pre>
+
+<h2 id="string">String</h2>
+
+<p>We can use single, double and tripple quotes to create strings</p>
+
+<pre><code class="language-ipython">'Hello World' == &quot;Hello World&quot; == &quot;&quot;&quot;Hello World&quot;&quot;&quot;
+</code></pre>
+
+<p>There are a number of useful string methods</p>
+
+<pre><code class="language-ipython">### There are a bunch of useful string methods
+
+### Capitalize the first letter
+print(&quot;hello&quot;.capitalize())
+
+### Convert all string characters to uppercase
+print(&quot;hello&quot;.upper())
+
+### Replace a letter
+print(&quot;hello&quot;.replace(&quot;e&quot;,&quot;3&quot;))
+
+### Check if string contrains only alphabet
+print(&quot;hello&quot;.isalpha() == True)
+
+### Check if string contains only numbers
+print(&quot;123&quot;.isdigit() == True)
+
+### Split string to a list
+print(&quot;some, csv, values&quot;.split(&quot;,&quot;))
+
+### String Format Function
+print(&quot;{a} and {b} are changing the world now&quot;
+      .format(a = &quot;Machine Learning&quot;, b=&quot;Artificial Intelligence&quot;))
+</code></pre>
+
+<h2 id="list">List</h2>
+
+<pre><code class="language-ipython">student_names = [&quot;Mark&quot;, &quot;Katarina&quot;, &quot;Tim&quot;]
+
+## Add an item to a list
+## Same as the push method in javascript
+student_names.append(&quot;Isaac&quot;)
+
+## Check if an element is in a list
+print(&quot;Tim&quot; in student_names)
+
+## List comprehension
+print([element for element in student_names if len(element) &lt;= 4])
+
+score = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;]
+## dictionary comprehension
+results_dict = {a:b for (a,b) in zip(student_names, score)}
+print(results_dict)
+
+## set comprehension, seldom used
+## can use [::-1] to reverse a list
+results_set = {(a,b) for (a,b) in zip(student_names, score[::-1])}
+print(results_set)
+</code></pre>
+
+<pre><code class="language-ipython">student_names = [&quot;Mark&quot;, &quot;Katarina&quot;, &quot;Tim&quot;]
+## Add an item to a list
+## Same as the push method in javascript
+[&quot;Mark&quot;, &quot;Katarina&quot;, &quot;Tim&quot;].append(&quot;Isaac&quot;)
+
+[stu.upper() for stu in student_names]
+
+student_names[1:]
+student_names[:-1]
+del student_names[2]
+</code></pre>
+
+<h2 id="loop">Loop</h2>
+
+<pre><code class="language-ipython">## Python way
+for var in collection:
+    # Do something
+</code></pre>
+
+<pre><code class="language-javascript">for(var i = 0; i &lt; collection.length; i++) {
+    // do something
+}
+</code></pre>
+
+<h2 id="break-and-continue">Break and Continue</h2>
+
+<p>Sometimes we don&rsquo;t want the loop to run to the end</p>
+
+<pre><code class="language-ipython">student_names = [&quot;James&quot;, &quot;Mark&quot;, &quot;Ben&quot;, &quot;Iza&quot;, &quot;Frank&quot;]
+
+for name in student_names:
+    print(&quot;Searched name is: &quot;+ name)
+    if name == &quot;Iza&quot;:
+        print(&quot;Find him&quot;)
+        break
+</code></pre>
+
+<p>Continue</p>
+
+<pre><code class="language-ipython">student_names = [&quot;James&quot;, &quot;Mark&quot;, &quot;Ben&quot;, &quot;Iza&quot;, &quot;Frank&quot;]
+
+for name in student_names:
+    if name == &quot;Ben&quot;:
+        print(&quot;Found Ben!&quot;)
+        continue
+    print(&quot;Current student is: &quot;+name)    
+</code></pre>
+
+<h2 id="while-loops">While loops</h2>
+
+<p>I rarely use while loops in Python</p>
+
+<pre><code class="language-ipython">x = 0
+
+while x &lt;= 10:
+    print(&quot;X is &quot;,x)
+    x += 1
+</code></pre>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://pages.gitlab.io/hugo/post/2017-03-20-photoswipe-gallery-sample/" data-toggle="tooltip" data-placement="top" title="Photoswipe Gallery Sample">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:isaaczhou85@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/username" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/username" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/XXXXXXX/username" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="https://pages.gitlab.io/hugo/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Isaac Zhou
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://pages.gitlab.io/hugo/">PrimerPy</a>
+          
+        </p>
+        
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://pages.gitlab.io/hugo/js/main.js"></script>
+<script src="https://pages.gitlab.io/hugo/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+
