@@ -1,4 +1,4 @@
-baseurl = "https://pages.gitlab.io/hugo/"
+baseurl = "http://www.primerpy.com/"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
