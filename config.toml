@@ -36,7 +36,7 @@ pygmentCodeFences = true
 [Author]
   name = "Isaac Zhou"
   email = "isaaczhou85@gmail.com"
-  github = "username"
+  github = "primerpy"
   twitter = "username"
   reddit = "username"
   linkedin = "username"
@@ -73,6 +73,12 @@ pygmentCodeFences = true
     parent = "samples"
     name = "Code Sample"
     url = "post/2016-03-08-code-sample"
+    weight = 3
+
+[[menu.main]]
+    parent = "samples"
+    name = "Advanced Javascript"
+    url = "/tags/javascript/advanced-javascript"
     weight = 3
 
 [[menu.main]]
