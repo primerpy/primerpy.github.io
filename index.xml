@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
     <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
-    <lastBuildDate>Wed, 01 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.primerpy.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Advanced Javascript Array Methods</title>
+      <link>http://www.primerpy.com/post/advanced-array-methods/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/advanced-array-methods/</guid>
+      <description>forEach  Iterates through an array Runs a callback function on each value in the array always returns &amp;ldquo;undefined&amp;rdquo;  var arr = [1,2,3,5] arr.forEach(function(d,i,arr){ console.log(d,i); });   How does forEach work  var forEach = (arr, callback) =&amp;gt; { for(var i = 0; i &amp;lt; arr.length; i++) { callback(arr[i],i,arr); } }   Using forEach in a function  var halfValues = (arr) =&amp;gt; { let newArr = []; arr.</description>
+    </item>
     
     <item>
       <title>Python Fundamentals</title>
