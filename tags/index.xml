@@ -49,11 +49,29 @@
     </item>
     
     <item>
+      <title>D3</title>
+      <link>http://www.primerpy.com/tags/d3/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/d3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Example</title>
       <link>http://www.primerpy.com/tags/example/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
       <guid>http://www.primerpy.com/tags/example/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>http://www.primerpy.com/tags/javascript/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/javascript/</guid>
       <description></description>
     </item>
     
@@ -90,6 +108,15 @@
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
       <guid>http://www.primerpy.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualization</title>
+      <link>http://www.primerpy.com/tags/visualization/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/visualization/</guid>
       <description></description>
     </item>
     

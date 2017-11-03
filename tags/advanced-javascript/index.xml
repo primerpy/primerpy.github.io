@@ -13,15 +13,6 @@
     
     
     <item>
-      <title>Advanced Javascript Ajax</title>
-      <link>http://www.primerpy.com/post/advanced-javascript-ajax/</link>
-      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
-      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/advanced-javascript-ajax/</guid>
-      <description> HTML &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Title of the document&amp;lt;/title&amp;gt; &amp;lt;script src=&amp;quot;https://code.jquery.com/jquery-3.2.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;button id=&amp;quot;getBtn&amp;quot;&amp;gt;GET()&amp;lt;/button&amp;gt; &amp;lt;button id=&amp;quot;postBtn&amp;quot;&amp;gt;POST()&amp;lt;/button&amp;gt; &amp;lt;button id=&amp;quot;getJSONBtn&amp;quot;&amp;gt;GETJSON()&amp;lt;/button&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  JS $(&amp;quot;#getBtn&amp;quot;).click(function(){ $.get(&amp;quot;https://api.github.com/users/isaaczhou&amp;quot;) .done(function(data){ console.log(data.blog); }).fail(function(){ { console.log(&amp;quot;Error!&amp;quot;) } }) }) $(&amp;quot;#postBtn&amp;quot;).click(function(){ var data = { name: &amp;quot;Isaac&amp;quot;, city: &amp;quot;New York&amp;quot; }; $.post(&amp;quot;www.isaaczhou.com&amp;quot;, data) .done(function(data){ console.log(&amp;quot;Hi Isaac!&amp;quot;) }).fail(function(error){ console.log(error); }) }) $(&amp;quot;#getJSONBtn&amp;quot;).click(function(){ $.getJSON(&amp;quot;https://raw.githubusercontent.com/RobertLowe/nvd3/master/examples/nations.json&amp;quot;) .done(function(data){ console.log(data[153]); }).fail(function(error){ console.log(error) }) })  </description>
-    </item>
-    
-    <item>
       <title>Advanced Javascript Array Methods</title>
       <link>http://www.primerpy.com/post/advanced-array-methods/</link>
       <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
