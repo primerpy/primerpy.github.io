@@ -5,12 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Advanced Javascript Ajax</title>
-  <meta property="og:title" content="Advanced Javascript Ajax" />
-  <meta name="twitter:title" content="Advanced Javascript Ajax" />
-  <meta name="description" content=" HTML &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;Title of the document&lt;/title&gt; &lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; &lt;body&gt; &lt;button id=&quot;getBtn&quot;&gt;GET()&lt;/button&gt; &lt;button id=&quot;postBtn&quot;&gt;POST()&lt;/button&gt; &lt;button id=&quot;getJSONBtn&quot;&gt;GETJSON()&lt;/button&gt; &lt;/body&gt; &lt;/html&gt;  JS $(&quot;#getBtn&quot;).click(function(){ $.get(&quot;https://api.github.com/users/isaaczhou&quot;) .done(function(data){ console.log(data.blog); }).fail(function(){ { console.log(&quot;Error!&quot;) } }) }) $(&quot;#postBtn&quot;).click(function(){ var data = { name: &quot;Isaac&quot;, city: &quot;New York&quot; }; $.post(&quot;www.isaaczhou.com&quot;, data) .done(function(data){ console.log(&quot;Hi Isaac!&quot;) }).fail(function(error){ console.log(error); }) }) $(&quot;#getJSONBtn&quot;).click(function(){ $.getJSON(&quot;https://raw.githubusercontent.com/RobertLowe/nvd3/master/examples/nations.json&quot;) .done(function(data){ console.log(data[153]); }).fail(function(error){ console.log(error) }) })  ">
-  <meta property="og:description" content=" HTML &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;Title of the document&lt;/title&gt; &lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; &lt;body&gt; &lt;button id=&quot;getBtn&quot;&gt;GET()&lt;/button&gt; &lt;button id=&quot;postBtn&quot;&gt;POST()&lt;/button&gt; &lt;button id=&quot;getJSONBtn&quot;&gt;GETJSON()&lt;/button&gt; &lt;/body&gt; &lt;/html&gt;  JS $(&quot;#getBtn&quot;).click(function(){ $.get(&quot;https://api.github.com/users/isaaczhou&quot;) .done(function(data){ console.log(data.blog); }).fail(function(){ { console.log(&quot;Error!&quot;) } }) }) $(&quot;#postBtn&quot;).click(function(){ var data = { name: &quot;Isaac&quot;, city: &quot;New York&quot; }; $.post(&quot;www.isaaczhou.com&quot;, data) .done(function(data){ console.log(&quot;Hi Isaac!&quot;) }).fail(function(error){ console.log(error); }) }) $(&quot;#getJSONBtn&quot;).click(function(){ $.getJSON(&quot;https://raw.githubusercontent.com/RobertLowe/nvd3/master/examples/nations.json&quot;) .done(function(data){ console.log(data[153]); }).fail(function(error){ console.log(error) }) })  ">
-  <meta name="twitter:description" content=" HTML &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;Title of the document&lt;/title&gt; &lt;script …">
+  <title>D3</title>
+  <meta property="og:title" content="D3" />
+  <meta name="twitter:title" content="D3" />
   <meta name="author" content="Isaac Zhou"/>
   <link href='http://www.primerpy.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="http://www.primerpy.com/img/avatar-icon.png" />
@@ -18,12 +15,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@username" />
   <meta name="twitter:creator" content="@username" />
-  <meta property="og:url" content="http://www.primerpy.com/post/advanced-javascript-ajax/" />
+  <meta property="og:url" content="http://www.primerpy.com/tags/d3/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PrimerPy" />
 
   <meta name="generator" content="Hugo 0.30.2" />
-  <link rel="canonical" href="http://www.primerpy.com/post/advanced-javascript-ajax/" />
+  <link rel="canonical" href="http://www.primerpy.com/tags/d3/" />
   <link rel="alternate" href="http://www.primerpy.com/index.xml" type="application/rss+xml" title="PrimerPy">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -166,33 +163,14 @@ ga('send', 'pageview');
 
 
     
-  
-  
-  
-
-
-
-
-  
-
   <header class="header-section ">
-    
     <div class="intro-header no-img">
-      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="post-heading">
-              <h1>Advanced Javascript Ajax</h1>
-                
-                
-                  <span class="post-meta">
-  Posted on November 2, 2017
-  
-</span>
-
-
-                
+            <div class="page-heading">
+              <h1>#D3</h1>
+              <hr class="small">
             </div>
           </div>
         </div>
@@ -200,92 +178,88 @@ ga('send', 'pageview');
     </div>
   </header>
 
-
     
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
-
-<h2 id="html">HTML</h2>
-
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;    
-  &lt;title&gt;Title of the document&lt;/title&gt;
-  &lt;script
-     src=&quot;https://code.jquery.com/jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-  &lt;button id=&quot;getBtn&quot;&gt;GET()&lt;/button&gt;
-  &lt;button id=&quot;postBtn&quot;&gt;POST()&lt;/button&gt;
-  &lt;button id=&quot;getJSONBtn&quot;&gt;GETJSON()&lt;/button&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;
-</code></pre>
-
-<h2 id="js">JS</h2>
-
-<pre><code class="language-javascript">$(&quot;#getBtn&quot;).click(function(){
-  $.get(&quot;https://api.github.com/users/isaaczhou&quot;)
-      .done(function(data){
-          console.log(data.blog);
-      }).fail(function(){
-          {
-              console.log(&quot;Error!&quot;)
-          }
-      })
-})
-
-$(&quot;#postBtn&quot;).click(function(){
-  var data = {
-      name: &quot;Isaac&quot;,
-      city: &quot;New York&quot;
-  };
-  $.post(&quot;www.isaaczhou.com&quot;, data)
-      .done(function(data){
-          console.log(&quot;Hi Isaac!&quot;)
-      }).fail(function(error){
-          console.log(error);
-      })
-})
-
-$(&quot;#getJSONBtn&quot;).click(function(){
-  $.getJSON(&quot;https://raw.githubusercontent.com/RobertLowe/nvd3/master/examples/nations.json&quot;)
-      .done(function(data){
-          console.log(data[153]);
-      }).fail(function(error){
-          console.log(error)
-      })
-})
-</code></pre>
-
-      </article>
-
-      <ul class="pager blog-pager">
+        <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/d3-visualization-embedded-in-jupyter-notebook/">
+                <h2 class="post-title">D3 Embedded with Jupyter Notebook</h2>
+    
+                
+                  <h3 class="post-subtitle">
+                    Use Jupyter notebook to draw D3
+                  </h3>
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on November 3, 2017
+              </p>
+              <div class="post-entry">
+                
+                  Embed D3 in Jupyter In tis tutorial, I will embed D3 object into Jupyter Notebook. It's not recommended but would benefit from a literate programming perspective  D3 Visualization Embedded in Jupyter Notebook  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.
+                  <a href="http://www.primerpy.com/post/d3-visualization-embedded-in-jupyter-notebook/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/javascript">javascript</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/d3">D3</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/visualization">Visualization</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/enter-append/">
+                <h2 class="post-title">D3 Visualization Enter-Append method</h2>
+    
+                
+                  <h3 class="post-subtitle">
+                    D3 Use Enter Append to add elements
+                  </h3>
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on November 3, 2017
+              </p>
+              <div class="post-entry">
+                
+                  D3-Visualization-Enter-Append What if we don't have elements predefined in svg? What should we do to add/match data with DOM element? We can use enter.append() method  Untitled2  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.
+                  <a href="http://www.primerpy.com/post/enter-append/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/javascript">javascript</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/d3">D3</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/visualization">Visualization</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+        </div>
         
-          <li class="previous">
-            <a href="http://www.primerpy.com/post/advanced-array-methods/" data-toggle="tooltip" data-placement="top" title="Advanced Javascript Array Methods">&larr; Previous Post</a>
-          </li>
-        
-        
-          <li class="next">
-            <a href="http://www.primerpy.com/post/pandas-brandon-rhodes-part2/" data-toggle="tooltip" data-placement="top" title="Brandon Rhodes Part 2">Next Post &rarr;</a>
-          </li>
-        
-      </ul>
-
-      
-        
-      
-
+      </div>
     </div>
   </div>
-</div>
 
     <footer>
   <div class="container">

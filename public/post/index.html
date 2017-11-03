@@ -252,82 +252,69 @@ ga('send', 'pageview');
             </article>
           
             <article class="post-preview">
-              <a href="http://www.primerpy.com/post/advanced-javascript-ajax/">
-                <h2 class="post-title">Advanced Javascript Ajax</h2>
+              <a href="http://www.primerpy.com/post/d3-visualization-embedded-in-jupyter-notebook/">
+                <h2 class="post-title">D3 Embedded with Jupyter Notebook</h2>
     
+                
+                  <h3 class="post-subtitle">
+                    Use Jupyter notebook to draw D3
+                  </h3>
                 
               </a>
     
               <p class="post-meta">
-                Posted on November 2, 2017
+                Posted on November 3, 2017
               </p>
               <div class="post-entry">
                 
-                  
-
-<h2 id="html">HTML</h2>
-
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;    
-  &lt;title&gt;Title of the document&lt;/title&gt;
-  &lt;script
-     src=&quot;https://code.jquery.com/jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-  &lt;button id=&quot;getBtn&quot;&gt;GET()&lt;/button&gt;
-  &lt;button id=&quot;postBtn&quot;&gt;POST()&lt;/button&gt;
-  &lt;button id=&quot;getJSONBtn&quot;&gt;GETJSON()&lt;/button&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;
-</code></pre>
-
-<h2 id="js">JS</h2>
-
-<pre><code class="language-javascript">$(&quot;#getBtn&quot;).click(function(){
-  $.get(&quot;https://api.github.com/users/isaaczhou&quot;)
-      .done(function(data){
-          console.log(data.blog);
-      }).fail(function(){
-          {
-              console.log(&quot;Error!&quot;)
-          }
-      })
-})
-
-$(&quot;#postBtn&quot;).click(function(){
-  var data = {
-      name: &quot;Isaac&quot;,
-      city: &quot;New York&quot;
-  };
-  $.post(&quot;www.isaaczhou.com&quot;, data)
-      .done(function(data){
-          console.log(&quot;Hi Isaac!&quot;)
-      }).fail(function(error){
-          console.log(error);
-      })
-})
-
-$(&quot;#getJSONBtn&quot;).click(function(){
-  $.getJSON(&quot;https://raw.githubusercontent.com/RobertLowe/nvd3/master/examples/nations.json&quot;)
-      .done(function(data){
-          console.log(data[153]);
-      }).fail(function(error){
-          console.log(error)
-      })
-})
-</code></pre>
-
+                  Embed D3 in Jupyter In tis tutorial, I will embed D3 object into Jupyter Notebook. It's not recommended but would benefit from a literate programming perspective  D3 Visualization Embedded in Jupyter Notebook  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.
+                  <a href="http://www.primerpy.com/post/d3-visualization-embedded-in-jupyter-notebook/" class="post-read-more">[Read More]</a>
                 
               </div>
     
               
                 <span class="post-meta">
                   
-                    #<a href="http://www.primerpy.com/tags/advanced-javascript">advanced-javascript</a>&nbsp;
+                    #<a href="http://www.primerpy.com/tags/javascript">javascript</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/d3">D3</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/visualization">Visualization</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/enter-append/">
+                <h2 class="post-title">D3 Visualization Enter-Append method</h2>
+    
+                
+                  <h3 class="post-subtitle">
+                    D3 Use Enter Append to add elements
+                  </h3>
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on November 3, 2017
+              </p>
+              <div class="post-entry">
+                
+                  D3-Visualization-Enter-Append What if we don't have elements predefined in svg? What should we do to add/match data with DOM element? We can use enter.append() method  Untitled2  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.
+                  <a href="http://www.primerpy.com/post/enter-append/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/javascript">javascript</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/d3">D3</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/visualization">Visualization</a>&nbsp;
                   
                 </span>
               
@@ -626,41 +613,6 @@ $$</p>
                     #<a href="http://www.primerpy.com/tags/example">example</a>&nbsp;
                   
                     #<a href="http://www.primerpy.com/tags/math">math</a>&nbsp;
-                  
-                </span>
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/2016-03-08-code-sample/">
-                <h2 class="post-title">Code Sample</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    Using Hugo or Pygments
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on March 8, 2016
-              </p>
-              <div class="post-entry">
-                
-                  <p>The following are two code samples using syntax highlighting.</p>
-
-<p></p>
-                  <a href="http://www.primerpy.com/post/2016-03-08-code-sample/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.primerpy.com/tags/example">example</a>&nbsp;
-                  
-                    #<a href="http://www.primerpy.com/tags/code">code</a>&nbsp;
                   
                 </span>
               
