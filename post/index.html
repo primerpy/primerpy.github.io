@@ -31,6 +31,13 @@
   <link rel="stylesheet" href="http://www.primerpy.com/css/pygment_highlights.css" />
   <link rel="stylesheet" href="http://www.primerpy.com/css/highlight.min.css" />
 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-103009539-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
 </head>
 
   <body>
@@ -50,8 +57,35 @@
       <ul class="nav navbar-nav navbar-right">
         
           
-            <li>
-              <a title="Blog" href="http://www.primerpy.com/">Blog</a>
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Python</a>
+              <div class="navlinks-children">
+                
+                  <a href="http://www.primerpy.com/tags/basic-python">Basic Python</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">R</a>
+              <div class="navlinks-children">
+                
+                  <a href="http://www.primerpy.com/tags/basic-r">Basic R</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Javascript</a>
+              <div class="navlinks-children">
+                
+                  <a href="http://www.primerpy.com/tags/advanced-javascript">Advanced JS</a>
+                
+              </div>
             </li>
           
         
@@ -65,8 +99,6 @@
                   <a href="http://www.primerpy.com/post/2017-03-05-math-sample">Math Sample</a>
                 
                   <a href="http://www.primerpy.com/post/2016-03-08-code-sample">Code Sample</a>
-                
-                  <a href="http://www.primerpy.com/tags/advanced-javascript">Advanced Javascript</a>
                 
               </div>
             </li>
@@ -88,6 +120,12 @@
         
 
         
+          <li>
+            <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
+              <span class="hidden-sm hidden-md hidden-lg">Search</span> <span id="searchGlyph" class="glyphicon glyphicon-search"></span>
+            </a>
+          </li>
+        
       </ul>
     </div>
 
@@ -105,6 +143,23 @@
 </nav>
 
 
+
+  <div id="modalSearch" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Search PrimerPy</h4>
+        </div>
+        <div class="modal-body">
+          <gcse:search></gcse:search>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
     
@@ -129,6 +184,69 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/pandas-brandon-rhodes-part1/pandas-brandon-rhodes-part1/">
+                <h2 class="post-title">Brandon Rhodes</h2>
+    
+                
+                  <h3 class="post-subtitle">
+                    Brandon Rhodes Pandas
+                  </h3>
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on November 3, 2017
+              </p>
+              <div class="post-entry">
+                
+                  This is the part two from Brandon Rhodes Pandas Tutorial pandas-brandon-rhodes-part2
+#Import libraries, display plot in the notebook %matplotlib inline import pandas as pd # import jtplot submodule from jupyterthemes from jupyterthemes import jtplot # currently installed theme will be used to # set plot style if no arguments provided jtplot.style() #Ignore warnings import warnings warnings.filterwarnings('ignore')  1. Read Data files and Explore Contents titles_path = \ &quot;/home/isaac/Dropbox/Pandas/pycon-pandas-tutorial/data/titles.csv&quot; cast_path = \ &quot;/home/isaac/Dropbox/Pandas/pycon-pandas-tutorial/data/cast.
+                  <a href="http://www.primerpy.com/post/pandas-brandon-rhodes-part1/pandas-brandon-rhodes-part1/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/basic-python">basic-python</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/pandas-brandon-rhodes-part2/">
+                <h2 class="post-title">Brandon Rhodes Part 2</h2>
+    
+                
+                  <h3 class="post-subtitle">
+                    Brandon Rhodes Pandas
+                  </h3>
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on November 3, 2017
+              </p>
+              <div class="post-entry">
+                
+                  pandas-brandon-rhodes-part1  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.
+                  <a href="http://www.primerpy.com/post/pandas-brandon-rhodes-part2/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/basic-python">basic-python</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
           
             <article class="post-preview">
               <a href="http://www.primerpy.com/post/advanced-javascript-ajax/">
@@ -290,7 +408,7 @@ Types, Statements Unlike others, there&rsquo;s no need to declare variables in P
               
                 <span class="post-meta">
                   
-                    #<a href="http://www.primerpy.com/tags/python-basics">python-basics</a>&nbsp;
+                    #<a href="http://www.primerpy.com/tags/basic-python">basic-python</a>&nbsp;
                   
                 </span>
               
@@ -546,67 +664,6 @@ $$</p>
     
             </article>
           
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/2015-02-26-flake-it-till-you-make-it/">
-                <h2 class="post-title">Flake it till you make it</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    Excerpt from Soulshaping by Jeff Brown
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on February 26, 2015
-              </p>
-              <div class="post-entry">
-                
-                  Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?
-                  <a href="http://www.primerpy.com/post/2015-02-26-flake-it-till-you-make-it/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/2015-02-20-test-markdown/">
-                <h2 class="post-title">Test markdown</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    Each post also has a subtitle
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on February 20, 2015
-              </p>
-              <div class="post-entry">
-                
-                  You can write regular markdown here and Jekyll will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it&rsquo;ll teach you how to transform regular text into bold/italics/headings/tables/etc.
-Here is some bold text
-Here is a secondary heading Here&rsquo;s a useless table:
-   Number Next number Previous number     Five Six Four   Ten Eleven Nine   Seven Eight Six   Two Three One    How about a yummy crepe?
-                  <a href="http://www.primerpy.com/post/2015-02-20-test-markdown/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.primerpy.com/tags/example">example</a>&nbsp;
-                  
-                    #<a href="http://www.primerpy.com/tags/markdown">markdown</a>&nbsp;
-                  
-                </span>
-              
-    
-            </article>
-          
         </div>
         
           <ul class="pager main-pager">
@@ -668,14 +725,6 @@ Here is a secondary heading Here&rsquo;s a useless table:
                   </span>
                 </a>
               </li>
-              <li>
-                <a href="https://stackoverflow.com/users/XXXXXXX/username" title="StackOverflow">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
           
           <li>
             <a href="http://www.primerpy.com/index.xml" title="RSS">
@@ -718,6 +767,18 @@ Here is a secondary heading Here&rsquo;s a useless table:
 
 
 
+
+<script>
+  (function() {
+    var cx = '000580855040544163791%3Arl5nzawcqq8';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
 
 
   </body>
