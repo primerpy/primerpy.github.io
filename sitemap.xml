@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.primerpy.com/post/pandas-brandon-rhodes-part1/pandas-brandon-rhodes-part1/</loc>
+    <loc>http://www.primerpy.com/post/pandas-brandon-rhodes-part1/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -156,6 +156,12 @@
   
   <url>
     <loc>http://www.primerpy.com/post/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.primerpy.com/tags/python/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
