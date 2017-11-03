@@ -14,7 +14,7 @@ pygmentCodeFences = true
 googleAnalytics = "UA-103009539-1"
 
 [Params]
-  subtitle = "A Primer on Programming Languages that are Relevant"
+  subtitle = "A Primer on Data Science Coding"
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
@@ -24,7 +24,7 @@ googleAnalytics = "UA-103009539-1"
   gcse = "000580855040544163791%3Arl5nzawcqq8" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 [[Params.bigimg]]
-  src = "img/lambda-performance.jpg"
+  src = "img/code.jpg"
 #  src = "img/triangle.jpg"
 #  desc = "Triangle"
 #[[Params.bigimg]]
@@ -47,6 +47,7 @@ googleAnalytics = "UA-103009539-1"
     identifier = "python"
     name = "Python"
     weight = 1
+    url = "/tags/python"
 
 [[menu.main]]
     parent = "python"
