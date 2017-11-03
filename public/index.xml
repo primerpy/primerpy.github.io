@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PrimerPy</title>
+    <link>http://www.primerpy.com/</link>
+    <description>Recent content on PrimerPy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
+    <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
+    <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.primerpy.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Brandon Rhodes Part 1</title>
+      <link>http://www.primerpy.com/post/pandas-brandon-rhodes-part1/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/pandas-brandon-rhodes-part1/</guid>
+      <description>This is the part one of Brandon Rhodes  pandas-brandon-rhodes-part1  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.</description>
+    </item>
+    
+    <item>
+      <title>Brandon Rhodes Part 2</title>
+      <link>http://www.primerpy.com/post/pandas-brandon-rhodes-part2/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/pandas-brandon-rhodes-part2/</guid>
+      <description>This is the part two of Brandon Rhodes  pandas-brandon-rhodes-part1  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.</description>
+    </item>
+    
+    <item>
+      <title>Advanced Javascript Ajax</title>
+      <link>http://www.primerpy.com/post/advanced-javascript-ajax/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/advanced-javascript-ajax/</guid>
+      <description> HTML &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Title of the document&amp;lt;/title&amp;gt; &amp;lt;script src=&amp;quot;https://code.jquery.com/jquery-3.2.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;button id=&amp;quot;getBtn&amp;quot;&amp;gt;GET()&amp;lt;/button&amp;gt; &amp;lt;button id=&amp;quot;postBtn&amp;quot;&amp;gt;POST()&amp;lt;/button&amp;gt; &amp;lt;button id=&amp;quot;getJSONBtn&amp;quot;&amp;gt;GETJSON()&amp;lt;/button&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  JS $(&amp;quot;#getBtn&amp;quot;).click(function(){ $.get(&amp;quot;https://api.github.com/users/isaaczhou&amp;quot;) .done(function(data){ console.log(data.blog); }).fail(function(){ { console.log(&amp;quot;Error!&amp;quot;) } }) }) $(&amp;quot;#postBtn&amp;quot;).click(function(){ var data = { name: &amp;quot;Isaac&amp;quot;, city: &amp;quot;New York&amp;quot; }; $.post(&amp;quot;www.isaaczhou.com&amp;quot;, data) .done(function(data){ console.log(&amp;quot;Hi Isaac!&amp;quot;) }).fail(function(error){ console.log(error); }) }) $(&amp;quot;#getJSONBtn&amp;quot;).click(function(){ $.getJSON(&amp;quot;https://raw.githubusercontent.com/RobertLowe/nvd3/master/examples/nations.json&amp;quot;) .done(function(data){ console.log(data[153]); }).fail(function(error){ console.log(error) }) })  </description>
+    </item>
+    
+    <item>
+      <title>Advanced Javascript Array Methods</title>
+      <link>http://www.primerpy.com/post/advanced-array-methods/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/advanced-array-methods/</guid>
+      <description>forEach  Iterates through an array Runs a callback function on each value in the array always returns &amp;ldquo;undefined&amp;rdquo;  var arr = [1,2,3,5] arr.forEach(function(d,i,arr){ console.log(d,i); });   How does forEach work  var forEach = (arr, callback) =&amp;gt; { for(var i = 0; i &amp;lt; arr.length; i++) { callback(arr[i],i,arr); } }   Using forEach in a function  var halfValues = (arr) =&amp;gt; { let newArr = []; arr.</description>
+    </item>
+    
+    <item>
+      <title>JS Closure</title>
+      <link>http://www.primerpy.com/post/js-closure/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/js-closure/</guid>
+      <description>Definition  A closure is a function that makes use of variables defined in outer functions that have previously returned We have to &amp;ldquo;return&amp;rdquo; the inner function for this to work We can either call the inner function right away by using an extra () or we can store the result of the function in a variable Closure only exists when an inner function makes use of variables defined from an outer function that has returned.</description>
+    </item>
+    
+    <item>
+      <title>Python Fundamentals</title>
+      <link>http://www.primerpy.com/post/python-fundamentals/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/python-fundamentals/</guid>
+      <description>This post will cover the absolutely basics of Python language
+Types, Statements Unlike others, there&amp;rsquo;s no need to declare variables in Python
+## No Need to declare Python variables answer = 42 name = &amp;quot;Python&amp;quot; print(answer) print(name) ## Integers and Floats can operate with each other answer = 42 pi = 3.14159 print(answer + pi)  String We can use single, double and tripple quotes to create strings
+&#39;Hello World&#39; == &amp;quot;Hello World&amp;quot; == &amp;quot;&amp;quot;&amp;quot;Hello World&amp;quot;&amp;quot;&amp;quot;  There are a number of useful string methods</description>
+    </item>
+    
+    <item>
+      <title>Photoswipe Gallery Sample</title>
+      <link>http://www.primerpy.com/post/2017-03-20-photoswipe-gallery-sample/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/2017-03-20-photoswipe-gallery-sample/</guid>
+      <description>&lt;p&gt;Beautiful Hugo adds a few custom shortcodes created by &lt;a href=&#34;https://www.liwen.id.au/heg/&#34;&gt;Li-Wen Yip&lt;/a&gt; and &lt;a href=&#34;https://github.com/GjjvdBurg/HugoPhotoSwipe&#34;&gt;Gert-Jan van den Berg&lt;/a&gt; for making galleries with &lt;a href=&#34;http://photoswipe.com&#34;&gt;PhotoSwipe&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;div class=&#34;gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
+	  
+  
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://www.primerpy.com/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/img/hexagon-thumb.jpg&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://www.primerpy.com/img/hexagon-thumb.jpg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://www.primerpy.com/img/hexagon.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+  
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/img/sphere-thumb.jpg&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://www.primerpy.com/img/sphere-thumb.jpg&#34; alt=&#34;Sphere&#34;/&gt;
+    &lt;/div&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Sphere&lt;/p&gt;
+      &lt;/figcaption&gt;
+    &lt;a href=&#34;http://www.primerpy.com/img/sphere.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+  
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/img/triangle-thumb.jpg&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://www.primerpy.com/img/triangle-thumb.jpg&#34; alt=&#34;This is a long comment about a triangle&#34;/&gt;
+    &lt;/div&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Triangle&lt;/p&gt;
+      &lt;/figcaption&gt;
+    &lt;a href=&#34;http://www.primerpy.com/img/triangle.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+
+
+  
+
+
+&lt;script src=&#34;https://code.jquery.com/jquery-1.12.4.min.js&#34; integrity=&#34;sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://www.primerpy.com/js/load-photoswipe.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css&#34; integrity=&#34;sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=&#34; crossorigin=&#34;anonymous&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css&#34; integrity=&#34;sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=&#34; crossorigin=&#34;anonymous&#34; /&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js&#34; integrity=&#34;sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js&#34; integrity=&#34;sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+
+
+&lt;div class=&#34;pswp&#34; tabindex=&#34;-1&#34; role=&#34;dialog&#34; aria-hidden=&#34;true&#34;&gt;
+
+&lt;div class=&#34;pswp__bg&#34;&gt;&lt;/div&gt;
+
+&lt;div class=&#34;pswp__scroll-wrap&#34;&gt;
+    
+    &lt;div class=&#34;pswp__container&#34;&gt;
+      &lt;div class=&#34;pswp__item&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;pswp__item&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;pswp__item&#34;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&#34;pswp__ui pswp__ui--hidden&#34;&gt;
+    &lt;div class=&#34;pswp__top-bar&#34;&gt;
+      
+      &lt;div class=&#34;pswp__counter&#34;&gt;&lt;/div&gt;
+      &lt;button class=&#34;pswp__button pswp__button--close&#34; title=&#34;Close (Esc)&#34;&gt;&lt;/button&gt;
+      &lt;button class=&#34;pswp__button pswp__button--share&#34; title=&#34;Share&#34;&gt;&lt;/button&gt;
+      &lt;button class=&#34;pswp__button pswp__button--fs&#34; title=&#34;Toggle fullscreen&#34;&gt;&lt;/button&gt;
+      &lt;button class=&#34;pswp__button pswp__button--zoom&#34; title=&#34;Zoom in/out&#34;&gt;&lt;/button&gt;
+      
+      
+      &lt;div class=&#34;pswp__preloader&#34;&gt;
+        &lt;div class=&#34;pswp__preloader__icn&#34;&gt;
+          &lt;div class=&#34;pswp__preloader__cut&#34;&gt;
+            &lt;div class=&#34;pswp__preloader__donut&#34;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;pswp__share-modal pswp__share-modal--hidden pswp__single-tap&#34;&gt;
+      &lt;div class=&#34;pswp__share-tooltip&#34;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class=&#34;pswp__button pswp__button--arrow--left&#34; title=&#34;Previous (arrow left)&#34;&gt;
+    &lt;/button&gt;
+    &lt;button class=&#34;pswp__button pswp__button--arrow--right&#34; title=&#34;Next (arrow right)&#34;&gt;
+    &lt;/button&gt;
+    &lt;div class=&#34;pswp__caption&#34;&gt;
+      &lt;div class=&#34;pswp__caption__center&#34;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Big Image Sample</title>
+      <link>http://www.primerpy.com/post/2017-03-07-bigimg-sample/</link>
+      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/2017-03-07-bigimg-sample/</guid>
+      <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Math Sample</title>
+      <link>http://www.primerpy.com/post/2017-03-05-math-sample/</link>
+      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/2017-03-05-math-sample/</guid>
+      <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;
+
+&lt;p&gt;$$
+\phi = \frac{(1+\sqrt{5})}{2} = 1.6180339887\cdots
+$$&lt;/p&gt;
+
+&lt;p&gt;Additional details can be found on &lt;a href=&#34;https://github.com/Khan/KaTeX&#34;&gt;GitHub&lt;/a&gt; or on the &lt;a href=&#34;http://tiddlywiki.com/plugins/tiddlywiki/katex/&#34;&gt;Wiki&lt;/a&gt;.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Code Sample</title>
+      <link>http://www.primerpy.com/post/2016-03-08-code-sample/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/2016-03-08-code-sample/</guid>
+      <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Flake it till you make it</title>
+      <link>http://www.primerpy.com/post/2015-02-26-flake-it-till-you-make-it/</link>
+      <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/2015-02-26-flake-it-till-you-make-it/</guid>
+      <description>Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?</description>
+    </item>
+    
+    <item>
+      <title>Test markdown</title>
+      <link>http://www.primerpy.com/post/2015-02-20-test-markdown/</link>
+      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/2015-02-20-test-markdown/</guid>
+      <description>You can write regular markdown here and Jekyll will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it&amp;rsquo;ll teach you how to transform regular text into bold/italics/headings/tables/etc.
+Here is some bold text
+Here is a secondary heading Here&amp;rsquo;s a useless table:
+   Number Next number Previous number     Five Six Four   Ten Eleven Nine   Seven Eight Six   Two Three One    How about a yummy crepe?</description>
+    </item>
+    
+    <item>
+      <title>To be</title>
+      <link>http://www.primerpy.com/post/2015-02-13-hamlet-monologue/</link>
+      <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/2015-02-13-hamlet-monologue/</guid>
+      <description>To be, or not to be&amp;ndash;that is the question: Whether &amp;lsquo;tis nobler in the mind to suffer The slings and arrows of outrageous fortune Or to take arms against a sea of troubles And by opposing end them. To die, to sleep&amp;ndash; No more&amp;ndash;and by a sleep to say we end The heartache, and the thousand natural shocks That flesh is heir to. &amp;lsquo;Tis a consummation Devoutly to be wished. To die, to sleep&amp;ndash; To sleep&amp;ndash;perchance to dream: ay, there&amp;rsquo;s the rub, For in that sleep of death what dreams may come When we have shuffled off this mortal coil, Must give us pause.</description>
+    </item>
+    
+    <item>
+      <title>Dear diary</title>
+      <link>http://www.primerpy.com/post/2015-01-27-dear-diary/</link>
+      <pubDate>Tue, 27 Jan 2015 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/2015-01-27-dear-diary/</guid>
+      <description>What is it with that Mary girl? Dragging me to school every day. As if I had a choice. What you don&amp;rsquo;t hear in those nursery rhymes is that she starves me if I don&amp;rsquo;t go to school with her; it&amp;rsquo;s the only way I can stay alive! I&amp;rsquo;m thinking about being adopted by Little Bo Peep, sure I may get lost, but anything is better than being with Mary and those little brats at school (shudder, shudder).</description>
+    </item>
+    
+    <item>
+      <title>Soccer</title>
+      <link>http://www.primerpy.com/post/2015-01-19-soccer/</link>
+      <pubDate>Mon, 19 Jan 2015 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/2015-01-19-soccer/</guid>
+      <description>From Wikipedia:
+Association football, more commonly known as football or soccer,[2] is a sport played between two teams of eleven players with a spherical ball. It is played by 250 million players in over 200 countries, making it the world&amp;rsquo;s most popular sport.[3][4][5][6] The game is played on a rectangular field with a goal at each end. The object of the game is to score by getting the ball into the opposing goal.</description>
+    </item>
+    
+    <item>
+      <title>Pirates arrrr</title>
+      <link>http://www.primerpy.com/post/2015-01-15-pirates/</link>
+      <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/2015-01-15-pirates/</guid>
+      <description>Piracy is typically an act of robbery or criminal violence at sea. The term can include acts committed on land, in the air, or in other major bodies of water or on a shore. It does not normally include crimes committed against persons traveling on the same vessel as the perpetrator (e.g. one passenger stealing from others on the same vessel). The term has been used throughout history to refer to raids across land borders by non-state agents.</description>
+    </item>
+    
+    <item>
+      <title>First post!</title>
+      <link>http://www.primerpy.com/post/2015-01-04-first-post/</link>
+      <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/2015-01-04-first-post/</guid>
+      <description>This is my first post, how exciting!</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>http://www.primerpy.com/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/page/about/</guid>
+      <description>My name is The Dude. I have the following qualities:
+ I rock a great beard I&amp;rsquo;m extremely loyal to my friends I like bowling  That rug really tied the room together.
+my history To be honest, I&amp;rsquo;m having some trouble remembering right now, so why don&amp;rsquo;t you just watch my movie and it will answer all your questions.</description>
+    </item>
+    
+  </channel>
+</rss>

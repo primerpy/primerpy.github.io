@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on PrimerPy</title>
+    <link>http://www.primerpy.com/tags/</link>
+    <description>Recent content in Tags on PrimerPy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
+    <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
+    <lastBuildDate>Thu, 02 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.primerpy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Advanced Javascript</title>
+      <link>http://www.primerpy.com/tags/advanced-javascript/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/advanced-javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Basic Python</title>
+      <link>http://www.primerpy.com/tags/basic-python/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/basic-python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bigimg</title>
+      <link>http://www.primerpy.com/tags/bigimg/</link>
+      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/bigimg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Code</title>
+      <link>http://www.primerpy.com/tags/code/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Example</title>
+      <link>http://www.primerpy.com/tags/example/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/example/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>http://www.primerpy.com/tags/markdown/</link>
+      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>http://www.primerpy.com/tags/math/</link>
+      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photoswipe</title>
+      <link>http://www.primerpy.com/tags/photoswipe/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/photoswipe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://www.primerpy.com/tags/python/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
