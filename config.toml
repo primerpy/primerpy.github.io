@@ -47,7 +47,6 @@ googleAnalytics = "UA-103009539-1"
     identifier = "python"
     name = "Python"
     weight = 1
-    url = "/tags/python"
 
 [[menu.main]]
     parent = "python"
@@ -76,6 +75,12 @@ googleAnalytics = "UA-103009539-1"
     name = "Advanced JS"
     url = "/tags/advanced-javascript"
     weight = 1
+
+[[menu.main]]
+    parent = "js"
+    name = "D3"
+    url = "/tags/d3"
+    weight = 2
     
 [[menu.main]]
     identifier = "samples"
