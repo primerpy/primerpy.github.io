@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on PrimerPy</title>
+    <link>http://www.primerpy.com/categories/javascript/</link>
+    <description>Recent content in Javascript on PrimerPy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
+    <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
+    <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.primerpy.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>D3 Embedded with Jupyter Notebook</title>
+      <link>http://www.primerpy.com/post/d3-visualization-embedded-in-jupyter-notebook/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/d3-visualization-embedded-in-jupyter-notebook/</guid>
+      <description>In this tutorial, I will embed D3 object into Jupyter Notebook. It&#39;s not recommended to write D3 or javascript in general with Jupyter notebook, but I could see some benefits from a literate programming perspective. I can see the results right away instead of rendering the whole html page or use Blockbuilder, which is actually pretty neat. I would definitely use blockbuilder on the fly or learn from others&#39; works. Another benefit of using Jupyter notebook is to conveniently use Python to generate data and assign it to the D3 object.</description>
+    </item>
+    
+  </channel>
+</rss>

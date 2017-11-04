@@ -36,7 +36,7 @@
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
       <guid>http://www.primerpy.com/post/d3-visualization-embedded-in-jupyter-notebook/</guid>
-      <description>Embed D3 in Jupyter In tis tutorial, I will embed D3 object into Jupyter Notebook. It&#39;s not recommended but would benefit from a literate programming perspective  D3 Visualization Embedded in Jupyter Notebook  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.</description>
+      <description>In this tutorial, I will embed D3 object into Jupyter Notebook. It&#39;s not recommended to write D3 or javascript in general with Jupyter notebook, but I could see some benefits from a literate programming perspective. I can see the results right away instead of rendering the whole html page or use Blockbuilder, which is actually pretty neat. I would definitely use blockbuilder on the fly or learn from others&#39; works. Another benefit of using Jupyter notebook is to conveniently use Python to generate data and assign it to the D3 object.</description>
     </item>
     
     <item>
@@ -304,9 +304,9 @@ Association football, more commonly known as football or soccer,[2] is a sport p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
       <guid>http://www.primerpy.com/page/about/</guid>
-      <description>My name is The Dude. I have the following qualities:
- I rock a great beard I&amp;rsquo;m extremely loyal to my friends I like bowling  That rug really tied the room together.
-my history To be honest, I&amp;rsquo;m having some trouble remembering right now, so why don&amp;rsquo;t you just watch my movie and it will answer all your questions.</description>
+      <description>My name is Isaac Zhou. I love data and coding. This website contains the tutorials/notes for a couple of programming languages:
+ Python Javascript R SQL  Two of my favorite editors emacs and jupyter notebook are used to create contents. I used to use Pelican for site generation but recently I migrated to Hugo for its speed and simpler workflow.
+my other sites I have two other site ACE big data is more project based and covers more advanced topics in Data Science; Isaac Zhou is my personal blog.</description>
     </item>
     
   </channel>
