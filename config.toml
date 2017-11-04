@@ -81,36 +81,52 @@ googleAnalytics = "UA-103009539-1"
     name = "D3"
     url = "/tags/d3"
     weight = 2
-    
+
 [[menu.main]]
-    identifier = "samples"
-    name = "Samples"
+    identifier = "sql"
+    name = "SQL"
     weight = 4
 
 [[menu.main]]
-    parent = "samples"
-    name = "Big Image Sample"
-    url = "post/2017-03-07-bigimg-sample"
+    parent = "sql"
+    name = "SELECT"
+    url = "/tags/sql-select"
     weight = 1
 
-[[menu.main]]
-    parent = "samples"
-    name = "Math Sample"
-    url = "post/2017-03-05-math-sample"
-    weight = 2
+# [[menu.main]]
+#     identifier = "samples"
+#     name = "Samples"
+#     weight = 5
 
-[[menu.main]]
-    parent = "samples"
-    name = "Code Sample"
-    url = "post/2016-03-08-code-sample"
-    weight = 3
+# [[menu.main]]
+#     parent = "samples"
+#     name = "Big Image Sample"
+#     url = "post/2017-03-07-bigimg-sample"
+#     weight = 1
+
+# [[menu.main]]
+#     parent = "samples"
+#     name = "Math Sample"
+#     url = "post/2017-03-05-math-sample"
+#     weight = 2
+
+# [[menu.main]]
+#     parent = "samples"
+#     name = "Code Sample"
+#     url = "post/2016-03-08-code-sample"
+#     weight = 3
 
 [[menu.main]]
     name = "About"
     url = "page/about/"
     weight = 5
 
+# [[menu.main]]
+#     name = "Categories"
+#     url = "categories"
+#     weight = 6
+    
 [[menu.main]]
     name = "Tags"
     url = "tags"
-    weight = 6
+    weight = 7

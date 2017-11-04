@@ -11,5 +11,14 @@
 	<atom:link href="http://www.primerpy.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Javascript</title>
+      <link>http://www.primerpy.com/categories/javascript/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

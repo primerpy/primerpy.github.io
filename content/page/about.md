@@ -1,19 +1,18 @@
 ---
 title: About me
-subtitle: Why you'd want to hang out with me
+subtitle: Why this site is created and my other works
 comments: false
 ---
 
-My name is The Dude. I have the following qualities:
+My name is Isaac Zhou. I love data and coding. This website contains the tutorials/notes for a couple of programming languages:
 
-- I rock a great beard
-- I'm extremely loyal to my friends
-- I like bowling
+- Python
+- Javascript
+- R
+- SQL
 
-That rug really tied the room together.
+Two of my favorite editors emacs and jupyter notebook are used to create contents. I used to use Pelican for site generation but recently I migrated to Hugo for its speed and simpler workflow.
 
-### my history
+### my other sites
 
-To be honest, I'm having some trouble remembering right now, so why don't you
-just watch [my movie](https://en.wikipedia.org/wiki/The_Big_Lebowski) and it
-will answer **all** your questions.
+I have two other site [ACE big data](http://www.acebigdata.com/) is more project based and covers more advanced topics in Data Science; [Isaac Zhou](http://www.isaaczhou.com) is my personal blog.
