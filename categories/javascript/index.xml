@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
     <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
-    <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.primerpy.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Javascript keyword &#34;this&#34;</title>
+      <link>http://www.primerpy.com/post/the-keyword-this/</link>
+      <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/the-keyword-this/</guid>
+      <description>&#34;this&#34; is a reserved keyword in Javscript. It is usually determined by how a function is called (&#34;execution context&#34;).Whenever a javascript function is run, two js keywords are given to that function: &#34;arguments&#34; and &#34;this&#34;. &#34;this&#34; can be determined using four rules: Global, Implicit, Explicit and New. We also discuss how to use apply, call and bind functions to apply the explicit rules.  The Keyword &#34;this&#34;  /*! * * Twitter Bootstrap * */ /*!</description>
+    </item>
     
     <item>
       <title>D3 Embedded with Jupyter Notebook</title>

@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
     <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
-    <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.primerpy.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Javascript keyword &#34;this&#34;</title>
+      <link>http://www.primerpy.com/post/the-keyword-this/</link>
+      <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/the-keyword-this/</guid>
+      <description>&#34;this&#34; is a reserved keyword in Javscript. It is usually determined by how a function is called (&#34;execution context&#34;).Whenever a javascript function is run, two js keywords are given to that function: &#34;arguments&#34; and &#34;this&#34;. &#34;this&#34; can be determined using four rules: Global, Implicit, Explicit and New. We also discuss how to use apply, call and bind functions to apply the explicit rules.  The Keyword &#34;this&#34;  /*! * * Twitter Bootstrap * */ /*!</description>
+    </item>
+    
+    <item>
+      <title>Python Fundamentals</title>
+      <link>http://www.primerpy.com/post/python-fundamentals/</link>
+      <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/python-fundamentals/</guid>
+      <description>In this tutorial, we will learn all the basics to start with Python. Topics covered here includes data types, lists, loops, dictionary etc. We will also take a peek at some more advanced techniques such as list comprehension and dictionary comprehension. Although there are a number of libraries that can make a Pythonist&#39;s life even easier, have a solid foundation would be a key to understand and learn more advanced topics.</description>
+    </item>
     
     <item>
       <title>Brandon Rhodes Part 1</title>
@@ -64,18 +82,6 @@
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
       <guid>http://www.primerpy.com/post/js-closure/</guid>
       <description>Definition  A closure is a function that makes use of variables defined in outer functions that have previously returned We have to &amp;ldquo;return&amp;rdquo; the inner function for this to work We can either call the inner function right away by using an extra () or we can store the result of the function in a variable Closure only exists when an inner function makes use of variables defined from an outer function that has returned.</description>
-    </item>
-    
-    <item>
-      <title>Python Fundamentals</title>
-      <link>http://www.primerpy.com/post/python-fundamentals/</link>
-      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
-      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/python-fundamentals/</guid>
-      <description>This post will cover the absolutely basics of Python language
-Types, Statements Unlike others, there&amp;rsquo;s no need to declare variables in Python
-## No Need to declare Python variables answer = 42 name = &amp;quot;Python&amp;quot; print(answer) print(name) ## Integers and Floats can operate with each other answer = 42 pi = 3.14159 print(answer + pi)  String We can use single, double and tripple quotes to create strings
-&#39;Hello World&#39; == &amp;quot;Hello World&amp;quot; == &amp;quot;&amp;quot;&amp;quot;Hello World&amp;quot;&amp;quot;&amp;quot;  There are a number of useful string methods</description>
     </item>
     
     <item>
