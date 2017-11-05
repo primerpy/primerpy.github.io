@@ -1,219 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+---
+title: Javascript keyword "this"
+subtitle: Examine the keyword "this" and how to use it
+date: 2017-11-04
+tags: ["advanced-javascript"]
+categories: ["javascript"]
+---
 
-  <title>Python Fundamentals</title>
-  <meta property="og:title" content="Python Fundamentals" />
-  <meta name="twitter:title" content="Python Fundamentals" />
-  <meta name="description" content="All the python basics you need to get familiar with">
-  <meta property="og:description" content="All the python basics you need to get familiar with">
-  <meta name="twitter:description" content="All the python basics you need to get familiar with">
-  <meta name="author" content="Isaac Zhou"/>
-  <link href='http://www.primerpy.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="http://www.primerpy.com/img/avatar-icon.png" />
-  <meta name="twitter:image" content="http://www.primerpy.com/img/avatar-icon.png" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@username" />
-  <meta name="twitter:creator" content="@username" />
-  <meta property="og:url" content="http://www.primerpy.com/post/python-fundamentals/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="PrimerPy" />
-
-  <meta name="generator" content="Hugo 0.30.2" />
-  <link rel="canonical" href="http://www.primerpy.com/post/python-fundamentals/" />
-  <link rel="alternate" href="http://www.primerpy.com/index.xml" type="application/rss+xml" title="PrimerPy">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="http://www.primerpy.com/css/main.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="http://www.primerpy.com/css/pygment_highlights.css" />
-  <link rel="stylesheet" href="http://www.primerpy.com/css/highlight.min.css" />
-
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-103009539-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
-</head>
-
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://www.primerpy.com/">PrimerPy</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">Python</a>
-              <div class="navlinks-children">
-                
-                  <a href="http://www.primerpy.com/tags/basic-python">Basic Python</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">Javascript</a>
-              <div class="navlinks-children">
-                
-                  <a href="http://www.primerpy.com/tags/advanced-javascript">Advanced JS</a>
-                
-                  <a href="http://www.primerpy.com/tags/d3">D3</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">R</a>
-              <div class="navlinks-children">
-                
-                  <a href="http://www.primerpy.com/tags/basic-r">Basic R</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">SQL</a>
-              <div class="navlinks-children">
-                
-                  <a href="http://www.primerpy.com/tags/sql-select">SELECT</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li>
-              <a title="About" href="http://www.primerpy.com/page/about/">About</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="Tags" href="http://www.primerpy.com/tags">Tags</a>
-            </li>
-          
-        
-
-        
-
-        
-          <li>
-            <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-              <span class="hidden-sm hidden-md hidden-lg">Search</span> <span id="searchGlyph" class="glyphicon glyphicon-search"></span>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        
-          <a title="PrimerPy" href="http://www.primerpy.com/">
-            <img class="avatar-img" src="http://www.primerpy.com/img/avatar-icon.png" alt="PrimerPy" />
-          </a>
-        
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
-
-  <div id="modalSearch" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Search PrimerPy</h4>
-        </div>
-        <div class="modal-body">
-          <gcse:search></gcse:search>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-    
-  
-  
-  
-
-
-
-
-  
-
-  <header class="header-section ">
-    
-    <div class="intro-header no-img">
-      
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="post-heading">
-              <h1>Python Fundamentals</h1>
-                
-                  
-                    <h2 class="post-subheading">All the python basics you need to get familiar with</h2>
-                  
-                
-                
-                  <span class="post-meta">
-  Posted on November 4, 2017
-  
-</span>
-
-
-                
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-
-    
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        In this tutorial, we will learn all the basics to start with Python. Topics covered here includes data types, lists, loops, dictionary etc. We will also take a peek at some more advanced techniques such as list comprehension and dictionary comprehension. Although there are a number of libraries that can make a Pythonist's life even easier, have a solid foundation would be a key to understand and learn more advanced topics.
-
+"this" is a reserved keyword in Javscript. It is usually determined by how a function is called ("execution context").Whenever a javascript function is run, two js keywords are given to that function: "arguments" and "this". "this" can be determined using four rules: Global, Implicit, Explicit and New. We also discuss how to use apply, call and bind functions to apply the explicit rules.
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Python Fundamentals</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>The Keyword "this"</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -14824,8 +14621,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Table-of-Contents-">Table of Contents <a class="anchor" id="toc" /><a class="anchor-link" href="#Table-of-Contents-">&#182;</a></h2><p>In this tutorial, we will cover the basics of Python. The topics include the following basics</p>
-<h3 id="Types,-Statements"><a href="#types-statements">Types, Statements</a><a class="anchor-link" href="#Types,-Statements">&#182;</a></h3><h3 id="String"><a href="#string">String</a><a class="anchor-link" href="#String">&#182;</a></h3><h3 id="List"><a href="#list">List</a><a class="anchor-link" href="#List">&#182;</a></h3><h3 id="Loop"><a href="#loop">Loop</a><a class="anchor-link" href="#Loop">&#182;</a></h3><h3 id="Break-and-Continue"><a href="#break-continue">Break and Continue</a><a class="anchor-link" href="#Break-and-Continue">&#182;</a></h3><h3 id="Dictionary"><a href="#dictionary">Dictionary</a><a class="anchor-link" href="#Dictionary">&#182;</a></h3><h3 id="File"><a href="#file">File</a><a class="anchor-link" href="#File">&#182;</a></h3><h3 id="Exception"><a href="#exception">Exception</a><a class="anchor-link" href="#Exception">&#182;</a></h3><p><br/></p>
+<h2 id="Table-of-Contents-">Table of Contents <a class="anchor" id="toc" /><a class="anchor-link" href="#Table-of-Contents-">&#182;</a></h2><p>"this" is a reserved keyword in Javscript. It is usually determined by how a function is called ("execution context").Whenever a javascript function is run, two js keywords are given to that function: <strong>"arguments"</strong> and <strong>"this"</strong>. "this" can be determined using four rules:</p>
+<h3 id="Global"><a href="#global">Global</a><a class="anchor-link" href="#Global">&#182;</a></h3><h3 id="Object/Implicit"><a href="#implicit">Object/Implicit</a><a class="anchor-link" href="#Object/Implicit">&#182;</a></h3><h3 id="Explicit"><a href="#explicit">Explicit</a><a class="anchor-link" href="#Explicit">&#182;</a></h3><h3 id="New"><a href="#new">New</a><a class="anchor-link" href="#New">&#182;</a></h3><p><br/></p>
 <hr>
 
 </div>
@@ -14836,30 +14633,22 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Types,-Statements-">Types, Statements <a class="anchor" id="types-statements" /><a class="anchor-link" href="#Types,-Statements-">&#182;</a></h3><p><a href="#toc">[top]</a></p>
+<h3 id="Global-">Global <a class="anchor" id="global" /><a class="anchor-link" href="#Global-">&#182;</a></h3><p>Global rule applies when "this" is not inside of a declared object. In the global context its value refers to the global object which in the browser is the window object.
+<br/>
+<a href="#toc">[top]</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Unlike others, there&#39;s no need to declare variables in Python</span>
-<span class="c1">## No Need to declare Python variables</span>
-<span class="n">answer</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-
-<span class="c1">## Integers and Floats can operate with each other</span>
-<span class="n">answer</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">answer</span> <span class="o">+</span> <span class="n">pi</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">answer</span><span class="o">+</span><span class="n">pi</span><span class="p">))</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// In a browser it will be window</span>
+<span class="c1">// console.log(this); window</span>
+<span class="kd">var</span> <span class="nx">firstName</span> <span class="o">=</span> <span class="s2">&quot;Isaac&quot;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">firstName</span>
 </pre></div>
 
 </div>
@@ -14871,55 +14660,12 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>42
-Python
-45.14159
-&lt;class &#39;float&#39;&gt;
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="String--">String  <a class="anchor" id="string" /><a class="anchor-link" href="#String--">&#182;</a></h3><p><a href="#toc">[top]</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can use single, double and tripple quotes to create strings</span>
-<span class="s1">&#39;Hello World&#39;</span> <span class="o">==</span> <span class="s2">&quot;Hello World&quot;</span> <span class="o">==</span> <span class="s2">&quot;&quot;&quot;Hello World&quot;&quot;&quot;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt output_prompt">Out[88]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>&#39;Isaac&#39;</pre>
 </div>
 
 </div>
@@ -14930,31 +14676,31 @@ Python
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># There are a number of useful string methods</span>
-<span class="c1">### Capitalize the first letter</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">whatIsThis</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span> <span class="c1">// in this case, this is still a global object</span>
+<span class="p">}</span>
+<span class="c1">// whatIsThis(); in a browser it should return window</span>
+</pre></div>
 
-<span class="c1">### Convert all string characters to uppercase</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</div>
+</div>
+</div>
 
-<span class="c1">### Replace a letter</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">))</span>
-
-<span class="c1">### Check if string contrains only alphabet</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
-
-<span class="c1">### Check if string contains only numbers</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
-
-<span class="c1">### Split string to a list</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;some, csv, values&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">))</span>
-
-<span class="c1">### String Format Function</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{a}</span><span class="s2"> and </span><span class="si">{b}</span><span class="s2"> are changing the world now&quot;</span>
-      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Machine Learning&quot;</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="s2">&quot;Artificial Intelligence&quot;</span><span class="p">))</span>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">variablesInThis</span><span class="p">(){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">person</span> <span class="o">=</span> <span class="s2">&quot;Isaac&quot;</span><span class="p">;</span> <span class="c1">// in this case, a global variable is created by invoking this function</span>
+<span class="p">}</span>
+<span class="nx">variablesInThis</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">person</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14969,13 +14715,193 @@ Python
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello
-HELLO
-h3llo
-True
-True
-[&#39;some&#39;, &#39; csv&#39;, &#39; values&#39;]
-Machine Learning and Artificial Intelligence are changing the world now
+<pre>Isaac
+Isaac
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// The right way is to declare the variable in the function</span>
+<span class="kd">function</span> <span class="nx">variablesInThis2</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">person2</span> <span class="o">=</span> <span class="s2">&quot;Isaac&quot;</span><span class="p">;</span> <span class="c1">// in this case, a global variable is created by invoking this function</span>
+<span class="p">}</span>
+<span class="nx">variablesInThis2</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{ firstName: &#39;Isaac&#39;,
+  determineContext: 
+   { global: [Circular],
+     process: 
+      process {
+        title: &#39;/home/isaac/anaconda3/bin/node&#39;,
+        version: &#39;v4.4.0&#39;,
+        moduleLoadList: [Object],
+        versions: [Object],
+        arch: &#39;x64&#39;,
+        platform: &#39;linux&#39;,
+        release: [Object],
+        argv: [Object],
+        execArgv: [Object],
+        env: [Object],
+        pid: 17488,
+        features: [Object],
+        _needImmediateCallback: false,
+        _eval: &#39;(function() {\n/*\n * BSD 3-Clause License\n *\n * Copyright (c) 2015, Nicolas Riesco and others as credited in the AUTHORS file\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are met:\n *\n * 1. Redistributions of source code must retain the above copyright notice,\n * this list of conditions and the following disclaimer.\n *\n * 2. Redistributions in binary form must reproduce the above copyright notice,\n * this list of conditions and the following disclaimer in the documentation\n * and/or other materials provided with the distribution.\n *\n * 3. Neither the name of the copyright holder nor the names of its contributors\n * may be used to endorse or promote products derived from this software without\n * specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &#34;AS IS&#34;\n * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE\n * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\n * POSSIBILITY OF SUCH DAMAGE.\n *\n */\n\nvar console = require(&#34;console&#34;);\nvar stream = require(&#34;stream&#34;);\nvar util = require(&#34;util&#34;);\n\nfunction Stdout(id, opt) {\n    stream.Transform.call(this, opt);\n\n    this._id = id;\n}\n\nStdout.prototype = Object.create(stream.Transform.prototype);\n\nStdout.prototype._transform = function(data, encoding, callback) {\n    var response = {\n        id: this._id,\n        stdout: data.toString(),\n    };\n    log(&#34;STDOUT:&#34;, response);\n    process.send(response);\n    this.push(data);\n    callback();\n};\n\nfunction Stderr(id, opt) {\n    stream.Transform.call(this, opt);\n\n    this._id = id;\n}\n\nStderr.prototype = Object.create(stream.Transform.prototype);\n\nStderr.prototype._transform = function(data, encoding, callback) {\n    var response = {\n        id: this._id,\n        stderr: data.toString(),\n    };\n    log(&#34;STDERR:&#34;, response);\n    process.send(response);\n    this.push(data);\n    callback();\n};\n\nfunction Context(id) {\n    this.id = id;\n\n    this.stdout = new Stdout(this.id);\n    this.stderr = new Stderr(this.id);\n    this.console = new console.Console(this.stdout, this.stderr);\n\n    this._capturedStdout = null;\n    this._capturedStderr = null;\n    this._capturedConsole = null;\n\n    this._async = false;\n    this._done = false;\n\n    // `$$` provides an interface for users to access the execution context\n    this.$$ = Object.create(null);\n\n    this.$$.async = (function async(value) {\n        this._async = (arguments.length === 0) ? true : !!value;\n        return this._async;\n    }).bind(this);\n\n    this.$$.done = (function done(result) {\n        this.send((arguments.length === 0) ? {\n            end: true,\n        } : {\n            mime: toMime(result),\n            end: true,\n        });\n    }).bind(this);\n\n    this.$$.sendResult = resolvePromise.call(this,\n        function sendResult(result, keepAlive) {\n            if (keepAlive) this.$$.async();\n\n            this.send({\n                mime: toMime(result),\n                end: !keepAlive,\n            });\n        }\n    );\n\n    this.$$.sendError = resolvePromise.call(this,\n        function sendError(error, keepAlive) {\n            if (keepAlive) this.$$.async();\n\n            this.send({\n                error: formatError(error),\n                end: !keepAlive,\n            });\n        }\n    );\n\n    this.$$.mime = resolvePromise.call(this,\n        function sendMime(mimeBundle, keepAlive) {\n            if (keepAlive) this.$$.async();\n\n            this.send({\n                mime: mimeBundle,\n                end: !keepAlive,\n            });\n        }\n    );\n\n    this.$$.text = resolvePromise.call(this,\n        function sendText(text, keepAlive) {\n            if (keepAlive) this.$$.async();\n\n            this.send({\n                mime: {\n                    &#34;text/plain&#34;: text,\n                },\n                end: !keepAlive,\n            });\n        }\n    );\n\n    this.$$.html = resolvePromise.call(this,\n        function sendHtml(html, keepAlive) {\n            if (keepAlive) this.$$.async();\n\n            this.send({\n                mime: {\n                    &#34;text/html&#34;: html,\n                },\n                end: !keepAlive,\n            });\n        }\n    );\n\n    this.$$.svg = resolvePromise.call(this,\n        function sendSvg(svg, keepAlive) {\n            if (keepAlive) this.$$.async();\n\n            this.send({\n                mime: {\n                    &#34;image/svg+xml&#34;: svg,\n                },\n                end: !keepAlive,\n            });\n        }\n    );\n\n    this.$$.png = resolvePromise.call(this,\n        function sendPng(png, keepAlive) {\n            if (keepAlive) this.$$.async();\n\n            this.send({\n                mime: {\n                    &#34;image/png&#34;: png,\n                },\n                end: !keepAlive,\n            });\n        }\n    );\n\n    this.$$.jpeg = resolvePromise.call(this,\n        function sendJpeg(jpeg, keepAlive) {\n            if (keepAlive) this.$$.async();\n\n            this.send({\n                mime: {\n                    &#34;image/jpeg&#34;: jpeg,\n                },\n                end: !keepAlive,\n            });\n        }\n    );\n\n    this.$$.json = resolvePromise.call(this,\n        function sendJpeg(json, keepAlive) {\n            if (keepAlive) this.$$.async();\n\n            this.send({\n                mime: {\n                    &#34;application/json&#34;: json,\n                },\n                end: !keepAlive,\n            });\n        }\n    );\n\n    this.$$.display = (function createDisplay(id) {\n        return (arguments.length === 0) ?\n            new Display(this) :\n            new Display(this, id);\n    }).bind(this);\n\n    function isPromise(output) {\n        if (!global.Promise || typeof global.Promise !== &#34;function&#34;) {\n            return false;\n        }\n        return output instanceof global.Promise;\n    }\n\n    function resolvePromise(outputHandler) {\n        return function(output, keepAlive) {\n            if (isPromise(output)) {\n                this.$$.async();\n\n                output.then(function(resolvedOutput) {\n                    outputHandler.call(this, resolvedOutput, keepAlive);\n                }.bind(this)).catch(function(error) {\n                    this.send({\n                        error: formatError(error),\n                        end: true,\n                    });\n                }.bind(this));\n\n                return;\n            }\n\n            outputHandler.apply(this, arguments);\n        }.bind(this);\n    }\n}\n\nContext.prototype.send = function send(message) {\n    message.id = this.id;\n\n    if (this._done) {\n        log(&#34;RESULT: DROPPED:&#34;, message);\n        return;\n    }\n\n    if(message.end) {\n        this._done = true;\n        this._async = false;\n    }\n\n    log(&#34;RESULT:&#34;, message);\n\n    process.send(message);\n};\n\nContext.prototype.captureGlobalContext = function captureGlobalContext() {\n    this._capturedStdout = process.stdout;\n    this._capturedStderr = process.stderr;\n    this._capturedConsole = console;\n\n    this.stdout.pipe(this._capturedStdout);\n    this.stderr.pipe(this._capturedStderr);\n    this.console.Console = this._capturedConsole.Console;\n\n    delete process.stdout;\n    process.stdout = this.stdout;\n\n    delete process.stderr;\n    process.stderr = this.stderr;\n\n    delete global.console;\n    global.console = this.console;\n\n    delete global.$$;\n    global.$$ = this.$$;\n\n    if (typeof global.$$mimer$$ !== &#34;function&#34;) {\n        global.$$mimer$$ = defaultMimer;\n    }\n\n    delete global.$$mime$$;\n    Object.defineProperty(global, &#34;$$mime$$&#34;, {\n        set: this.$$.mime,\n        configurable: true,\n        enumerable: false,\n    });\n\n    delete global.$$html$$;\n    Object.defineProperty(global, &#34;$$html$$&#34;, {\n        set: this.$$.html,\n        configurable: true,\n        enumerable: false,\n    });\n\n    delete global.$$svg$$;\n    Object.defineProperty(global, &#34;$$svg$$&#34;, {\n        set: this.$$.svg,\n        configurable: true,\n        enumerable: false,\n    });\n\n    delete global.$$png$$;\n    Object.defineProperty(global, &#34;$$png$$&#34;, {\n        set: this.$$.png,\n        configurable: true,\n        enumerable: false,\n    });\n\n    delete global.$$jpeg$$;\n    Object.defineProperty(global, &#34;$$jpeg$$&#34;, {\n        set: this.$$.jpeg,\n        configurable: true,\n        enumerable: false,\n    });\n\n    delete global.$$async$$;\n    Object.defineProperty(global, &#34;$$async$$&#34;, {\n        get: (function() {\n            return this._async;\n        }).bind(this),\n        set: (function(value) {\n            this._async = !!value;\n        }).bind(this),\n        configurable: true,\n        enumerable: false,\n    });\n\n    global.$$done$$ = this.$$.done.bind(this);\n\n    if (!global.hasOwnProperty(&#34;$$defaultMimer$$&#34;)) {\n        Object.defineProperty(global, &#34;$$defaultMimer$$&#34;, {\n            value: defaultMimer,\n            configurable: false,\n            writable: false,\n            enumerable: false,\n        });\n    }\n};\n\nContext.prototype.releaseGlobalContext = function releaseGlobalContext() {\n    if (process.stdout === this.stdout) {\n        this.stdout.unpipe();\n\n        delete process.stdout;\n        process.stdout = this._capturedStdout;\n\n        this._capturedStdout = null;\n    }\n\n    if (process.stderr === this.stderr) {\n        this.stderr.unpipe();\n\n        delete process.stderr;\n        process.stderr = this._capturedStderr;\n\n        this._capturedStderr = null;\n    }\n\n    if (global.console === this.console) {\n        delete global.console;\n        global.console = this._capturedConsole;\n\n        this._capturedConsole = null;\n    }\n};\n\nfunction formatError(error) {\n    return {\n        ename: (error &amp;&amp; error.name) ?\n            error.name : typeof error,\n        evalue: (error &amp;&amp; error.message) ?\n            error.message : util.inspect(error),\n        traceback: (error &amp;&amp; error.stack) ?\n            error.stack.split(&#34;\\n&#34;) : &#34;&#34;,\n    };\n}\n\nfunction toMime(result) {\n    var mimer = (typeof global.$$mimer$$ === &#34;function&#34;) ?\n        global.$$mimer$$ :\n        defaultMimer;\n    return mimer(result);\n}\n\nfunction defaultMimer(result) {\n    if (typeof result === &#34;undefined&#34;) {\n        return {\n            &#34;text/plain&#34;: &#34;undefined&#34;\n        };\n    }\n\n    if (result === null) {\n        return {\n            &#34;text/plain&#34;: &#34;null&#34;\n        };\n    }\n\n    var mime;\n    if (result._toMime) {\n        try {\n            mime = result._toMime();\n        } catch (error) {}\n    }\n    if (typeof mime !== &#34;object&#34;) {\n        mime = {};\n    }\n\n    if (!(&#34;text/plain&#34; in mime)) {\n        try {\n            mime[&#34;text/plain&#34;] = util.inspect(result);\n        } catch (error) {}\n    }\n\n    if (result._toHtml &amp;&amp; !(&#34;text/html&#34; in mime)) {\n        try {\n            mime[&#34;text/html&#34;] = result._toHtml();\n        } catch (error) {}\n    }\n\n    if (result._toSvg &amp;&amp; !(&#34;image/svg+xml&#34; in mime)) {\n        try {\n            mime[&#34;image/svg+xml&#34;] = result._toSvg();\n        } catch (error) {}\n    }\n\n    if (result._toPng &amp;&amp; !(&#34;image/png&#34; in mime)) {\n        try {\n            mime[&#34;image/png&#34;] = result._toPng();\n        } catch (error) {}\n    }\n\n    if (result._toJpeg &amp;&amp; !(&#34;image/jpeg&#34; in mime)) {\n        try {\n            mime[&#34;image/jpeg&#34;] = result._toJpeg();\n        } catch (error) {}\n    }\n\n    return mime;\n}\n\n/*\n * BSD 3-Clause License\n *\n * Copyright (c) 2017, Nicolas Riesco and others as credited in the AUTHORS file\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are met:\n *\n * 1. Redistributions of source code must retain the above copyright notice,\n * this list of conditions and the following disclaimer.\n *\n * 2. Redistributions in binary form must reproduce the above copyright notice,\n * this list of conditions and the following disclaimer in the documentation\n * and/or other materials provided with the distribution.\n *\n * 3. Neither the name of the copyright holder nor the names of its contributors\n * may be used to endorse or promote products derived from this software without\n * specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &#34;AS IS&#34;\n * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE\n * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\n * POSSIBILITY OF SUCH DAMAGE.\n *\n */\n\nfunction Display(context, display_id) {\n    if (arguments.length &lt; 2) display_id = &#34;&#34;;\n\n    this.mime = function mime(mimeBundle) {\n        send(mimeBundle);\n    };\n\n    this.text = function text(text) {\n        send({&#34;text/plain&#34;: text});\n    };\n\n    this.html = function html(html) {\n        send({&#34;text/html&#34;: html});\n    };\n\n    this.svg = function svg(svg) {\n        send({&#34;image/svg+xml&#34;: svg});\n    };\n\n    this.png = function png(png) {\n        send({&#34;image/png&#34;: png});\n    };\n\n    this.jpeg = function jpeg(jpeg) {\n        send({&#34;image/jpeg&#34;: jpeg});\n    };\n\n    this.json = function json(json) {\n        send({&#34;application/json&#34;: json});\n    };\n\n    function send(mimeBundle) {\n        var message = {\n            display_id: display_id,\n            mime: mimeBundle,\n        };\n\n        context.send(message);\n    }\n}\n\n/*\n * BSD 3-Clause License\n *\n * Copyright (c) 2015, Nicolas Riesco and others as credited in the AUTHORS file\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are met:\n *\n * 1. Redistributions of source code must retain the above copyright notice,\n * this list of conditions and the following disclaimer.\n *\n * 2. Redistributions in binary form must reproduce the above copyright notice,\n * this list of conditions and the following disclaimer in the documentation\n * and/or other materials provided with the distribution.\n *\n * 3. Neither the name of the copyright holder nor the names of its contributors\n * may be used to endorse or promote products derived from this software without\n * specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &#34;AS IS&#34;\n * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE\n * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\n * POSSIBILITY OF SUCH DAMAGE.\n *\n */\n\nvar vm = require(&#34;vm&#34;);\n\n// Shared variables\nvar DEBUG = !!process.env.DEBUG;\nvar log;\nvar initialContext;\n\n// Init IPC server\ninit();\n\nreturn;\n\nfunction init() {\n    // Setup logger\n    log = DEBUG ?\n        function log() {\n            process.send({\n                log: &#34;SERVER: &#34; + util.format.apply(this, arguments),\n            });\n        } :\n        function noop() {};\n\n    // Capture the initial context\n    // (id left undefined to indicate this is the initial context)\n    initialContext = new Context();\n    initialContext.captureGlobalContext();\n\n    Object.defineProperty(global, &#34;$$defaultMimer$$&#34;, {\n        value: defaultMimer,\n        configurable: false,\n        writable: false,\n        enumerable: false,\n    });\n\n    process.on(&#34;message&#34;, onMessage.bind(this));\n\n    process.on(&#34;uncaughtException&#34;, onUncaughtException.bind(this));\n\n    process.send({\n        status: &#34;online&#34;,\n    });\n}\n\nfunction onUncaughtException(error) {\n    log(&#34;UNCAUGHTEXCEPTION:&#34;, error.stack);\n    process.send({\n        stderr: error.stack.toString(),\n    });\n}\n\nfunction onMessage(request) {\n    log(&#34;REQUEST:&#34;, request);\n\n    var action = request[0];\n    var code = request[1];\n    var id = request[2];\n\n    initialContext.releaseGlobalContext();\n    var context = new Context(id);\n    context.captureGlobalContext();\n\n    try {\n        if (action === &#34;getAllPropertyNames&#34;) {\n            onNameRequest(code, context);\n        } else if (action === &#34;inspect&#34;) {\n            onInspectRequest(code, context);\n        } else if (action === &#34;run&#34;) {\n            onRunRequest(code, context);\n        } else {\n            throw new Error(&#34;NEL: Unhandled action request: &#34; + action);\n        }\n    } catch (error) {\n        context.$$.sendError(error);\n    }\n\n    context.releaseGlobalContext();\n    initialContext.captureGlobalContext();\n    initialContext._done = false;\n}\n\nfunction onNameRequest(code, context) {\n    var message = {\n        id: context.id,\n        names: getAllPropertyNames(run(code)),\n        end: true,\n    };\n    context.send(message);\n}\n\nfunction onInspectRequest(code, context) {\n    var message = {\n        id: context.id,\n        inspection: inspect(run(code)),\n        end: true,\n    };\n    context.send(message);\n}\n\nfunction onRunRequest(code, context) {\n    var result = run(code);\n\n    // Drop result if the run request initiated the async mode\n    if (context._async) {\n        return;\n    }\n\n    // Drop result if the run request has already been replied to\n    if (context._done) {\n        return;\n    }\n\n    context.$$.sendResult(result);\n}\n\nfunction getAllPropertyNames(object) {\n    var propertyList = [];\n\n    if (object === undefined) {\n        return [];\n    }\n\n    if (object === null) {\n        return [];\n    }\n\n    var prototype;\n    if (typeof object === &#34;boolean&#34;) {\n        prototype = Boolean.prototype;\n    } else if (typeof object === &#34;number&#34;) {\n        prototype = Number.prototype;\n    } else if (typeof object === &#34;string&#34;) {\n        prototype = String.prototype;\n    } else {\n        prototype = object;\n    }\n\n    var prototypeList = [prototype];\n\n    function pushToPropertyList(e) {\n        if (propertyList.indexOf(e) === -1) {\n            propertyList.push(e);\n        }\n    }\n\n    while (true) {\n        var names;\n        try {\n            names = Object.getOwnPropertyNames(prototype).sort();\n        } catch (e) {\n            break;\n        }\n        names.forEach(pushToPropertyList);\n\n        prototype = Object.getPrototypeOf(prototype);\n        if (prototype === null) {\n            break;\n        }\n\n        if (prototypeList.indexOf(prototype) === -1) {\n            prototypeList.push(prototype);\n        }\n    }\n\n    return propertyList;\n}\n\nfunction inspect(object) {\n    if (object === undefined) {\n        return {\n            string: &#34;undefined&#34;,\n            type: &#34;Undefined&#34;,\n        };\n    }\n\n    if (object === null) {\n        return {\n            string: &#34;null&#34;,\n            type: &#34;Null&#34;,\n        };\n    }\n\n    if (typeof object === &#34;boolean&#34;) {\n        return {\n            string: object ? &#34;true&#34; : &#34;false&#34;,\n            type: &#34;Boolean&#34;,\n            constructorList: [&#34;Boolean&#34;, &#34;Object&#34;],\n        };\n    }\n\n    if (typeof object === &#34;number&#34;) {\n        return {\n            string: util.inspect(object),\n            type: &#34;Number&#34;,\n            constructorList: [&#34;Number&#34;, &#34;Object&#34;],\n        };\n    }\n\n    if (typeof object === &#34;string&#34;) {\n        return {\n            string: object,\n            type: &#34;String&#34;,\n            constructorList: [&#34;String&#34;, &#34;Object&#34;],\n            length: object.length,\n        };\n    }\n\n    if (typeof object === &#34;function&#34;) {\n        return {\n            string: object.toString(),\n            type: &#34;Function&#34;,\n            constructorList: [&#34;Function&#34;, &#34;Object&#34;],\n            length: object.length,\n        };\n    }\n\n    var constructorList = getConstructorList(object);\n    var result = {\n        string: toString(object),\n        type: constructorList[0] || &#34;&#34;,\n        constructorList: constructorList,\n    };\n\n    if (&#34;length&#34; in object) {\n        result.length = object.length;\n    }\n\n    return result;\n\n    function toString(object) {\n        try {\n            return util.inspect(object.valueOf());\n        } catch (e) {\n            return util.inspect(object);\n        }\n    }\n\n    function getConstructorList(object) {\n        var constructorList = [];\n\n        var prototype = Object.getPrototypeOf(object);\n        while (true) {\n            try {\n                constructorList.push(prototype.constructor.name);\n            } catch (e) {\n                break;\n            }\n            prototype = Object.getPrototypeOf(prototype);\n        }\n\n        return constructorList;\n    }\n}\n\nfunction run(code) {\n    return vm.runInThisContext(code);\n}\n\n})();&#39;,
+        execPath: &#39;/home/isaac/anaconda3/bin/node&#39;,
+        debugPort: 5858,
+        _startProfilerIdleNotifier: [Function: _startProfilerIdleNotifier],
+        _stopProfilerIdleNotifier: [Function: _stopProfilerIdleNotifier],
+        _getActiveRequests: [Function: _getActiveRequests],
+        _getActiveHandles: [Function: _getActiveHandles],
+        reallyExit: [Function: reallyExit],
+        abort: [Function: abort],
+        chdir: [Function: chdir],
+        cwd: [Function: cwd],
+        umask: [Function: umask],
+        getuid: [Function: getuid],
+        geteuid: [Function: geteuid],
+        setuid: [Function: setuid],
+        seteuid: [Function: seteuid],
+        setgid: [Function: setgid],
+        setegid: [Function: setegid],
+        getgid: [Function: getgid],
+        getegid: [Function: getegid],
+        getgroups: [Function: getgroups],
+        setgroups: [Function: setgroups],
+        initgroups: [Function: initgroups],
+        _kill: [Function: _kill],
+        _debugProcess: [Function: _debugProcess],
+        _debugPause: [Function: _debugPause],
+        _debugEnd: [Function: _debugEnd],
+        hrtime: [Function: hrtime],
+        dlopen: [Function: dlopen],
+        uptime: [Function: uptime],
+        memoryUsage: [Function: memoryUsage],
+        binding: [Function: binding],
+        _linkedBinding: [Function: _linkedBinding],
+        _setupDomainUse: [Function: _setupDomainUse],
+        _events: [Object],
+        _rawDebug: [Function],
+        _eventsCount: 5,
+        domain: null,
+        _maxListeners: undefined,
+        EventEmitter: [Object],
+        _fatalException: [Function],
+        _exiting: false,
+        assert: [Function],
+        config: [Object],
+        nextTick: [Function: nextTick],
+        _tickCallback: [Function: _tickCallback],
+        _tickDomainCallback: [Function: _tickDomainCallback],
+        stdin: [Getter],
+        openStdin: [Function],
+        exit: [Function],
+        kill: [Function],
+        _channel: [Object],
+        _handleQueue: null,
+        send: [Function],
+        _send: [Function],
+        connected: true,
+        disconnect: [Function],
+        _disconnect: [Function],
+        stdout: [Object],
+        stderr: [Object] },
+     GLOBAL: [Circular],
+     root: [Circular],
+     Buffer: 
+      { [Function: Buffer]
+        poolSize: 8192,
+        isBuffer: [Function: isBuffer],
+        compare: [Function: compare],
+        isEncoding: [Function],
+        concat: [Function],
+        byteLength: [Function: byteLength] },
+     clearImmediate: [Function],
+     clearInterval: [Function],
+     clearTimeout: [Function],
+     setImmediate: [Function],
+     setInterval: [Function],
+     setTimeout: [Function],
+     __filename: &#39;[eval]&#39;,
+     exports: {},
+     module: 
+      Module {
+        id: &#39;[eval]&#39;,
+        exports: {},
+        parent: undefined,
+        filename: &#39;/home/isaac/Dropbox/[eval]&#39;,
+        loaded: false,
+        children: [],
+        paths: [Object] },
+     __dirname: &#39;.&#39;,
+     require: 
+      { [Function: require]
+        resolve: [Function],
+        main: undefined,
+        extensions: [Object],
+        cache: {},
+        registerExtension: [Function] },
+     &#39;$$mimer$$&#39;: [Function: defaultMimer],
+     &#39;$$done$$&#39;: [Function: bound bound done],
+     firstName: &#39;Isaac&#39;,
+     whatIsThis: [Function: whatIsThis],
+     variablesInThis: [Function: variablesInThis],
+     person: &#39;Isaac&#39;,
+     variablesInThis2: [Function: variablesInThis2],
+     variablesInThis3: [Function: variablesInThis3],
+     person2: [Circular],
+     batman: { firstName: &#39;Bruce&#39; },
+     superman: { firstName: &#39;Clark&#39; },
+     addNumbers: [Function: addNumbers],
+     num: [ 76, 82, 17, 33, 56, 32, 93, 82, 99, 13 ],
+     addNumber2: [Function],
+     console: 
+      Console {
+        log: [Function: bound ],
+        info: [Function: bound ],
+        warn: [Function: bound ],
+        error: [Function: bound ],
+        dir: [Function: bound ],
+        time: [Function: bound ],
+        timeEnd: [Function: bound ],
+        trace: [Function: bound trace],
+        assert: [Function: bound ],
+        Console: [Function: Console] },
+     &#39;$$&#39;: 
+      { async: [Function: bound async],
+        done: [Function: bound done],
+        sendResult: [Function: bound ],
+        sendError: [Function: bound ],
+        mime: [Function: bound ],
+        text: [Function: bound ],
+        html: [Function: bound ],
+        svg: [Function: bound ],
+        png: [Function: bound ],
+        jpeg: [Function: bound ],
+        json: [Function: bound ],
+        display: [Function: bound createDisplay] } } }
 </pre>
 </div>
 </div>
@@ -14989,50 +14915,24 @@ Machine Learning and Artificial Intelligence are changing the world now
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="List-">List <a class="anchor" id="list" /><a class="anchor-link" href="#List-">&#182;</a></h3><p><a href="#toc">[top]</a></p>
+<p>In the above example, we can still call the variable outside the function, which is a very bad practice to declare all of our variables at the top of our code
+<br/>
+We can use <strong>strict mode</strong> to prevent it</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">student_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mark&quot;</span><span class="p">,</span> <span class="s2">&quot;Katarina&quot;</span><span class="p">,</span> <span class="s2">&quot;Tim&quot;</span><span class="p">]</span>
-
-<span class="c1">## Add an item to a list</span>
-<span class="c1">## Same as the push method in javascript</span>
-<span class="n">student_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Isaac&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">student_names</span><span class="p">)</span>
-
-<span class="c1">## Check if an element is in a list</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tim&quot;</span> <span class="ow">in</span> <span class="n">student_names</span><span class="p">)</span>
-
-<span class="c1">## List comprehension</span>
-<span class="nb">print</span><span class="p">([</span><span class="n">element</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">student_names</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">])</span>
-
-<span class="n">score</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]</span>
-
-<span class="c1">## dictionary comprehension</span>
-<span class="n">results_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">a</span><span class="p">:</span><span class="n">b</span> <span class="k">for</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">student_names</span><span class="p">,</span> <span class="n">score</span><span class="p">)}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">results_dict</span><span class="p">)</span>
-
-<span class="c1">## dictionary-set comprehension, seldom used</span>
-<span class="c1">## can use [::-1] to reverse a list</span>
-<span class="n">results_set</span> <span class="o">=</span> <span class="p">{(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">student_names</span><span class="p">,</span> <span class="n">score</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">results_set</span><span class="p">)</span>
-
-<span class="c1">## Slicing list</span>
-<span class="n">crime_rates</span> <span class="o">=</span> <span class="p">[</span><span class="mi">749</span><span class="p">,</span> <span class="mi">371</span><span class="p">,</span> <span class="mi">828</span><span class="p">,</span> <span class="mi">503</span><span class="p">,</span> <span class="mi">1379</span><span class="p">]</span>
-<span class="c1"># list slicing from the 3rd element to the end</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">crime_rates</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
-<span class="c1"># list slicing from the beginning to the last 3rd element</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">crime_rates</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
-<span class="c1"># Reverse a list</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">crime_rates</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="c1"># slicing list, select every other element</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">crime_rates</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="s2">&quot;use strict&quot;</span>
+<span class="kd">function</span> <span class="nx">variablesInThis3</span><span class="p">(){</span>
+    <span class="nx">person3</span> <span class="o">=</span> <span class="s2">&quot;Isaac&quot;</span><span class="p">;</span> <span class="c1">// in this case, a global variable is created by invoking this function</span>
+<span class="p">}</span>
+<span class="nx">variablesInThis3</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15046,17 +14946,19 @@ Machine Learning and Artificial Intelligence are changing the world now
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Mark&#39;, &#39;Katarina&#39;, &#39;Tim&#39;, &#39;Isaac&#39;]
-True
-[&#39;Mark&#39;, &#39;Tim&#39;]
-{&#39;Mark&#39;: &#39;A&#39;, &#39;Katarina&#39;: &#39;B&#39;, &#39;Tim&#39;: &#39;C&#39;}
-{(&#39;Katarina&#39;, &#39;B&#39;), (&#39;Tim&#39;, &#39;A&#39;), (&#39;Mark&#39;, &#39;C&#39;)}
-[828, 503, 1379]
-[749, 371, 828]
-[1379, 503, 828, 371, 749]
-[749, 828, 1379]
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+ReferenceError: person3 is not defined
+    at variablesInThis3 (evalmachine.&lt;anonymous&gt;:3:13)
+    at evalmachine.&lt;anonymous&gt;:5:1
+    at Object.exports.runInThisContext (vm.js:54:17)
+    at run ([eval]:821:15)
+    at onRunRequest ([eval]:666:18)
+    at onMessage ([eval]:634:13)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:695:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)</pre>
 </div>
 </div>
 
@@ -15069,176 +14971,7 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Loop-">Loop <a class="anchor" id="loop" /><a class="anchor-link" href="#Loop-">&#182;</a></h3><p><a href="#toc">[top]</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For loop is extremely easy in python</span>
-<span class="c1"># For loop in an array</span>
-<span class="n">student_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;James&quot;</span><span class="p">,</span> <span class="s2">&quot;Mark&quot;</span><span class="p">,</span> <span class="s2">&quot;Ben&quot;</span><span class="p">,</span> <span class="s2">&quot;Iza&quot;</span><span class="p">,</span> <span class="s2">&quot;Frank&quot;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">student_names</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>JAMES
-MARK
-BEN
-IZA
-FRANK
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For loop with numbers</span>
-<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">9</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-18
-36
-54
-72
-90
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># While loop is less used compared to for</span>
-<span class="c1"># It will usually generate infinite loops without properly setup incremental step</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X is &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>X is  0
-X is  1
-X is  2
-X is  3
-X is  4
-X is  5
-X is  6
-X is  7
-X is  8
-X is  9
-X is  10
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The above code can be easily converted in for</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span> <span class="c1"># note range function does not include the last number</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X is &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>X is  0
-X is  1
-X is  2
-X is  3
-X is  4
-X is  5
-X is  6
-X is  7
-X is  8
-X is  9
-X is  10
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Break-and-Continue-">Break and Continue <a class="anchor" id="break-continue" /><a class="anchor-link" href="#Break-and-Continue-">&#182;</a></h3><p>Usually used in loops to either break the whole loop or continue to the next loop
+<h3 id="Object/Implicit-">Object/Implicit <a class="anchor" id="implicit" /><a class="anchor-link" href="#Object/Implicit-">&#182;</a></h3><p>Object/Implicit rule (or Object Binding) applies when "this" is <strong>inside</strong> of a declared object. The value of the keyword "this" will always be the closest parent object
 <br/>
 <a href="#toc">[top]</a></p>
 
@@ -15247,16 +14980,40 @@ X is  10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Break will break the whole loop</span>
-<span class="n">student_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;James&quot;</span><span class="p">,</span> <span class="s2">&quot;Mark&quot;</span><span class="p">,</span> <span class="s2">&quot;Ben&quot;</span><span class="p">,</span> <span class="s2">&quot;Iza&quot;</span><span class="p">,</span> <span class="s2">&quot;Frank&quot;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">student_names</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Iza&quot;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found him:&quot;</span><span class="o">+</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">break</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The current student is &quot;</span><span class="o">+</span><span class="n">name</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// strict mode doesn&#39;t make a difference here</span>
+<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Isaac&quot;</span><span class="p">,</span>
+    <span class="nx">sayHi</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="s2">&quot;Hi &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="p">;</span> 
+    <span class="p">},</span>
+    <span class="nx">determineContext</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="k">this</span> <span class="o">===</span> <span class="nx">person</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="nx">dog</span><span class="o">:</span> <span class="p">{</span>
+       <span class="nx">sayHello</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+           <span class="k">return</span> <span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="p">;</span>
+       <span class="p">},</span>
+        <span class="nx">determineContext</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="k">return</span> <span class="k">this</span> <span class="o">===</span> <span class="nx">person</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">person</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -15268,15 +15025,14 @@ X is  10
 
 
 <div class="output_area">
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[94]:</div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The current student is James
-The current student is Mark
-The current student is Ben
-Found him:Iza
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Hi Isaac&#39;</pre>
 </div>
+
 </div>
 
 </div>
@@ -15285,16 +15041,10 @@ Found him:Iza
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Continue will continue to the next loop</span>
-<span class="n">student_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;James&quot;</span><span class="p">,</span> <span class="s2">&quot;Mark&quot;</span><span class="p">,</span> <span class="s2">&quot;Ben&quot;</span><span class="p">,</span> <span class="s2">&quot;Iza&quot;</span><span class="p">,</span> <span class="s2">&quot;Frank&quot;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">student_names</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Iza&quot;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found him:&quot;</span><span class="o">+</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">continue</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The current student is &quot;</span><span class="o">+</span><span class="n">name</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">person</span><span class="p">.</span><span class="nx">determineContext</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -15306,18 +15056,94 @@ Found him:Iza
 
 
 <div class="output_area">
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[95]:</div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The current student is James
-The current student is Mark
-The current student is Ben
-Found him:Iza
-The current student is Frank
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">person</span><span class="p">.</span><span class="nx">dog</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[96]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Hello undefined&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">person</span><span class="p">.</span><span class="nx">dog</span><span class="p">.</span><span class="nx">determineContext</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[97]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">person2</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Isaac&quot;</span><span class="p">,</span>
+    <span class="nx">determineContext</span><span class="o">:</span> <span class="k">this</span> <span class="c1">// this value will be the window in a browser</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
@@ -15327,152 +15153,83 @@ The current student is Frank
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Dictionary-">Dictionary <a class="anchor" id="dictionary" /><a class="anchor-link" href="#Dictionary-">&#182;</a></h3><p>a key-value pair data structure, similar to JSON or object in javascript
-<br/>
-<a href="#toc">[top]</a></p>
+<h3 id="Explicit-">Explicit <a class="anchor" id="explicit" /><a class="anchor-link" href="#Explicit-">&#182;</a></h3><p>What if you want to explicitly set the value of the keyword "this", so that you can force it to be the object you want? We can apply the explicit rule
+<br/></p>
+<table>
+<thead><tr>
+<th>Name of the method</th>
+<th style="text-align:center">Parameters</th>
+<th style="text-align:right">Invoke Immediately?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#call">call</a></td>
+<td style="text-align:center">thisArg, a,b,c,d,...</td>
+<td style="text-align:right">Yes</td>
+</tr>
+<tr>
+<td><a href="#apply">apply</a></td>
+<td style="text-align:center">thisArg, [a,b,c,d,...]</td>
+<td style="text-align:right">Yes</td>
+</tr>
+<tr>
+<td><a href="#bind">bind</a></td>
+<td style="text-align:center">thisArg, a,b,c,d,...</td>
+<td style="text-align:right">No</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#toc">[top]</a></p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># construct a dictionary</span>
-<span class="n">superhero_ranks</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">superhero_ranks</span><span class="p">[</span><span class="s2">&quot;Superman&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">superhero_ranks</span><span class="p">[</span><span class="s2">&quot;Aquaman&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">superhero_ranks</span><span class="p">)</span>
-<span class="c1"># get if you can find the element in the dictionary</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">superhero_ranks</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Superman&quot;</span><span class="p">))</span>
-<span class="c1"># none if you can find the element in the dictionary</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">superhero_ranks</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Batman&quot;</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Superman&#39;: 2, &#39;Aquaman&#39;: 1}
-2
-None
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a dictionary from two lists</span>
-<span class="c1"># One for index, the other for value</span>
-<span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Tom&quot;</span><span class="p">,</span> <span class="s2">&quot;Jim&quot;</span><span class="p">,</span> <span class="s2">&quot;Sue&quot;</span><span class="p">,</span> <span class="s2">&quot;Ann&quot;</span><span class="p">]</span>
-<span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">75</span><span class="p">]</span>
-<span class="n">record</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">d</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">scores</span><span class="p">):</span>
-    <span class="n">record</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Tom&#39;: 70, &#39;Jim&#39;: 80, &#39;Sue&#39;: 85, &#39;Ann&#39;: 75}
-dict_values([70, 80, 85, 75])
-dict_keys([&#39;Tom&#39;, &#39;Jim&#39;, &#39;Sue&#39;, &#39;Ann&#39;])
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use dictionary to count the appearance</span>
-<span class="c1"># Very common algorithm</span>
-<span class="n">pantry</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;grape&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;tomato&quot;</span><span class="p">,</span> <span class="s2">&quot;potato&quot;</span><span class="p">,</span> <span class="s2">&quot;grape&quot;</span><span class="p">]</span>
-<span class="n">pantry_counts</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">pantry</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">pantry_counts</span><span class="p">:</span>
-        <span class="n">pantry_counts</span><span class="p">[</span><span class="n">fruit</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">pantry_counts</span><span class="p">[</span><span class="n">fruit</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pantry_counts</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;apple&#39;: 3, &#39;orange&#39;: 2, &#39;grape&#39;: 2, &#39;tomato&#39;: 1, &#39;potato&#39;: 1}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="File-">File <a class="anchor" id="file" /><a class="anchor-link" href="#File-">&#182;</a></h3><p>how to work with files and use loops to iterate through lists.
-<br/>
-<a href="#toc">[top]</a></p>
+<h4 id="Call-"><strong>Call</strong> <a class="anchor" id="call" /><a class="anchor-link" href="#Call-">&#182;</a></h4><p>Use call to apply explicit this rule, for the code below</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># to open a file in python, use open()</span>
-<span class="c1"># accepts two different arguments (inputs) in the parentheses</span>
-<span class="c1"># always in the following order: filename and mode (&quot;r&quot;, &quot;w&quot;)</span>
-<span class="n">a</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;crime_rates.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Isaac&quot;</span><span class="p">,</span>
+    <span class="nx">sayHi</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="s2">&quot;Hi &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="p">;</span> 
+    <span class="p">},</span>
+    <span class="nx">determineContext</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="k">this</span> <span class="o">===</span> <span class="nx">person</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="nx">dog</span><span class="o">:</span> <span class="p">{</span>
+       <span class="nx">sayHello</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+           <span class="k">return</span> <span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="p">;</span>
+       <span class="p">},</span>
+        <span class="nx">determineContext</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="k">return</span> <span class="k">this</span> <span class="o">===</span> <span class="nx">person</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">person</span><span class="p">.</span><span class="nx">dog</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15484,45 +15241,14 @@ dict_keys([&#39;Tom&#39;, &#39;Jim&#39;, &#39;Sue&#39;, &#39;Ann&#39;])
 
 
 <div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;_io.TextIOWrapper name=&#39;crime_rates.csv&#39; mode=&#39;r&#39; encoding=&#39;UTF-8&#39;&gt;
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># File objects have a read() method that returns a string representation of the text in a file. </span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="c1"># Convert it to a list</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
+<div class="prompt output_prompt">Out[22]:</div>
 
 
-<div class="output_area">
-<div class="prompt"></div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Albuquerque,749&#39;, &#39;Anaheim,371&#39;, &#39;Anchorage,828&#39;, &#39;Arlington,503&#39;, &#39;Atlanta,1379&#39;, &#39;Aurora,425&#39;, &#39;Austin,408&#39;, &#39;Bakersfield,542&#39;, &#39;Baltimore,1405&#39;, &#39;Boston,835&#39;]
-</pre>
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Hello Isaac&#39;</pre>
 </div>
+
 </div>
 
 </div>
@@ -15534,12 +15260,7 @@ dict_keys([&#39;Tom&#39;, &#39;Jim&#39;, &#39;Sue&#39;, &#39;Ann&#39;])
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split each data entry</span>
-<span class="n">final_data</span> <span class="o">=</span><span class="p">{}</span>
-<span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-    <span class="n">split_entry</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
-    <span class="n">final_data</span><span class="p">[</span><span class="n">split_entry</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">split_entry</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">final_data</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">person</span><span class="p">.</span><span class="nx">dog</span><span class="p">.</span><span class="nx">determineContext</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15551,29 +15272,64 @@ dict_keys([&#39;Tom&#39;, &#39;Jim&#39;, &#39;Sue&#39;, &#39;Ann&#39;])
 
 
 <div class="output_area">
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[23]:</div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Albuquerque&#39;: &#39;749&#39;, &#39;Anaheim&#39;: &#39;371&#39;, &#39;Anchorage&#39;: &#39;828&#39;, &#39;Arlington&#39;: &#39;503&#39;, &#39;Atlanta&#39;: &#39;1379&#39;, &#39;Aurora&#39;: &#39;425&#39;, &#39;Austin&#39;: &#39;408&#39;, &#39;Bakersfield&#39;: &#39;542&#39;, &#39;Baltimore&#39;: &#39;1405&#39;, &#39;Boston&#39;: &#39;835&#39;, &#39;Buffalo&#39;: &#39;1288&#39;, &#39;Charlotte-Mecklenburg&#39;: &#39;647&#39;, &#39;Cincinnati&#39;: &#39;974&#39;, &#39;Cleveland&#39;: &#39;1383&#39;, &#39;Colorado Springs&#39;: &#39;455&#39;, &#39;Corpus Christi&#39;: &#39;658&#39;, &#39;Dallas&#39;: &#39;675&#39;, &#39;Denver&#39;: &#39;615&#39;, &#39;Detroit&#39;: &#39;2122&#39;, &#39;El Paso&#39;: &#39;423&#39;, &#39;Fort Wayne&#39;: &#39;362&#39;, &#39;Fort Worth&#39;: &#39;587&#39;, &#39;Fresno&#39;: &#39;543&#39;, &#39;Greensboro&#39;: &#39;563&#39;, &#39;Henderson&#39;: &#39;168&#39;, &#39;Houston&#39;: &#39;992&#39;, &#39;Indianapolis&#39;: &#39;1185&#39;, &#39;Jacksonville&#39;: &#39;617&#39;, &#39;Jersey City&#39;: &#39;734&#39;, &#39;Kansas City&#39;: &#39;1263&#39;, &#39;Las Vegas&#39;: &#39;784&#39;, &#39;Lexington&#39;: &#39;352&#39;, &#39;Lincoln&#39;: &#39;397&#39;, &#39;Long Beach&#39;: &#39;575&#39;, &#39;Los Angeles&#39;: &#39;481&#39;, &#39;Louisville Metro&#39;: &#39;598&#39;, &#39;Memphis&#39;: &#39;1750&#39;, &#39;Mesa&#39;: &#39;399&#39;, &#39;Miami&#39;: &#39;1172&#39;, &#39;Milwaukee&#39;: &#39;1294&#39;, &#39;Minneapolis&#39;: &#39;992&#39;, &#39;Mobile&#39;: &#39;522&#39;, &#39;Nashville&#39;: &#39;1216&#39;, &#39;New Orleans&#39;: &#39;815&#39;, &#39;New York&#39;: &#39;639&#39;, &#39;Newark&#39;: &#39;1154&#39;, &#39;Oakland&#39;: &#39;1993&#39;, &#39;Oklahoma City&#39;: &#39;919&#39;, &#39;Omaha&#39;: &#39;594&#39;, &#39;Philadelphia&#39;: &#39;1160&#39;, &#39;Phoenix&#39;: &#39;636&#39;, &#39;Pittsburgh&#39;: &#39;752&#39;, &#39;Plano&#39;: &#39;130&#39;, &#39;Portland&#39;: &#39;517&#39;, &#39;Raleigh&#39;: &#39;423&#39;, &#39;Riverside&#39;: &#39;443&#39;, &#39;Sacramento&#39;: &#39;738&#39;, &#39;San Antonio&#39;: &#39;503&#39;, &#39;San Diego&#39;: &#39;413&#39;, &#39;San Francisco&#39;: &#39;704&#39;, &#39;San Jose&#39;: &#39;363&#39;, &#39;Santa Ana&#39;: &#39;401&#39;, &#39;Seattle&#39;: &#39;597&#39;, &#39;St. Louis&#39;: &#39;1776&#39;, &#39;St. Paul&#39;: &#39;722&#39;, &#39;Stockton&#39;: &#39;1548&#39;, &#39;Tampa&#39;: &#39;616&#39;, &#39;Toledo&#39;: &#39;1171&#39;, &#39;Tucson&#39;: &#39;724&#39;, &#39;Tulsa&#39;: &#39;990&#39;, &#39;Virginia Beach&#39;: &#39;169&#39;, &#39;Washington&#39;: &#39;1177&#39;, &#39;Wichita&#39;: &#39;742&#39;}
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Another example to use call in the wild</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">batman</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Bruce&quot;</span><span class="p">,</span>
+    <span class="nx">sayHi</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="s2">&quot;Hi &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">superman</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Clark&quot;</span><span class="p">,</span>
+    <span class="nx">sayHi</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="s2">&quot;Hi &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Can alternatively stored the data in a list of list</span>
-<span class="n">final_list</span> <span class="o">=</span><span class="p">[]</span>
-<span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-    <span class="n">split_entry</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
-    <span class="n">final_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">split_entry</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">final_list</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">batman</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">())</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">batman</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">superman</span><span class="p">))</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">superman</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">())</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">superman</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">batman</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -15588,7 +15344,10 @@ dict_keys([&#39;Tom&#39;, &#39;Jim&#39;, &#39;Sue&#39;, &#39;Ann&#39;])
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[&#39;Albuquerque&#39;, &#39;749&#39;], [&#39;Anaheim&#39;, &#39;371&#39;], [&#39;Anchorage&#39;, &#39;828&#39;], [&#39;Arlington&#39;, &#39;503&#39;], [&#39;Atlanta&#39;, &#39;1379&#39;], [&#39;Aurora&#39;, &#39;425&#39;], [&#39;Austin&#39;, &#39;408&#39;], [&#39;Bakersfield&#39;, &#39;542&#39;], [&#39;Baltimore&#39;, &#39;1405&#39;], [&#39;Boston&#39;, &#39;835&#39;]]
+<pre>Hi Bruce
+Hi Clark
+Hi Clark
+Hi Bruce
 </pre>
 </div>
 </div>
@@ -15602,22 +15361,426 @@ dict_keys([&#39;Tom&#39;, &#39;Jim&#39;, &#39;Sue&#39;, &#39;Ann&#39;])
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exception-">Exception <a class="anchor" id="exception" /><a class="anchor-link" href="#Exception-">&#182;</a></h3><p>Python uses exception handling to try-error
-<br/>
-<a href="#toc">[top]</a></p>
+<p><a href="#explicit">[back]</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Apply-"><strong>Apply</strong> <a class="anchor" id="apply" /><a class="anchor-link" href="#Apply-">&#182;</a></h4><p>Apply, the only difference is the argument in the function
+call can have unlimited arguments, apply only has two</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span> 
-    <span class="n">berlin_rate</span> <span class="o">=</span> <span class="n">final_data</span><span class="p">[</span><span class="s2">&quot;Berlin&quot;</span><span class="p">]</span>
-<span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span> <span class="c1"># This part can be replaced with generic Exception</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No Berlin data found&quot;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">batman</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Bruce&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">superman</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Clark&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">addNumbers</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">d</span><span class="p">){</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s2">&quot; just calculated &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="o">+</span><span class="nx">c</span><span class="o">+</span><span class="nx">d</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It's worth mentioning that arrow function cannot be used here. Note in the codes below, it will generate undefined</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">addNumber2</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">d</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s2">&quot; just calculated &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="o">+</span><span class="nx">c</span><span class="o">+</span><span class="nx">d</span><span class="p">)</span>
+<span class="nx">addNumber2</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">superman</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[82]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;undefined just calculated 10&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// Using traditionally defined function</span>
+<span class="nx">addNumbers</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">superman</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[84]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Clark just calculated 16&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">addNumbers</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">batman</span><span class="p">,</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[85]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Bruce just calculated 18&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Apply is really useful when a function does not accept an array, apply will spread out values in an array for us</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">76</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="c1">// Math.max cannot take an array as input, it will return NaN</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[86]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>NaN</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>we can use apply to spread the array numbers</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">num</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[87]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>99</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#explicit">[back]</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Bind--"><strong>Bind</strong>  <a class="anchor" id="bind" /><a class="anchor-link" href="#Bind--">&#182;</a></h4><p>Bind works like call, but instead of immediately invoking a function, it will return a function with the context of 'this' bound already</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">batman</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Bruce&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">addNumbers</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">d</span><span class="p">){</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s2">&quot; just calculated &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="o">+</span><span class="nx">c</span><span class="o">+</span><span class="nx">d</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">batmanCalc</span> <span class="o">=</span> <span class="nx">addNumbers</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">batman</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1">// it will return a function</span>
+<span class="nx">batmanCalc</span><span class="p">()</span> <span class="c1">// invoke the function</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[105]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Bruce just calculated 10&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So, when to use bind? One common case is when we don't know all the arguments passed to the function, aka partial application</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">batmanCalc</span> <span class="o">=</span> <span class="nx">addNumbers</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">batman</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">);</span> <span class="c1">// we don&#39;t have all the arguments</span>
+<span class="nx">batmanCalc</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">);</span> <span class="c1">// invoke the function once we know all the arguments</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[108]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Bruce just calculated 38&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Bind is also extremely useful for the asynchronous applications, with setTimeout and setInterval</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+<span class="p">},</span> <span class="mi">5000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[110]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{ _called: false,
+  _idleTimeout: 5000,
+  _idlePrev: 
+   Timer {
+     &#39;0&#39;: [Function: listOnTimeout],
+     _idleNext: [Circular],
+     _idlePrev: [Circular],
+     msecs: 5000 },
+  _idleNext: 
+   Timer {
+     &#39;0&#39;: [Function: listOnTimeout],
+     _idleNext: [Circular],
+     _idlePrev: [Circular],
+     msecs: 5000 },
+  _idleStart: 4097943,
+  _onTimeout: [Function],
+  _repeat: null }</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello world!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Very commonly we lose the context of "this", e.g. in functions that we don't want to execute right away!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">isaac</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Isaac&quot;</span><span class="p">,</span>
+    <span class="nx">sayHi</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hi &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="p">);</span>
+        <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">colt</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">()</span> <span class="c1">// keyword this will be lost with timeout</span>
 </pre></div>
 
 </div>
@@ -15632,7 +15795,7 @@ dict_keys([&#39;Tom&#39;, &#39;Jim&#39;, &#39;Sue&#39;, &#39;Ann&#39;])
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>No Berlin data found
+<pre>Hi undefined
 </pre>
 </div>
 </div>
@@ -15643,13 +15806,18 @@ dict_keys([&#39;Tom&#39;, &#39;Jim&#39;, &#39;Sue&#39;, &#39;Ann&#39;])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[124]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span> 
-    <span class="n">berlin_rate</span> <span class="o">=</span> <span class="n">final_data</span><span class="p">[</span><span class="s2">&quot;Berlin&quot;</span><span class="p">]</span>
-<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">isaac2</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Isaac&quot;</span><span class="p">,</span>
+    <span class="nx">sayHi</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hi &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="p">);</span>
+        <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// use bind to set the correct context of &quot;this&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">isaac2</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -15664,7 +15832,66 @@ dict_keys([&#39;Tom&#39;, &#39;Jim&#39;, &#39;Sue&#39;, &#39;Ann&#39;])
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&#39;Berlin&#39;
+<pre>Hi Isaac
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#explicit">[back]</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="The-'new'-keyword-">The 'new' keyword <a class="anchor" id="new" /><a class="anchor-link" href="#The-'new'-keyword-">&#182;</a></h3><p>We can set the context of the keyword "this" using the "new" keyword
+<br/>
+<a href="#toc">[top]</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[127]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">firstName</span><span class="p">,</span> <span class="nx">lastName</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">firstName</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">lastName</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">isaac</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Isaac&quot;</span><span class="p">,</span> <span class="s2">&quot;Zhou&quot;</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isaac</span><span class="p">.</span><span class="nx">firstName</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isaac</span><span class="p">.</span><span class="nx">lastName</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Isaac
+Zhou
 </pre>
 </div>
 </div>
@@ -15681,132 +15908,3 @@ dict_keys([&#39;Tom&#39;, &#39;Jim&#39;, &#39;Sue&#39;, &#39;Ann&#39;])
 
 
 </html>
-
-      </article>
-
-      <ul class="pager blog-pager">
-        
-          <li class="previous">
-            <a href="http://www.primerpy.com/post/pandas-brandon-rhodes-part1/" data-toggle="tooltip" data-placement="top" title="Brandon Rhodes Part 1">&larr; Previous Post</a>
-          </li>
-        
-        
-          <li class="next">
-            <a href="http://www.primerpy.com/post/the-keyword-this/" data-toggle="tooltip" data-placement="top" title="Javascript keyword &#34;this&#34;">Next Post &rarr;</a>
-          </li>
-        
-      </ul>
-
-      
-        
-      
-
-    </div>
-  </div>
-</div>
-
-    <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-          
-              <li>
-                <a href="mailto:isaaczhou85@gmail.com" title="Email me">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/primerpy" title="GitHub">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/username" title="Twitter">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://reddit.com/u/username" title="Reddit">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/username" title="LinkedIn">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-          
-          <li>
-            <a href="http://www.primerpy.com/index.xml" title="RSS">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-        <p class="credits copyright text-muted">
-          Isaac Zhou
-          &nbsp;&bull;&nbsp;
-          2017
-
-          
-            &nbsp;&bull;&nbsp;
-            <a href="http://www.primerpy.com/">PrimerPy</a>
-          
-        </p>
-        
-        
-        
-        
-        
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="http://www.primerpy.com/js/main.js"></script>
-<script src="http://www.primerpy.com/js/highlight.min.js"></script>
-<script> hljs.initHighlightingOnLoad(); </script>
-<script> renderMathInElement(document.body); </script>
-
-
-
-
-<script>
-  (function() {
-    var cx = '000580855040544163791%3Arl5nzawcqq8';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-
-
-  </body>
-</html>
-

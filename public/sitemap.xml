@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.primerpy.com/post/the-keyword-this/</loc>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.primerpy.com/post/python-fundamentals/</loc>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.primerpy.com/post/pandas-brandon-rhodes-part1/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
   </url>
@@ -30,11 +40,6 @@
   <url>
     <loc>http://www.primerpy.com/post/js-closure/</loc>
     <lastmod>2017-11-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.primerpy.com/post/python-fundamentals/</loc>
-    <lastmod>2017-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -94,7 +99,7 @@
   
   <url>
     <loc>http://www.primerpy.com/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -103,13 +108,13 @@
   
   <url>
     <loc>http://www.primerpy.com/tags/advanced-javascript/</loc>
-    <lastmod>2017-11-02T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.primerpy.com/tags/basic-python/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -150,7 +155,7 @@
   
   <url>
     <loc>http://www.primerpy.com/categories/javascript/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -179,19 +184,25 @@
   
   <url>
     <loc>http://www.primerpy.com/post/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.primerpy.com/tags/python/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.primerpy.com/categories/python/</loc>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.primerpy.com/tags/</loc>
-    <lastmod>2017-11-02T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

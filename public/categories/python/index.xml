@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on PrimerPy</title>
+    <link>http://www.primerpy.com/categories/python/</link>
+    <description>Recent content in Python on PrimerPy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
+    <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
+    <lastBuildDate>Sat, 04 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.primerpy.com/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python Fundamentals</title>
+      <link>http://www.primerpy.com/post/python-fundamentals/</link>
+      <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/python-fundamentals/</guid>
+      <description>In this tutorial, we will learn all the basics to start with Python. Topics covered here includes data types, lists, loops, dictionary etc. We will also take a peek at some more advanced techniques such as list comprehension and dictionary comprehension. Although there are a number of libraries that can make a Pythonist&#39;s life even easier, have a solid foundation would be a key to understand and learn more advanced topics.</description>
+    </item>
+    
+  </channel>
+</rss>
