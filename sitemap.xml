@@ -148,14 +148,14 @@
   </url>
   
   <url>
-    <loc>http://www.primerpy.com/tags/javascript/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <loc>http://www.primerpy.com/categories/javascript/</loc>
+    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.primerpy.com/categories/javascript/</loc>
-    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
+    <loc>http://www.primerpy.com/tags/javascript/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -189,13 +189,13 @@
   </url>
   
   <url>
-    <loc>http://www.primerpy.com/tags/python/</loc>
+    <loc>http://www.primerpy.com/categories/python/</loc>
     <lastmod>2017-11-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.primerpy.com/categories/python/</loc>
+    <loc>http://www.primerpy.com/tags/python/</loc>
     <lastmod>2017-11-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
