@@ -18,7 +18,7 @@
       <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
       <guid>http://www.primerpy.com/post/the-keyword-this/</guid>
-      <description>&#34;this&#34; is a reserved keyword in Javscript. It is usually determined by how a function is called (&#34;execution context&#34;).Whenever a javascript function is run, two js keywords are given to that function: &#34;arguments&#34; and &#34;this&#34;. &#34;this&#34; can be determined using four rules: Global, Implicit, Explicit and New. We also discuss how to use apply, call and bind functions to apply the explicit rules.  The Keyword &#34;this&#34;  /*! * * Twitter Bootstrap * */ /*!</description>
+      <description>&#34;this&#34; is a reserved keyword in Javscript. It is usually determined by how a function is called (&#34;execution context&#34;). It can&#39;t be set by assignment during execution, and it may be different each time the function is called. Whenever a javascript function is run, two js keywords are given to that function: &#34;arguments&#34; and &#34;this&#34;. &#34;this&#34; can be determined using four rules: Global, Implicit, Explicit and New. We also discuss how to use apply, call and bind functions to apply the explicit rules.</description>
     </item>
     
     <item>
