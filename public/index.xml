@@ -7,89 +7,80 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
     <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
-    <lastBuildDate>Sat, 04 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.primerpy.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Python Function</title>
+      <link>http://www.primerpy.com/post/python/python-function/</link>
+      <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/python/python-function/</guid>
+      <description>Function is a powerful concept in any programming languages. It&#39;s very useful to avoid repetitive coding or WET (Write Everything Twice+) coding style. Instead we should promote DRY (Don&#39;t Repeat Yourself) style. In this tutorial, we will only cover the basics about the Python Functions. How to define a function, parameters (single, multiple, optional), return multiple values, write proper docstrings to document the function. At the end of the project, I also provided a synthesis exercise to show how to build a function and use it conveniently in a more real world scenario.</description>
+    </item>
+    
+    <item>
       <title>Javascript keyword &#34;this&#34;</title>
-      <link>http://www.primerpy.com/post/the-keyword-this/</link>
+      <link>http://www.primerpy.com/post/js/the-keyword-this/</link>
       <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/the-keyword-this/</guid>
+      <guid>http://www.primerpy.com/post/js/the-keyword-this/</guid>
       <description>&#34;this&#34; is a reserved keyword in Javscript. It is usually determined by how a function is called (&#34;execution context&#34;). It can&#39;t be set by assignment during execution, and it may be different each time the function is called. Whenever a javascript function is run, two js keywords are given to that function: &#34;arguments&#34; and &#34;this&#34;. &#34;this&#34; can be determined using four rules: Global, Implicit, Explicit and New. We also discuss how to use apply, call and bind functions to apply the explicit rules.</description>
     </item>
     
     <item>
       <title>Python Fundamentals</title>
-      <link>http://www.primerpy.com/post/python-fundamentals/</link>
+      <link>http://www.primerpy.com/post/python/python-fundamentals/</link>
       <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/python-fundamentals/</guid>
+      <guid>http://www.primerpy.com/post/python/python-fundamentals/</guid>
       <description>In this tutorial, we will learn all the basics to start with Python. Topics covered here includes data types, lists, loops, dictionary etc. We will also take a peek at some more advanced techniques such as list comprehension and dictionary comprehension. Although there are a number of libraries that can make a Pythonist&#39;s life even easier, have a solid foundation would be a key to understand and learn more advanced topics.</description>
     </item>
     
     <item>
-      <title>Brandon Rhodes Part 1</title>
-      <link>http://www.primerpy.com/post/pandas-brandon-rhodes-part1/</link>
-      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
-      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/pandas-brandon-rhodes-part1/</guid>
-      <description>This is the part one of Brandon Rhodes  pandas-brandon-rhodes-part1  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.</description>
-    </item>
-    
-    <item>
-      <title>Brandon Rhodes Part 2</title>
-      <link>http://www.primerpy.com/post/pandas-brandon-rhodes-part2/</link>
-      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
-      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/pandas-brandon-rhodes-part2/</guid>
-      <description>This is the part two of Brandon Rhodes  pandas-brandon-rhodes-part1  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.</description>
-    </item>
-    
-    <item>
       <title>D3 Embedded with Jupyter Notebook</title>
-      <link>http://www.primerpy.com/post/d3-visualization-embedded-in-jupyter-notebook/</link>
+      <link>http://www.primerpy.com/post/js/d3-visualization-embedded-in-jupyter-notebook/</link>
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/d3-visualization-embedded-in-jupyter-notebook/</guid>
+      <guid>http://www.primerpy.com/post/js/d3-visualization-embedded-in-jupyter-notebook/</guid>
       <description>In this tutorial, I will embed D3 object into Jupyter Notebook. It&#39;s not recommended to write D3 or javascript in general with Jupyter notebook, but I could see some benefits from a literate programming perspective. I can see the results right away instead of rendering the whole html page or use Blockbuilder, which is actually pretty neat. I would definitely use blockbuilder on the fly or learn from others&#39; works. Another benefit of using Jupyter notebook is to conveniently use Python to generate data and assign it to the D3 object.</description>
     </item>
     
     <item>
       <title>D3 Visualization Enter-Append method</title>
-      <link>http://www.primerpy.com/post/enter-append/</link>
+      <link>http://www.primerpy.com/post/js/enter-append/</link>
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/enter-append/</guid>
+      <guid>http://www.primerpy.com/post/js/enter-append/</guid>
       <description>D3-Visualization-Enter-Append What if we don&#39;t have elements predefined in svg? What should we do to add/match data with DOM element? We can use enter.append() method  Untitled2  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.</description>
     </item>
     
     <item>
       <title>Advanced Javascript Array Methods</title>
-      <link>http://www.primerpy.com/post/advanced-array-methods/</link>
+      <link>http://www.primerpy.com/post/js/advanced-array-methods/</link>
       <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/advanced-array-methods/</guid>
+      <guid>http://www.primerpy.com/post/js/advanced-array-methods/</guid>
       <description>forEach  Iterates through an array Runs a callback function on each value in the array always returns &amp;ldquo;undefined&amp;rdquo;  var arr = [1,2,3,5] arr.forEach(function(d,i,arr){ console.log(d,i); });   How does forEach work  var forEach = (arr, callback) =&amp;gt; { for(var i = 0; i &amp;lt; arr.length; i++) { callback(arr[i],i,arr); } }   Using forEach in a function  var halfValues = (arr) =&amp;gt; { let newArr = []; arr.</description>
     </item>
     
     <item>
       <title>JS Closure</title>
-      <link>http://www.primerpy.com/post/js-closure/</link>
+      <link>http://www.primerpy.com/post/js/js-closure/</link>
       <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/js-closure/</guid>
+      <guid>http://www.primerpy.com/post/js/js-closure/</guid>
       <description>Definition  A closure is a function that makes use of variables defined in outer functions that have previously returned We have to &amp;ldquo;return&amp;rdquo; the inner function for this to work We can either call the inner function right away by using an extra () or we can store the result of the function in a variable Closure only exists when an inner function makes use of variables defined from an outer function that has returned.</description>
     </item>
     
     <item>
       <title>Photoswipe Gallery Sample</title>
-      <link>http://www.primerpy.com/post/2017-03-20-photoswipe-gallery-sample/</link>
+      <link>http://www.primerpy.com/post/others/2017-03-20-photoswipe-gallery-sample/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/2017-03-20-photoswipe-gallery-sample/</guid>
+      <guid>http://www.primerpy.com/post/others/2017-03-20-photoswipe-gallery-sample/</guid>
       <description>&lt;p&gt;Beautiful Hugo adds a few custom shortcodes created by &lt;a href=&#34;https://www.liwen.id.au/heg/&#34;&gt;Li-Wen Yip&lt;/a&gt; and &lt;a href=&#34;https://github.com/GjjvdBurg/HugoPhotoSwipe&#34;&gt;Gert-Jan van den Berg&lt;/a&gt; for making galleries with &lt;a href=&#34;http://photoswipe.com&#34;&gt;PhotoSwipe&lt;/a&gt; .&lt;/p&gt;
 
 &lt;p&gt;
@@ -201,10 +192,10 @@
     
     <item>
       <title>Big Image Sample</title>
-      <link>http://www.primerpy.com/post/2017-03-07-bigimg-sample/</link>
+      <link>http://www.primerpy.com/post/others/2017-03-07-bigimg-sample/</link>
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/2017-03-07-bigimg-sample/</guid>
+      <guid>http://www.primerpy.com/post/others/2017-03-07-bigimg-sample/</guid>
       <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -212,10 +203,10 @@
     
     <item>
       <title>Math Sample</title>
-      <link>http://www.primerpy.com/post/2017-03-05-math-sample/</link>
+      <link>http://www.primerpy.com/post/others/2017-03-05-math-sample/</link>
       <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/2017-03-05-math-sample/</guid>
+      <guid>http://www.primerpy.com/post/others/2017-03-05-math-sample/</guid>
       <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;
 
 &lt;p&gt;$$
@@ -228,10 +219,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Code Sample</title>
-      <link>http://www.primerpy.com/post/2016-03-08-code-sample/</link>
+      <link>http://www.primerpy.com/post/others/2016-03-08-code-sample/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/2016-03-08-code-sample/</guid>
+      <guid>http://www.primerpy.com/post/others/2016-03-08-code-sample/</guid>
       <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -239,19 +230,19 @@ $$&lt;/p&gt;
     
     <item>
       <title>Flake it till you make it</title>
-      <link>http://www.primerpy.com/post/2015-02-26-flake-it-till-you-make-it/</link>
+      <link>http://www.primerpy.com/post/others/2015-02-26-flake-it-till-you-make-it/</link>
       <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/2015-02-26-flake-it-till-you-make-it/</guid>
+      <guid>http://www.primerpy.com/post/others/2015-02-26-flake-it-till-you-make-it/</guid>
       <description>Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?</description>
     </item>
     
     <item>
       <title>Test markdown</title>
-      <link>http://www.primerpy.com/post/2015-02-20-test-markdown/</link>
+      <link>http://www.primerpy.com/post/others/2015-02-20-test-markdown/</link>
       <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/2015-02-20-test-markdown/</guid>
+      <guid>http://www.primerpy.com/post/others/2015-02-20-test-markdown/</guid>
       <description>You can write regular markdown here and Jekyll will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it&amp;rsquo;ll teach you how to transform regular text into bold/italics/headings/tables/etc.
 Here is some bold text
 Here is a secondary heading Here&amp;rsquo;s a useless table:
@@ -260,47 +251,47 @@ Here is a secondary heading Here&amp;rsquo;s a useless table:
     
     <item>
       <title>To be</title>
-      <link>http://www.primerpy.com/post/2015-02-13-hamlet-monologue/</link>
+      <link>http://www.primerpy.com/post/others/2015-02-13-hamlet-monologue/</link>
       <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/2015-02-13-hamlet-monologue/</guid>
+      <guid>http://www.primerpy.com/post/others/2015-02-13-hamlet-monologue/</guid>
       <description>To be, or not to be&amp;ndash;that is the question: Whether &amp;lsquo;tis nobler in the mind to suffer The slings and arrows of outrageous fortune Or to take arms against a sea of troubles And by opposing end them. To die, to sleep&amp;ndash; No more&amp;ndash;and by a sleep to say we end The heartache, and the thousand natural shocks That flesh is heir to. &amp;lsquo;Tis a consummation Devoutly to be wished. To die, to sleep&amp;ndash; To sleep&amp;ndash;perchance to dream: ay, there&amp;rsquo;s the rub, For in that sleep of death what dreams may come When we have shuffled off this mortal coil, Must give us pause.</description>
     </item>
     
     <item>
       <title>Dear diary</title>
-      <link>http://www.primerpy.com/post/2015-01-27-dear-diary/</link>
+      <link>http://www.primerpy.com/post/others/2015-01-27-dear-diary/</link>
       <pubDate>Tue, 27 Jan 2015 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/2015-01-27-dear-diary/</guid>
+      <guid>http://www.primerpy.com/post/others/2015-01-27-dear-diary/</guid>
       <description>What is it with that Mary girl? Dragging me to school every day. As if I had a choice. What you don&amp;rsquo;t hear in those nursery rhymes is that she starves me if I don&amp;rsquo;t go to school with her; it&amp;rsquo;s the only way I can stay alive! I&amp;rsquo;m thinking about being adopted by Little Bo Peep, sure I may get lost, but anything is better than being with Mary and those little brats at school (shudder, shudder).</description>
     </item>
     
     <item>
       <title>Soccer</title>
-      <link>http://www.primerpy.com/post/2015-01-19-soccer/</link>
+      <link>http://www.primerpy.com/post/others/2015-01-19-soccer/</link>
       <pubDate>Mon, 19 Jan 2015 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/2015-01-19-soccer/</guid>
+      <guid>http://www.primerpy.com/post/others/2015-01-19-soccer/</guid>
       <description>From Wikipedia:
 Association football, more commonly known as football or soccer,[2] is a sport played between two teams of eleven players with a spherical ball. It is played by 250 million players in over 200 countries, making it the world&amp;rsquo;s most popular sport.[3][4][5][6] The game is played on a rectangular field with a goal at each end. The object of the game is to score by getting the ball into the opposing goal.</description>
     </item>
     
     <item>
       <title>Pirates arrrr</title>
-      <link>http://www.primerpy.com/post/2015-01-15-pirates/</link>
+      <link>http://www.primerpy.com/post/others/2015-01-15-pirates/</link>
       <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/2015-01-15-pirates/</guid>
+      <guid>http://www.primerpy.com/post/others/2015-01-15-pirates/</guid>
       <description>Piracy is typically an act of robbery or criminal violence at sea. The term can include acts committed on land, in the air, or in other major bodies of water or on a shore. It does not normally include crimes committed against persons traveling on the same vessel as the perpetrator (e.g. one passenger stealing from others on the same vessel). The term has been used throughout history to refer to raids across land borders by non-state agents.</description>
     </item>
     
     <item>
       <title>First post!</title>
-      <link>http://www.primerpy.com/post/2015-01-04-first-post/</link>
+      <link>http://www.primerpy.com/post/others/2015-01-04-first-post/</link>
       <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/2015-01-04-first-post/</guid>
+      <guid>http://www.primerpy.com/post/others/2015-01-04-first-post/</guid>
       <description>This is my first post, how exciting!</description>
     </item>
     

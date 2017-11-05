@@ -14,28 +14,28 @@
     
     <item>
       <title>Javascript keyword &#34;this&#34;</title>
-      <link>http://www.primerpy.com/post/the-keyword-this/</link>
+      <link>http://www.primerpy.com/post/js/the-keyword-this/</link>
       <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/the-keyword-this/</guid>
+      <guid>http://www.primerpy.com/post/js/the-keyword-this/</guid>
       <description>&#34;this&#34; is a reserved keyword in Javscript. It is usually determined by how a function is called (&#34;execution context&#34;). It can&#39;t be set by assignment during execution, and it may be different each time the function is called. Whenever a javascript function is run, two js keywords are given to that function: &#34;arguments&#34; and &#34;this&#34;. &#34;this&#34; can be determined using four rules: Global, Implicit, Explicit and New. We also discuss how to use apply, call and bind functions to apply the explicit rules.</description>
     </item>
     
     <item>
       <title>Advanced Javascript Array Methods</title>
-      <link>http://www.primerpy.com/post/advanced-array-methods/</link>
+      <link>http://www.primerpy.com/post/js/advanced-array-methods/</link>
       <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/advanced-array-methods/</guid>
+      <guid>http://www.primerpy.com/post/js/advanced-array-methods/</guid>
       <description>forEach  Iterates through an array Runs a callback function on each value in the array always returns &amp;ldquo;undefined&amp;rdquo;  var arr = [1,2,3,5] arr.forEach(function(d,i,arr){ console.log(d,i); });   How does forEach work  var forEach = (arr, callback) =&amp;gt; { for(var i = 0; i &amp;lt; arr.length; i++) { callback(arr[i],i,arr); } }   Using forEach in a function  var halfValues = (arr) =&amp;gt; { let newArr = []; arr.</description>
     </item>
     
     <item>
       <title>JS Closure</title>
-      <link>http://www.primerpy.com/post/js-closure/</link>
+      <link>http://www.primerpy.com/post/js/js-closure/</link>
       <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/post/js-closure/</guid>
+      <guid>http://www.primerpy.com/post/js/js-closure/</guid>
       <description>Definition  A closure is a function that makes use of variables defined in outer functions that have previously returned We have to &amp;ldquo;return&amp;rdquo; the inner function for this to work We can either call the inner function right away by using an extra () or we can store the result of the function in a variable Closure only exists when an inner function makes use of variables defined from an outer function that has returned.</description>
     </item>
     
