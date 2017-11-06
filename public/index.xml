@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
     <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
-    <lastBuildDate>Sun, 05 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.primerpy.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ES2015</title>
+      <link>http://www.primerpy.com/post/js/es2015/</link>
+      <pubDate>Mon, 06 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/js/es2015/</guid>
+      <description>ES6 has brought a huge number of updates to the Javascript languages. Some of them are extremely handy such as arrow functions. However, we also need to pay extra attention to some of the nitty gritty nuisances. For example, arrow functions are nice and succinct however it doesn&#39;t have its own this or arguments keywords, which could be useful for some cases but the coder need to really understand the context.</description>
+    </item>
     
     <item>
       <title>Python Function</title>
