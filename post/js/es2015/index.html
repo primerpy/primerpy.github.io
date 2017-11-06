@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Python Function</title>
-  <meta property="og:title" content="Python Function" />
-  <meta name="twitter:title" content="Python Function" />
-  <meta name="description" content="Use function to avoid repetitiveness">
-  <meta property="og:description" content="Use function to avoid repetitiveness">
-  <meta name="twitter:description" content="Use function to avoid repetitiveness">
+  <title>ES2015</title>
+  <meta property="og:title" content="ES2015" />
+  <meta name="twitter:title" content="ES2015" />
+  <meta name="description" content="What&#39;s new with ES6">
+  <meta property="og:description" content="What&#39;s new with ES6">
+  <meta name="twitter:description" content="What&#39;s new with ES6">
   <meta name="author" content="Isaac Zhou"/>
   <link href='http://www.primerpy.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="http://www.primerpy.com/img/avatar-icon.png" />
@@ -18,12 +18,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@username" />
   <meta name="twitter:creator" content="@username" />
-  <meta property="og:url" content="http://www.primerpy.com/post/python/python-function/" />
+  <meta property="og:url" content="http://www.primerpy.com/post/js/es2015/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PrimerPy" />
 
   <meta name="generator" content="Hugo 0.30.2" />
-  <link rel="canonical" href="http://www.primerpy.com/post/python/python-function/" />
+  <link rel="canonical" href="http://www.primerpy.com/post/js/es2015/" />
   <link rel="alternate" href="http://www.primerpy.com/index.xml" type="application/rss+xml" title="PrimerPy">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -181,15 +181,15 @@ ga('send', 'pageview');
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>Python Function</h1>
+              <h1>ES2015</h1>
                 
                   
-                    <h2 class="post-subheading">Use function to avoid repetitiveness</h2>
+                    <h2 class="post-subheading">What&#39;s new with ES6</h2>
                   
                 
                 
                   <span class="post-meta">
-  Posted on November 5, 2017
+  Posted on November 6, 2017
   
 </span>
 
@@ -208,12 +208,12 @@ ga('send', 'pageview');
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        Function is a powerful concept in any programming languages. It's very useful to avoid repetitive coding or WET (Write Everything Twice+) coding style. Instead we should promote DRY (Don't Repeat Yourself) style. In this tutorial, we will only cover the basics about the Python Functions. How to define a function, parameters (single, multiple, optional), return multiple values, write proper docstrings to document the function. At the end of the project, I also provided a synthesis exercise to show how to build a function and use it conveniently in a more real world scenario.
+        ES6 has brought a huge number of updates to the Javascript languages. Some of them are extremely handy such as arrow functions. However, we also need to pay extra attention to some of the nitty gritty nuisances. For example, arrow functions are nice and succinct however it doesn't have its own this or arguments keywords, which could be useful for some cases but the coder need to really understand the context.
 
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Python-Function</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>ES2015</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11962,17 +11962,26 @@ a:focus {
 }
 .list_header,
 div#notebook_list_header.row.list_header {
- font-size: 13.5pt;
+ font-size: 14pt;
  color: #2f2f2f;
  background-color: transparent;
  height: 35px;
+}
+i.fa.fa-folder {
+ display: inline-block;
+ font: normal normal normal 14px "FontAwesome";
+ font-family: "FontAwesome" !important;
+ text-rendering: auto;
+ -webkit-font-smoothing: antialiased;
+ font-size: 18px;
+ -moz-osx-font-smoothing: grayscale;
 }
 #running .panel-group .panel .panel-heading {
  font-size: 14pt;
  color: #303030;
  padding: 8px 8px;
- background: #eeeeee;
- background-color: #eeeeee;
+ background: #e4e4e4;
+ background-color: #e4e4e4;
 }
 #running .panel-group .panel .panel-heading a {
  font-size: 14pt;
@@ -11984,17 +11993,23 @@ div#notebook_list_header.row.list_header {
  color: #303030;
 }
 #running .panel-group .panel .panel-body .list_container .list_item {
- background: #fafafa;
- background-color: #fafafa;
+ background: #f4f4f4;
+ background-color: #f4f4f4;
  padding: 2px;
- border-bottom: 2px solid rgba(180,180,180,.30);
+ border-bottom: 2px solid #dedede;
 }
 #running .panel-group .panel .panel-body .list_container .list_item:hover {
- background: #fafafa;
- background-color: #fafafa;
+ background: #f4f4f4;
+ background-color: #f4f4f4;
 }
 #running .panel-group .panel .panel-body {
  padding: 2px;
+}
+button#refresh_running_list {
+ border: none !important;
+}
+button#refresh_cluster_list {
+ border: none !important;
 }
 div.running_list_info.toolbar_info {
  font-size: 15px;
@@ -12010,6 +12025,7 @@ div.running_list_info.toolbar_info {
 }
 #tree-selector {
  padding: 0px;
+ border-color: transparent;
 }
 #project_name > ul > li > a > i.fa.fa-home {
  color: #ff7823;
@@ -12030,6 +12046,10 @@ div.running_list_info.toolbar_info {
 .fa-arrow-down:before {
  font-size: 14px;
 }
+span#last-modified.btn.btn-xs.btn-default.sort-action:hover .fa,
+span#sort-name.btn.btn-xs.btn-default.sort-action:hover .fa {
+ color: #ef5c00;
+}
 .folder_icon:before {
  display: inline-block;
  font: normal normal normal 14px/1 FontAwesome;
@@ -12049,7 +12069,7 @@ div.running_list_info.toolbar_info {
  -moz-osx-font-smoothing: grayscale;
  content: "\f02d";
  position: relative;
- color: #2c85f7 !important;
+ color: #009e07 !important;
  top: 0px;
 }
 .file_icon:before {
@@ -12062,45 +12082,44 @@ div.running_list_info.toolbar_info {
  content: "\f15b";
  position: relative;
  top: 0px;
- color: #303030 !important;
+ color: #6a737d !important;
 }
-#project_name {
+#project_name a {
  display: inline-flex;
  padding-left: 7px;
  margin-left: -2px;
- margin-bottom: -20px;
  text-align: -webkit-auto;
- vertical-align: text-top;
+ vertical-align: baseline;
+ font-size: 18px;
 }
 div#notebook_toolbar div.dynamic-instructions {
  font-family: sans-serif;
- font-size: 15px;
-}
-div#maintoolbar .container {
- margin-left: -5px !important;
+ font-size: 17px;
+ color: #828892;
 }
 span#login_widget > .button,
 #logout {
- font-family: sans-serif;
+ font-family: "Proxima Nova", sans-serif;
  color: #303030;
- background: #ebebeb;
- background-color: #ebebeb;
- border: 2px solid #e8e8e8;
+ background: transparent;
+ background-color: transparent;
+ border: 2px solid #e5e5e5;
  font-weight: normal;
  box-shadow: none;
  text-shadow: none;
- border-radius: 2px;
- font-size: inherit;
+ border-radius: 3px;
+ margin-right: 10px;
+ padding: 2px 7px;
 }
 span#login_widget > .button:hover,
 #logout:hover {
- color: #2f2f2f;
- background-color: #e4e4e4;
- background: #e4e4e4;
- border-color: #e4e4e4;
+ color: #ef5c00;
+ background-color: transparent;
+ background: transparent;
+ border: 2px solid #ef5c00;
  background-image: none;
  box-shadow: none !important;
- border-radius: 2px;
+ border-radius: 3px;
 }
 span#login_widget > .button:focus,
 #logout:focus,
@@ -12113,9 +12132,9 @@ span#login_widget > .button.active,
 .open > .dropdown-togglespan#login_widget > .button,
 .open > .dropdown-toggle#logout {
  color: #1c1c1c;
- background-color: #ff7823;
- background: #ff7823;
- border-color: #ff7823;
+ background-color: #303030;
+ background: #303030;
+ border-color: #303030;
  background-image: none;
  box-shadow: none !important;
  border-radius: 2px;
@@ -12134,17 +12153,19 @@ body > #header {
  z-index: 100;
 }
 .list_container {
- font-size: 11.0pt;
+ font-size: 12pt;
  color: #303030;
  border: none;
  text-shadow: none !important;
 }
 .list_container > div {
  border-bottom: 1px solid rgba(180,180,180,.14);
- font-size: 11.0pt;
+ font-size: 12pt;
 }
 .list_header > div,
 .list_item > div {
+ padding-top: 6px;
+ padding-bottom: 2px;
  padding-left: 0px;
 }
 .list_header > div .item_link,
@@ -12152,25 +12173,26 @@ body > #header {
  margin-left: -1px;
  vertical-align: middle;
  line-height: 22px;
- font-size: 11.0pt;
+ font-size: 12pt;
 }
 .item_icon {
- font-size: 11.0pt;
+ color: #126dce;
+ font-size: 13pt;
  vertical-align: middle;
 }
 .list_item input:not([type="checkbox"]) {
  padding-right: 0px;
- height: auto;
- width: 20%;
- margin: 6px 0 0;
- margin-top: 1px;
+ height: 1.75em;
+ width: 25%;
+ margin: 0px 0 0;
+ margin-top: 0px;
 }
 .list_header > div .item_link,
 .list_item > div .item_link {
  margin-left: -1px;
  vertical-align: middle;
- line-height: 22px;
- font-size: 10.5pt;
+ line-height: 1.5em;
+ font-size: 12pt;
  display: inline-table;
  position: static;
 }
@@ -12186,11 +12208,20 @@ body > #header {
  left: -3px;
  border-radius: 0px !important;
 }
+#button-select-all:focus,
+#button-select-all:active:focus,
+#button-select-all.active:focus,
+#button-select-all.focus,
+#button-select-all:active.focus,
+#button-select-all.active.focus {
+ background-color: #e5e5e5 !important;
+ background: #e5e5e5 !important;
+}
 button#tree-selector-btn {
  height: 34px;
  font-size: 11.0pt;
  border: none;
- left: -3px;
+ left: 0px;
  border-radius: 0px !important;
 }
 input#select-all.pull-left.tree-selector {
@@ -12204,6 +12235,12 @@ input[type="checkbox"] {
  margin-top: 1px;
  line-height: normal;
 }
+.delete-button {
+ border: none !important;
+}
+i.fa.fa-trash {
+ font-size: 13.5pt;
+}
 .list_container a {
  font-size: 16px;
  color: #303030;
@@ -12214,6 +12251,15 @@ input[type="checkbox"] {
 }
 div.list_container a:hover {
  color: #2f2f2f;
+}
+.list_header > div input,
+.list_item > div input {
+ margin-right: 7px;
+ margin-left: 12px;
+ vertical-align: baseline;
+ line-height: 22px;
+ position: relative;
+ top: -1px;
 }
 div.list_item:hover {
  background-color: #fafafa;
@@ -12230,51 +12276,80 @@ div.list_item:hover {
  color: #303030;
  font-size: 18px;
 }
+#project_name > .breadcrumb {
+ padding: 0px;
+ margin-bottom: 0px;
+ background-color: transparent;
+ font-weight: normal;
+ margin-top: -2px;
+}
 ul#tabs a {
  font-family: sans-serif;
- font-size: 12pt;
+ font-size: 13.5pt;
  font-weight: normal;
  font-style: normal;
- border-color: transparent;
  text-shadow: none !important;
 }
 .nav-tabs {
  font-family: sans-serif;
- font-size: 12pt;
+ font-size: 13.5pt;
  font-weight: normal;
  font-style: normal;
- background: #ffffff;
- text-shadow: none !important;
+ background-color: transparent;
  border-color: transparent;
- border-bottom-color: rgba(180,180,180,.30);
-}
-.nav-tabs > li > a:hover {
- color: #2f2f2f;
- background-color: rgba(180,180,180,.14);
+ text-shadow: none !important;
+ border: 2px solid transparent;
 }
 .nav-tabs > li > a:active,
 .nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover,
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:focus,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
- color: #1c1c1c;
- background-color: #eeeeee;
- border: 1px solid transparent;
- border-bottom-color: transparent;
- cursor: default;
-}
-.nav > li > a:hover,
-.nav > li > a:focus {
- text-decoration: none;
- background-color: rgba(180,180,180,.14);
- transition: 200ms ease;
+ color: #ef5c00;
+ background-color: transparent;
+ border-color: transparent;
+ border-bottom: 2px solid transparent;
 }
 .nav > li.disabled > a,
 .nav > li.disabled > a:hover {
- color: #aaaaaa;
+ color: #828892;
+}
+.nav-tabs > li > a:before {
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 2px;
+ bottom: -2px;
+ left: 0;
+ background-color: #ef5c00;
+ visibility: hidden;
+ -webkit-transform: perspective(0)scaleX(0);
+ transform: perspective(0)scaleX(0);
+ -webkit-transition: ease 220ms;
+ transition: ease 220ms;
+ -webkit-font-smoothing: antialiased !important;
+}
+.nav-tabs > li > a:hover:before {
+ visibility: visible;
+ -webkit-transform: perspective(1)scaleX(1);
+ transform: perspective(1)scaleX(1);
+}
+.nav-tabs > li.active > a:before {
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 2px;
+ bottom: -2px;
+ left: 0;
+ background-color: #ef5c00;
+ visibility: visible;
+ -webkit-transform: perspective(1)scaleX(1);
+ transform: perspective(1)scaleX(1);
+ -webkit-font-smoothing: subpixel-antialiased !important;
 }
 div#notebook {
  font-family: sans-serif;
@@ -12365,7 +12440,7 @@ p.navbar-text.indicator_area {
  font-family: sans-serif;
  font-size: 12pt;
  background-color: #ffffff;
- border-color: rgba(180,180,180,.14);
+ border-color: #d4d4d4;
  line-height: 1.5em;
  padding-bottom: 0px;
 }
@@ -12382,7 +12457,7 @@ p.navbar-text.indicator_area {
 .navbar-default .navbar-nav > li > a:focus {
  color: #2f2f2f;
  background-color: rgba(180,180,180,.14);
- border-color: rgba(180,180,180,.14);
+ border-color: #d4d4d4;
  line-height: 1.5em;
  transition: 200ms ease;
 }
@@ -12390,8 +12465,8 @@ p.navbar-text.indicator_area {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
  color: #1c1c1c;
- background-color: rgba(180,180,180,.14);
- border-color: rgba(180,180,180,.14);
+ background-color: #dedede;
+ border-color: #dedede;
  line-height: 1.5em;
  transition: 200ms ease;
 }
@@ -12415,26 +12490,44 @@ div.notification_widget.info,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:hover,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:focus {
- color: #126dce;
+ color: #303030 !important;
  background-color: transparent !important;
  border-color: transparent !important;
  padding-bottom: 0px !important;
  margin-bottom: 0px !important;
- font-size: 8pt;
+ font-size: 9pt !important;
  z-index: 0;
 }
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn {
- font-size: 8pt;
+ font-size: 9pt !important;
  z-index: 0;
 }
 .notification_widget {
  color: #126dce;
  z-index: -500;
- font-size: 8pt;
+ font-size: 9pt;
  background: transparent;
  background-color: transparent;
  margin-right: 3px;
  border: none;
+}
+.notification_widget,
+div.notification_widget {
+ margin-right: 0px;
+ margin-left: 0px;
+ padding-right: 0px;
+ vertical-align: text-top !important;
+ margin-top: 6px !important;
+ background: transparent !important;
+ background-color: transparent !important;
+ font-size: 9pt !important;
+ border: none;
+}
+.navbar-btn.btn-xs:hover {
+ border: none !important;
+ background: transparent !important;
+ background-color: transparent !important;
+ color: #303030 !important;
 }
 div.notification_widget.info,
 .notification_widget.info {
@@ -12443,8 +12536,7 @@ div.notification_widget.info,
 .edit_mode .modal_indicator:before {
  font-size: 18px;
  color: #ff7823;
- content: "E";
- opacity: 0.35;
+ opacity: 1.0;
  padding-bottom: 0px;
  vertical-align: -webkit-baseline-middle;
  margin-left: 1px;
@@ -12454,7 +12546,6 @@ div.notification_widget.info,
  font-family: sans-serif;
  font-size: 18px;
  color: #ff7823;
- content: "C";
  padding-bottom: 0px;
  vertical-align: -webkit-baseline-middle;
  margin-left: 1px;
@@ -12593,7 +12684,7 @@ div.notification_widget.info,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:hover,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:focus {
- color: #126dce;
+ color: #303030;
  background-color: #ffffff;
  border-color: #ffffff;
 }
@@ -12636,9 +12727,9 @@ i.fa.fa-icon {
  box-shadow: none;
  padding: 0px;
  text-align: left;
- border: 2px solid rgba(180,180,180,.30);
- background-color: #ffffff;
- background: #ffffff;
+ border: 2px solid #dedede;
+ background-color: #dedede;
+ background: #dedede;
  line-height: 1;
 }
 .dropdown-menu:hover {
@@ -12647,8 +12738,8 @@ i.fa.fa-icon {
  box-shadow: none;
  padding: 0px;
  text-align: left;
- border: 2px solid rgba(180,180,180,.30);
- background-color: #ffffff;
+ border: 2px solid #dedede;
+ background-color: #dedede;
  box-shadow: none;
  line-height: 1;
 }
@@ -12659,15 +12750,15 @@ i.fa.fa-icon {
  display: block;
  padding: 10px 20px 9px 10px;
  color: #303030;
- background-color: #ffffff;
- background: #ffffff;
+ background-color: #dedede;
+ background: #dedede;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
  color: #2f2f2f;
- background-color: rgba(180,180,180,.14);
- background: rgba(180,180,180,.14);
- border-color: rgba(180,180,180,.14);
+ background-color: #d4d4d4;
+ background: #d4d4d4;
+ border-color: #d4d4d4;
  transition: 200ms ease;
 }
 .dropdown-menu .divider {
@@ -12690,7 +12781,7 @@ i.fa.fa-icon {
  font-family: sans-serif;
  font-size: 11.0pt;
  font-weight: normal;
- color: #aaaaaa;
+ color: #828892;
  padding: none;
  display: block;
  clear: both;
@@ -12718,14 +12809,14 @@ div.kse-dropdown > .dropdown-menu,
 .btn-default {
  font-family: sans-serif;
  color: #303030;
- background: #ebebeb;
- background-color: #ebebeb;
- border: 1px solid #e8e8e8;
+ background: #e5e5e5;
+ background-color: #e5e5e5;
+ border: 2px solid #e5e5e5;
  font-weight: normal;
  box-shadow: none;
  text-shadow: none;
- border-radius: 2px;
- font-size: inherit;
+ border-radius: 3px;
+ font-size: initial;
 }
 .btn:hover,
 .btn:active:hover,
@@ -12733,14 +12824,13 @@ div.kse-dropdown > .dropdown-menu,
 .btn-default:hover,
 .open > .dropdown-toggle.btn-default:hover,
 .open > .dropdown-toggle.btn:hover {
- color: #2f2f2f;
- border: 1px solid #e4e4e4;
- background-color: #e4e4e4;
- background: #e4e4e4;
+ color: #ef5c00;
+ border: 2px solid #e0e0e0;
+ background-color: #e0e0e0;
+ background: #e0e0e0;
  background-image: none;
  box-shadow: none !important;
- border-radius: 2px;
- transition: 200ms ease;
+ border-radius: 3px;
 }
 .btn:active,
 .btn.active,
@@ -12760,33 +12850,80 @@ div.kse-dropdown > .dropdown-menu,
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn:focus,
 .open > .dropdown-toggle.btn.focus,
-.open > .dropdown-toggle.btn-default {
- color: #1c1c1c;
- border: 1px solid #e4e4e4;
- background-color: #e4e4e4;
- background: #e4e4e4;
- border-color: #e4e4e4;
+.open > .dropdown-toggle.btn-default:hover,
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default.hover,
+.open > .dropdown-toggle.btn-default.focus {
+ color: #ef5c00;
+ border: 2px solid #e0e0e0;
+ background-color: #e0e0e0 !important;
+ background: #e0e0e0 !important;
  background-image: none;
  box-shadow: none !important;
- border-radius: 2px;
- transition: 200ms ease;
+ border-radius: 3px;
+}
+.btn-default:active:hover,
+.btn-default.active:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.btn-default:active.focus,
+.btn-default.active.focus {
+ color: #ef5c00 !important;
+ background-color: #e5e5e5;
+ border-color: #ffccac !important;
+ transition: 2000ms ease;
+}
+.btn:focus,
+.btn.focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn:active,
+.btn.active,
+.btn:active.focus,
+.btn.active.focus {
+ color: #ef5c00 !important;
+ outline: none !important;
+ outline-width: 0px !important;
+ background: #ffccac !important;
+ background-color: #ffccac !important;
+ border-color: #ffccac !important;
+ transition: 200ms ease !important;
 }
 .item_buttons > .btn,
 .item_buttons > .btn-group,
 .item_buttons > .input-group {
+ font-size: 12pt;
+ background: transparent;
+ background-color: transparent;
+ border: 0px solid #e4e4e4;
+ border-bottom: 2px solid transparent;
  margin-left: 5px;
- background: #eeeeee;
- background-color: #eeeeee;
- border: 1px solid #eeeeee;
+ padding-top: 4px !important;
 }
 .item_buttons > .btn:hover,
 .item_buttons > .btn-group:hover,
-.item_buttons > .input-group:hover {
+.item_buttons > .input-group:hover,
+.item_buttons > .btn.active,
+.item_buttons > .btn-group.active,
+.item_buttons > .input-group.active,
+.item_buttons > .btn.focus {
  margin-left: 5px;
- background: #e9e9e9;
- background-color: #e9e9e9;
- border: 1px solid #e9e9e9;
- transition: 200ms ease;
+ background: #dfdfdf;
+ padding-top: 4px !important;
+ background-color: transparent;
+ border: 0px solid transparent;
+ border-bottom: 2px solid #ff7823;
+ border-radius: 0px;
+ transition: none;
+}
+.item_buttons {
+ line-height: 1.5em !important;
+}
+.item_buttons .btn {
+ min-width: 11ex;
+}
+.btn-group > .btn:first-child {
+ margin-left: 3px;
 }
 .btn-group > .btn-mini,
 .btn-sm,
@@ -12796,31 +12933,85 @@ div.kse-dropdown > .dropdown-menu,
 .alternate_upload .btn-upload,
 .btn-group,
 .btn-group-vertical {
- font-size: 11.0pt;
+ font-size: inherit;
  font-weight: normal;
  height: inherit;
+ line-height: inherit;
 }
 .btn-xs,
 .btn-group-xs > .btn {
- font-size: 11.0pt;
+ font-size: initial !important;
  background-image: none;
  font-weight: normal;
  text-shadow: none;
  display: inline-table;
+ padding: 2px 5px;
+ line-height: 1.45;
 }
 .btn-group > .btn:first-child {
  margin-left: 3px;
+}
+div#new-buttons > button,
+#new-buttons > button,
+div#refresh_notebook_list,
+#refresh_notebook_list {
+ background: transparent;
+ background-color: transparent;
+ border: none;
+}
+div#new-buttons > button:hover,
+#new-buttons > button:hover,
+div#refresh_notebook_list,
+#refresh_notebook_list,
+div.alternate_upload .btn-upload,
+.alternate_upload .btn-upload,
+div.dynamic-buttons > button,
+.dynamic-buttons > button,
+.dynamic-buttons > button:focus,
+.dynamic-buttons > button:active:focus,
+.dynamic-buttons > button.active:focus,
+.dynamic-buttons > button.focus,
+.dynamic-buttons > button:active.focus,
+.dynamic-buttons > button.active.focus,
+#new-buttons > button:focus,
+#new-buttons > button:active:focus,
+#new-buttons > button.active:focus,
+#new-buttons > button.focus,
+#new-buttons > button:active.focus,
+#new-buttons > button.active.focus,
+.alternate_upload .btn-upload:focus,
+.alternate_upload .btn-upload:active:focus,
+.alternate_upload .btn-upload.active:focus,
+.alternate_upload .btn-upload.focus,
+.alternate_upload .btn-upload:active.focus,
+.alternate_upload .btn-upload.active.focus {
+ background: transparent !important;
+ background-color: transparent !important;
+ border: none !important;
 }
 .alternate_upload input.fileinput {
  text-align: center;
  vertical-align: bottom;
  margin-left: -.5ex;
  display: inline-table;
- border: solid 0px #ebebeb;
+ border: solid 0px #e5e5e5;
  margin-bottom: -1ex;
 }
 .alternate_upload .btn-upload {
  display: inline-table;
+ background: transparent;
+ border: none;
+}
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group,
+.btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-group {
+ margin-left: -2px;
+}
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+ border-bottom-right-radius: 0;
+ border-top-right-radius: 0;
+ z-index: 2;
 }
 .dropdown-header {
  font-family: sans-serif !important;
@@ -12837,6 +13028,7 @@ span#sort-name.btn.btn-xs.btn-default.sort-action {
  background-color: transparent;
  background: transparent;
  border: none;
+ color: #303030;
  padding-bottom: 0px;
  margin-bottom: 0px;
  vertical-align: sub;
@@ -12851,7 +13043,6 @@ button.close {
  font-weight: normal;
 }
 .dynamic-buttons {
- font-size: 15px;
  padding-top: 0px;
  display: inline-block;
 }
@@ -12880,88 +13071,97 @@ fieldset[disabled] .btn-default:focus,
 .btn-default[disabled].focus,
 fieldset[disabled] .btn-default.focus {
  color: #4a4a4a;
- background: #e8e8e8;
- background-color: #e8e8e8;
- border-color: #e8e8e8;
+ background: #e2e2e2;
+ background-color: #e2e2e2;
+ border-color: #e2e2e2;
  transition: 200ms ease;
 }
 .input-group-addon {
  padding: 2px 5px;
- font-size: 11.0pt;
+ font-size: 12pt;
  font-weight: normal;
  height: auto;
  color: #303030;
  text-align: center;
- background-color: #ffffff;
- border: none;
+ background-color: transparent;
+ border: 2px solid transparent !important;
+ text-transform: capitalize;
+}
+a.btn.btn-default.input-group-addon:hover {
+ background: transparent !important;
+ background-color: transparent !important;
 }
 .btn-group > .btn + .dropdown-toggle {
  padding-left: 8px;
  padding-right: 8px;
  height: 100%;
- border-left: 2px solid #ff7823 !important;
 }
 .btn-group > .btn + .dropdown-toggle:hover {
- border-left: 2px solid #ff7823 !important;
+ background: #e0e0e0 !important;
 }
 .input-group-btn {
  position: relative;
  font-size: inherit;
  white-space: nowrap;
+ background: #e4e4e4;
+ background-color: #e4e4e4;
  border: none;
 }
 .input-group-btn:hover {
+ background: #dfdfdf;
+ background-color: #dfdfdf;
  border: none;
 }
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group {
- background: #eeeeee;
- background-color: #eeeeee;
+ background: #e4e4e4;
+ background-color: #e4e4e4;
  border: none;
- margin-right: 3px;
+ margin-left: 2px;
+ margin-right: -1px;
  font-size: inherit;
 }
 .input-group-btn:first-child > .btn:hover,
 .input-group-btn:first-child > .btn-group:hover {
- background: #e9e9e9;
- background-color: #e9e9e9;
+ background: #e0e0e0;
+ background-color: #e0e0e0;
  border: none;
  font-size: inherit;
  transition: 200ms ease;
 }
 div.modal .btn-group > .btn:first-child {
- background: #eeeeee;
- background-color: #eeeeee;
- border: 1px solid #ebebeb;
+ background: #e4e4e4;
+ background-color: #e4e4e4;
+ border: 1px solid #e1e1e1;
  margin-top: 0px !important;
  margin-left: 0px;
  margin-bottom: 2px;
 }
 div.modal .btn-group > .btn:first-child:hover {
- background: #e9e9e9;
- background-color: #e9e9e9;
- border: 1px solid #e9e9e9;
+ background: #dfdfdf;
+ background-color: #dfdfdf;
+ border: 1px solid #dfdfdf;
  transition: 200ms ease;
 }
 div.modal > button,
 div.modal-footer > button {
- background: #eeeeee;
- background-color: #eeeeee;
- border-color: #eeeeee;
+ background: #e4e4e4;
+ background-color: #e4e4e4;
+ border-color: #e4e4e4;
 }
 div.modal > button:hover,
 div.modal-footer > button:hover {
- background: #e9e9e9;
- background-color: #e9e9e9;
- border-color: #e9e9e9;
+ background: #dfdfdf;
+ background-color: #dfdfdf;
+ border-color: #dfdfdf;
  transition: 200ms ease;
 }
 .modal-content {
  font-family: sans-serif;
  font-size: 11.0pt;
  position: relative;
- background: #eeeeee;
- background-color: #eeeeee;
+ background: #e4e4e4;
+ background-color: #e4e4e4;
  border: none;
  border-radius: 1px;
  background-clip: padding-box;
@@ -12971,9 +13171,9 @@ div.modal-footer > button:hover {
  font-family: sans-serif;
  font-size: 12pt;
  color: #303030;
- background: #eeeeee;
- background-color: #eeeeee;
- border-color: rgba(180,180,180,.30);
+ background: #e4e4e4;
+ background-color: #e4e4e4;
+ border-color: #dedede;
  padding: 12px;
  min-height: 16.4286px;
 }
@@ -12989,14 +13189,14 @@ div.modal-footer > button:hover {
  padding: 15px;
 }
 .modal-footer {
- padding: 10px;
+ padding: 8px;
  text-align: right;
- background-color: #fafafa;
- border-top: 1px solid rgba(180,180,180,.30);
+ background-color: #ffffff;
+ border-top: none;
 }
 .alert-info {
  background-color: #fdfdfd;
- border-color: rgba(180,180,180,.30);
+ border-color: #dedede;
  color: #303030;
 }
 .modal-header .close {
@@ -13005,16 +13205,16 @@ div.modal-footer > button:hover {
 }
 .modal-backdrop,
 .modal-backdrop.in {
- opacity: 0.7;
- background-color: #c4c4c4;
+ opacity: 0.85;
+ background-color: notebook-bg;
 }
 div.panel,
 div.panel-default,
 .panel,
 .panel-default {
  font-family: sans-serif;
- font-size: 11.0pt;
- background-color: #fafafa;
+ font-size: 12pt;
+ background-color: #f4f4f4;
  color: #303030;
  margin-bottom: 14px;
  border: 0;
@@ -13024,8 +13224,8 @@ div.panel > .panel-heading,
 div.panel-default > .panel-heading {
  font-size: 14pt;
  color: #303030;
- background: #eeeeee;
- background-color: #eeeeee;
+ background: #e4e4e4;
+ background-color: #e4e4e4;
  border: 0;
 }
 .modal .modal-dialog {
@@ -13041,20 +13241,22 @@ div.container-fluid {
 div.form-control,
 .form-control {
  font-family: sans-serif;
- font-size: inherit;
+ font-size: initial;
  color: #303030;
  background-color: #ffffff;
- border: 2px solid #e7e7e7;
+ border: 1px solid #d0d0d0 !important;
  margin-left: 2px;
- height: auto;
  box-shadow: none;
- padding: 6px 12px;
  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.form-control-static {
+ min-height: inherit;
+ height: inherit;
 }
 .form-group.list-group-item {
  color: #303030;
- background-color: #fafafa;
- border-color: rgba(180,180,180,.30);
+ background-color: #f4f4f4;
+ border-color: #dedede;
  margin-bottom: 0px;
 }
 input,
@@ -13063,37 +13265,51 @@ select,
 textarea {
  background-color: #ffffff;
  font-weight: normal;
- border: 1px solid rgba(180,180,180,.30);
+ border: 1px solid #dedede;
 }
 select.form-control.select-xs {
- height: auto;
+ height: 33px;
+ font-size: 12pt;
+}
+.toolbar select,
+.toolbar label {
+ width: auto;
+ vertical-align: middle;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ display: inline;
+ font-size: 92%;
+ margin-left: 10px;
+ padding: 0px;
+ background: #e5e5e5 !important;
+ background-color: #e5e5e5 !important;
+ border: 2px solid #e5e5e5 !important;
 }
 .form-control:focus {
  border-color: #ff7823;
- outline: 0;
- -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(240,147,43,.50);
- box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(240,147,43,.50);
+ outline: 2px solid rgba(240,147,43,.50);
+ -webkit-box-shadow: none;
 }
 ::-webkit-input-placeholder {
- color: #aaaaaa;
+ color: #828892;
 }
 ::-moz-placeholder {
- color: #aaaaaa;
+ color: #828892;
 }
 :-ms-input-placeholder {
- color: #aaaaaa;
+ color: #828892;
 }
 :-moz-placeholder {
- color: #aaaaaa;
+ color: #828892;
 }
 [dir="ltr"] #find-and-replace .input-group-btn + .form-control {
- border-left: 2px solid rgba(180,180,180,.30) !important;
+ border: 2px solid #dedede !important;
 }
 [dir="ltr"] #find-and-replace .input-group-btn + .form-control:focus {
- border-left-color: #ff7823 !important;
- outline: 0;
- -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(240,147,43,.50) !important;
- box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(240,147,43,.50) !important;
+ border-color: #ff7823;
+ outline: 2px solid rgba(240,147,43,.50);
+ -webkit-box-shadow: none;
+ box-shadow: none;
 }
 div.output.output_scroll {
  box-shadow: none;
@@ -13101,12 +13317,12 @@ div.output.output_scroll {
 ::-webkit-scrollbar {
  width: 11px;
  max-height: 9px;
- background-color: #e0e0e0;
+ background-color: #ebebeb;
  border-radius: 3px;
  border: none;
 }
 ::-webkit-scrollbar-track {
- background: #e0e0e0;
+ background: #ebebeb;
  border: none;
  width: 11px;
  max-height: 9px;
@@ -13114,7 +13330,7 @@ div.output.output_scroll {
 ::-webkit-scrollbar-thumb {
  border-radius: 2px;
  border: none;
- background: #ff7823;
+ background: #909090;
  background-clip: content-box;
  width: 11px;
 }
@@ -13155,33 +13371,36 @@ div.input_area {
  background: #ededed;
  padding-right: 1.2em;
  border: 0px;
- border-radius: 2px;
+ border-radius: 0px;
+ border-top-right-radius: 3px;
+ border-bottom-right-radius: 3px;
 }
 div.cell {
  padding: 0px;
- background: #ededed;
- background-color: #ededed;
+ background: #ffffff;
+ background-color: #ffffff;
  border: medium solid #ffffff;
- border-radius: 2px;
+ border-radius: 0px;
  top: 0;
- border-top-left-radius: 4px;
 }
 div.cell.selected {
- background: #ededed;
- background-color: #ededed;
+ background: #ffffff;
+ background-color: #ffffff;
  border: medium solid #ffffff;
  padding: 0px;
+ border-radius: 3px;
 }
 .edit_mode div.cell.selected {
  padding: 0px;
- background: #ededed;
- background-color: #ededed;
+ background: #ffffff;
+ background-color: #ffffff;
  border: medium solid #ffffff;
+ border-radius: 3px;
 }
 div.cell.edit_mode {
  padding: 0px;
- background: #ededed;
- background-color: #ededed;
+ background: #ffffff;
+ background-color: #ffffff;
 }
 div.CodeMirror-sizer {
  margin-left: 0px;
@@ -13193,45 +13412,86 @@ div.CodeMirror-sizer {
  margin-top: 0px;
 }
 div.cell.selected:before {
- background: #ff7823;
- border: 2px solid #ff7823;
- border-top-left-radius: 2px;
- border-bottom-left-radius: 4px;
+ background: #ededed;
+ border: none;
+ border-radius: 3px;
  position: absolute;
  display: block;
  top: 0px;
  left: 0px;
- width: 5px;
+ width: 0px;
  height: 100%;
 }
-div.cell.selected.jupyter-soft-selected:before,
 .edit_mode div.cell.selected:before {
- background: #ffd5bb;
- border: 2px solid #ffd5bb;
- border-top-left-radius: 2px;
- border-bottom-left-radius: 2px;
+ background: #ffffff;
+ border: none;
+ border-radius: 3px;
  position: absolute;
  display: block;
  top: 0px;
  left: 0px;
- width: 5px;
+ width: 0px;
  height: 100%;
+}
+div.cell.code_cell .input {
+ border-left: 5px solid #ededed !important;
+ border-radius: 3px;
+ border-bottom-left-radius: 3px;
+ border-top-left-radius: 3px;
+}
+div.cell.code_cell.selected .input {
+ border-left: 5px solid #ff7823 !important;
+ border-radius: 3px;
+}
+.edit_mode div.cell.code_cell.selected .input {
+ border-left: 5px solid #ffd5bb !important;
+ border-radius: 3px;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+ position: absolute;
+ display: block;
+ top: -1px;
+ left: -1px;
+ width: 5px;
+ height: calc(102%);
+ content: '';
+ background: transparent !important;
 }
 div.cell.jupyter-soft-selected,
 div.cell.selected.jupyter-soft-selected {
- border-left-color: #ffd5bb;
- border-left-width: 0px;
- padding-left: 7px;
- border-right-color: #ffd5bb;
- border-right-width: 0px;
- background: #ffd5bb;
- border-radius: 6px;
+ border-left-color: #ffd5bb !important;
+ border-left-width: 0px !important;
+ padding-left: 7px !important;
+ border-right-color: #ffd5bb !important;
+ border-right-width: 0px !important;
+ background: #ffd5bb !important;
+ border-radius: 6px !important;
+}
+div.cell.selected.jupyter-soft-selected .input {
+ border-left: 5px solid #ededed !important;
+}
+div.cell.selected.jupyter-soft-selected:before,
+.edit_mode div.cell.selected:before .input {
+ background: #ffd5bb !important;
+ border: 2px solid #ffd5bb !important;
+ border-radius: 6px !important;
+ position: absolute !important;
+ display: block !important;
+ top: 0px !important;
+ left: 0px !important;
+ width: 6px !important;
+ height: 100% !important;
 }
 div.cell.selected.jupyter-soft-selected {
  border-left-color: #ff7823;
  border-color: #ffffff;
  padding-left: 7px;
  border-radius: 6px;
+}
+div.cell.code_cell.selected .input {
+ border-left: none;
+ border-radius: 3px;
 }
 div.cell.selected.jupyter-soft-selected .prompt,
 div.cell.text_cell.selected.jupyter-soft-selected .prompt {
@@ -13243,8 +13503,8 @@ div.cell.text_cell.selected.jupyter-soft-selected .input_prompt {
  border-left: none !important;
 }
 div.cell.text_cell.selected.jupyter-soft-selected:before {
- background: #87b0db !important;
- border: 2px solid #87b0db !important;
+ background: #f2f2f2 !important;
+ border: 2px solid #f2f2f2 !important;
  border-radius: 6px !important;
  position: absolute !important;
  display: block !important;
@@ -13255,12 +13515,12 @@ div.cell.text_cell.selected.jupyter-soft-selected:before {
 }
 div.cell.text_cell.jupyter-soft-selected,
 div.cell.text_cell.selected.jupyter-soft-selected {
- border-left-color: #87b0db !important;
+ border-left-color: #f2f2f2 !important;
  border-left-width: 0px !important;
  padding-left: 7px !important;
- border-right-color: #87b0db !important;
+ border-right-color: #f2f2f2 !important;
  border-right-width: 0px !important;
- background: #87b0db !important;
+ background: #f2f2f2 !important;
  border-radius: 6px !important;
 }
 div.prompt,
@@ -13275,8 +13535,8 @@ div.prompt,
  padding-left: 0px;
  padding-right: 1px;
  text-align: right !important;
- min-width: 7ex !important;
- width: 7ex !important;
+ min-width: 8ex !important;
+ width: 8ex !important;
 }
 div.prompt.input_prompt {
  font-size: 9pt !important;
@@ -13286,26 +13546,20 @@ div.prompt.input_prompt {
  border-bottom-left-radius: 0px;
  border-bottom-right-radius: 0px;
  padding-right: 3px;
- min-width: 7ex;
- width: 7ex !important;
+ min-width: 8ex;
+ width: 8ex !important;
 }
 div.cell.code_cell .input_prompt {
  border-right: 2px solid rgba(240,147,43,.50);
 }
 div.cell.selected .prompt {
  top: 0;
- border-left: 5px solid #ff7823;
- border-radius: 2px;
 }
 .edit_mode div.cell.selected .prompt {
  top: 0;
- border-left: 5px solid #ffd5bb;
- border-radius: 2px;
 }
 .edit_mode div.cell.selected .prompt {
  top: 0;
- border-left: 5px solid #ffd5bb;
- border-radius: 2px;
 }
 div.output_wrapper {
  background-color: #ffffff;
@@ -13346,73 +13600,77 @@ div.output_html {
 }
 div.output_subarea {
  overflow-x: auto;
- padding: 0.3em;
+ padding: 0.8em !important;
  -webkit-box-flex: 1;
  -moz-box-flex: 1;
  box-flex: 1;
  flex: 1;
 }
 div.btn.btn-default.output_collapsed {
- background: #e1e1e1;
- background-color: #e1e1e1;
- border-color: #e1e1e1;
+ background: #d7d7d7;
+ background-color: #d7d7d7;
+ border-color: #d7d7d7;
 }
 div.btn.btn-default.output_collapsed:hover {
- background: #dcdcdc;
- background-color: #dcdcdc;
- border-color: #dcdcdc;
+ background: #d2d2d2;
+ background-color: #d2d2d2;
+ border-color: #d2d2d2;
 }
 div.prompt.output_prompt {
  font-family: monospace, monospace;
- font-size: 9pt !important;
+ font-size: 9.5pt !important;
+ font-weight: bold !important;
  background-color: #ffffff;
  color: transparent;
  border-bottom-left-radius: 4px;
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
  border-bottom-right-radius: 0px;
- min-width: 7ex !important;
- width: 7ex !important;
- border-right: 2px solid rgba(240,147,43,.50) !important;
+ min-width: 8ex !important;
+ width: 8ex !important;
+ border-right: 2px solid transparent;
 }
 div.out_prompt_overlay.prompt {
  font-family: monospace, monospace;
- font-size: 9pt !important;
+ font-size: 9.5pt !important;
+ font-weight: bold !important;
  background-color: #ffffff;
  border-bottom-left-radius: 2px;
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
  border-bottom-right-radius: 0px;
- min-width: 7ex !important;
- width: 7ex !important;
- border-right: 2px solid rgba(240,147,43,.50) !important;
+ min-width: 8ex !important;
+ width: 8ex !important;
+ border-right: 2px solid transparent;
  color: transparent;
 }
 div.out_prompt_overlay.prompt:hover {
- background-color: #ffffff;
- box-shadow: #e8e8e8 2px 1px 1px 2px inset;
+ background-color: #f7f7f7;
+ box-shadow: none !important;
  border: none;
  border-bottom-left-radius: 2px;
  -webkit-border-: 2px;
  -moz-border-radius: 2px;
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
- min-width: 7ex !important;
- width: 7ex !important;
- border-right: 2px solid rgba(240,147,43,.50) !important;
+ min-width: 8ex !important;
+ width: 8ex !important;
+ border-right: 2px solid #f7f7f7 !important;
 }
 div.cell.code_cell .output_prompt {
- border-right: 2px solid 2px solid rgba(240,147,43,.50) !important;
+ border-right: 2px solid transparent;
  color: transparent;
 }
 div.cell.selected .output_prompt,
 div.cell.selected .out_prompt_overlay.prompt {
- border-left: 5px solid #ff7823;
+ border-left: 5px solid #f2f2f2;
+ border-right: 2px solid #ffffff;
  border-radius: 0px !important;
 }
 .edit_mode div.cell.selected .output_prompt,
 .edit_mode div.cell.selected .out_prompt_overlay.prompt {
- border-left: 5px solid #ffd5bb !important;
+ border-left: 5px solid #f2f2f2;
+ border-right: 2px solid #ffffff;
  border-radius: 0px !important;
 }
 div.text_cell,
@@ -13427,7 +13685,7 @@ div.text_cell_render {
  border-radius: 0px;
 }
 div .text_cell_render {
- padding: 0.4em 0.4em 0em 0.4em;
+ padding: 0.4em 0.4em 0.4em 0.4em;
 }
 div.cell.text_cell .CodeMirror-lines {
  padding-top: .7em !important;
@@ -13486,8 +13744,8 @@ div.edit_mode div.text_cell.unrendered {
  border-radius: 0px;
 }
 div.cell.text_cell.selected:before {
- background: #126dce;
- border: 2px solid #126dce;
+ background: #f2f2f2;
+ border: 2px solid #f2f2f2;
  border-top-left-radius: 2px;
  border-bottom-left-radius: 2px;
  position: absolute;
@@ -13498,8 +13756,8 @@ div.cell.text_cell.selected:before {
  height: 100%;
 }
 .edit_mode div.cell.text_cell.selected:before {
- background: #87b0db;
- border: 2px solid #87b0db;
+ background: #f2f2f2;
+ border: 2px solid #f2f2f2;
  border-top-left-radius: 2px;
  border-bottom-left-radius: 2px;
  position: absolute;
@@ -13509,45 +13767,44 @@ div.cell.text_cell.selected:before {
  width: 5px;
  height: 100%;
 }
-div.cell.text_cell .input_prompt {
+div.cell.text_cell .prompt {
  border-right: 0;
 }
-div.cell.text_cell.rendered .input_prompt {
+div.cell.text_cell.rendered .prompt {
  font-family: monospace, monospace;
  font-size: 9.5pt;
  font-weight: normal;
- color: transparent;
+ color: transparent !important;
  text-align: right !important;
- min-width: 7ex;
- width: 7ex !important;
+ min-width: 8ex !important;
+ width: 8ex !important;
  background-color: #ffffff;
  border-right: 2px solid transparent;
  border-left: 5px solid #ffffff;
 }
-div.cell.text_cell.unrendered .input_prompt {
+div.cell.text_cell.unrendered .prompt {
  font-family: monospace, monospace;
  font-size: 9.5pt;
  font-weight: normal;
- color: transparent;
+ color: transparent !important;
  text-align: right !important;
- min-width: 7ex;
- width: 7ex !important;
+ min-width: 8ex !important;
+ width: 8ex !important;
  border-right: 2px solid transparent;
  border-left: 5px solid #ffffff;
 }
-div.cell.text_cell.rendered .input_prompt {
+div.cell.text_cell.rendered .prompt {
  border-right: 2px solid transparent;
 }
-div.cell.text_cell.rendered.selected .input_prompt {
+div.cell.text_cell.rendered.selected .prompt {
  top: 0;
- border-left: 5px solid #126dce;
- border-radius: 2px;
+ border-left: 5px solid #f2f2f2;
  border-right: 2px solid transparent;
 }
 div.text_cell.unrendered.selected .prompt {
  top: 0;
- border-left: 5px solid #87b0db;
- border-radius: 2px;
+ background: #ffffff;
+ border-left: 5px solid #f2f2f2;
  border-right: 2px solid transparent;
 }
 div.rendered_html code {
@@ -13556,8 +13813,8 @@ div.rendered_html code {
  padding-top: 3px;
  padding-left: 2px;
  color: #303030;
- background: #ffffff;
- background-color: #ffffff;
+ background: #efefef;
+ background-color: #efefef;
 }
 pre,
 code,
@@ -13576,10 +13833,11 @@ code {
  border-color: #efefef;
 }
 kbd {
- padding: 4px;
+ padding: 1px;
  font-size: 12pt;
+ font-weight: 800;
  color: #303030;
- background-color: #efefef;
+ background-color: transparent !important;
  border: 0;
  box-shadow: none;
 }
@@ -13605,8 +13863,23 @@ div.rendered_html {
  margin-top: .5em;
  margin-bottom: .5em;
 }
-div.rendered_html pre,
-div.text_cell_render pre {
+div.rendered_html pre {
+ font-family: monospace, monospace;
+ font-size: 12pt !important;
+ line-height: 170% !important;
+ color: #353535;
+ background: #efefef;
+ background-color: #efefef;
+ max-width: 80%;
+ border-radius: 0px;
+ border-left: 3px solid #efefef;
+ max-width: 80%;
+ border-radius: 0px;
+ padding-left: 5px;
+ margin-left: 6px;
+}
+div.text_cell_render pre,
+div.text_cell_render code {
  font-family: monospace, monospace;
  font-size: 12pt !important;
  line-height: 170% !important;
@@ -13615,7 +13888,10 @@ div.text_cell_render pre {
  background-color: #ffffff;
  max-width: 80%;
  border-radius: 0px;
- border-left: 3px solid rgba(240,147,43,.50);
+ border-left: none;
+}
+div.text_cell_render pre {
+ border-left: 3px solid rgba(240,147,43,.50) !important;
  max-width: 80%;
  border-radius: 0px;
  padding-left: 5px;
@@ -13646,7 +13922,7 @@ div.rendered_html h5 {
 .rendered_html h1,
 .text_cell_render h1 {
  color: #126dce;
- font-size: 215%;
+ font-size: 200%;
  text-align: center;
  font-style: normal;
  font-weight: lighter;
@@ -13654,22 +13930,22 @@ div.rendered_html h5 {
 .rendered_html h2,
 .text_cell_render h2 {
  text-align: left;
- font-size: 180%;
- color: #126dce;
+ font-size: 170%;
+ color: #3f3d46;
  font-style: normal;
  font-weight: lighter;
 }
 .rendered_html h3,
 .text_cell_render h3 {
- font-size: 150%;
- color: #126dce;
+ font-size: 140%;
+ color: #3f3d46;
  font-style: normal;
  font-weight: lighter;
 }
 .rendered_html h4,
 .text_cell_render h4 {
- font-size: 120%;
- color: #126dce;
+ font-size: 110%;
+ color: #3f3d46;
  font-style: normal;
  font-weight: lighter;
 }
@@ -13692,8 +13968,8 @@ hr {
  margin-right: 2em;
 }
 #complete > select > option:hover {
- background: rgba(180,180,180,.14);
- background-color: rgba(180,180,180,.14);
+ background: #d4d4d4;
+ background-color: #d4d4d4;
 }
 div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
  position: absolute;
@@ -13715,13 +13991,9 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
  max-width: none;
  border: none;
 }
-.rendered_html tr,
 .rendered_html td {
- font-size: 9.3pt !important;
-}
-.rendered_html thead {
- font-family: sans-serif;
- font-size: 10.3pt !important;
+ font-family: sans-serif !important;
+ font-size: 9.3pt;
 }
 .rendered_html table {
  font-family: sans-serif !important;
@@ -13734,6 +14006,8 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
  table-layout: fixed;
 }
 .rendered_html thead {
+ font-family: sans-serif !important;
+ font-size: 10.3pt !important;
  background: #ebebeb;
  color: #353535;
  border-bottom: 1px solid #ebebeb;
@@ -13782,9 +14056,9 @@ div.widget-area a:focus {
 }
 div.widget_item.btn-group > button.btn.btn-default.widget-combo-btn,
 div.widget_item.btn-group > button.btn.btn-default.widget-combo-btn:hover {
- background: #ebebeb;
- background-color: #ebebeb;
- border: 2px solid #ebebeb !important;
+ background: #e1e1e1;
+ background-color: #e1e1e1;
+ border: 2px solid #e1e1e1 !important;
  font-size: inherit;
  z-index: 0;
 }
@@ -13804,6 +14078,7 @@ div.widget-label {
  min-width: 100px !important;
  vertical-align: text-top !important;
  color: #303030 !important;
+ font-size: 14px !important;
 }
 .widget-hprogress .progress {
  flex-grow: 1;
@@ -13842,37 +14117,37 @@ div.widget-label {
 .rendered_html :link {
  font-family: sans-serif;
  font-size: 100%;
- color: #126dce;
+ color: #ff7823;
  text-decoration: underline;
 }
 .rendered_html :visited,
 .rendered_html :visited:active,
 .rendered_html :visited:focus {
- color: #1a77da;
+ color: #fa853d;
 }
 .rendered_html :visited:hover,
 .rendered_html :link:hover {
  font-family: sans-serif;
  font-size: 100%;
- color: #ff8132;
+ color: #f96000;
 }
-a.anchor-link:link {
+div.cell.text_cell a.anchor-link:link {
  font-size: inherit;
  text-decoration: none;
  padding: 0px 20px;
  visibility: none;
- color: #126dce;
+ color: rgba(0,0,0,.32);
 }
-a.anchor-link:link:hover {
+div.cell.text_cell a.anchor-link:link:hover {
  font-size: inherit;
- color: #ff8132;
+ color: #828892;
 }
 .navbar-text {
  margin-top: 4px;
  margin-bottom: 0px;
 }
 #clusters > a {
- color: #ff8132;
+ color: #ef5c00;
  text-decoration: underline;
  cursor: auto;
 }
@@ -13882,7 +14157,7 @@ a.anchor-link:link:hover {
  cursor: auto;
 }
 #nbextensions-configurator-container > div.row.container-fluid.nbext-selector > h3 {
- font-size: 15px;
+ font-size: 17px;
  margin-top: 5px;
  margin-bottom: 8px;
  height: 24px;
@@ -13898,6 +14173,27 @@ div.nbext-selector > nav > .nav > li > a {
  font-family: sans-serif;
  font-size: 10.5pt;
  padding: 2px 5px;
+}
+div.nbext-selector > nav > .nav > li > a:hover {
+ background: transparent;
+}
+div.nbext-selector > nav > .nav > li:hover {
+ background-color: rgba(180,180,180,.14) !important;
+ background: rgba(180,180,180,.14) !important;
+}
+div.nbext-selector > nav > .nav > li.active:hover {
+ background: transparent !important;
+ background-color: transparent !important;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:active,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+ color: #1c1c1c;
+ background-color: rgba(180,180,180,.14) !important;
+ background: rgba(180,180,180,.14) !important;
+ -webkit-backface-visibility: hidden;
+ -webkit-font-smoothing: subpixel-antialiased !important;
 }
 div.nbext-readme > .nbext-readme-contents > .rendered_html {
  font-family: sans-serif;
@@ -13926,7 +14222,7 @@ div.nbext-readme > .nbext-readme-contents:not(:empty) {
  margin-top: 0.5em;
  margin-bottom: 2em;
  border: none;
- border-top-color: rgba(180,180,180,.30);
+ border-top-color: #828892;
 }
 .nbext-showhide-incompat {
  padding-bottom: 0.5em;
@@ -13937,9 +14233,18 @@ div.nbext-readme > .nbext-readme-contents:not(:empty) {
 .nbext-filter-menu.dropdown-menu > li > a:focus,
 .nbext-filter-menu.dropdown-menu > li > a.ui-state-focus {
  color: #2f2f2f !important;
- background-color: rgba(180,180,180,.14) !important;
- background: rgba(180,180,180,.14) !important;
- border-color: rgba(180,180,180,.14) !important;
+ background-color: #d4d4d4 !important;
+ background: #d4d4d4 !important;
+ border-color: #d4d4d4 !important;
+}
+.nbext-filter-input-wrap > .nbext-filter-input-subwrap,
+.nbext-filter-input-wrap > .nbext-filter-input-subwrap > input {
+ border: none;
+ outline: none;
+ background-color: transparent;
+ padding: 0;
+ vertical-align: middle;
+ margin-top: -2px;
 }
 span.rendered_html code {
  background-color: transparent;
@@ -13953,11 +14258,14 @@ span.rendered_html code {
  max-height: 50vh;
  overflow-y: auto;
  outline: none;
- border: 2px solid rgba(180,180,180,.30);
+ border: 2px solid #dedede;
+}
+.nbext-filter-menu:hover {
+ border: 2px solid #dedede;
 }
 .alert-warning {
- background-color: #fafafa;
- border-color: #fafafa;
+ background-color: #f4f4f4;
+ border-color: #f4f4f4;
  color: #303030;
 }
 .notification_widget.danger {
@@ -13965,6 +14273,12 @@ span.rendered_html code {
  background-color: #e5344a;
  border-color: #e5344a;
  padding-right: 5px;
+}
+#nbextensions-configurator-container > div.nbext-buttons.tree-buttons.no-padding.pull-right > span > button {
+ border: none !important;
+}
+button#refresh_running_list {
+ border: none !important;
 }
 mark,
 .mark {
@@ -13974,7 +14288,7 @@ mark,
 }
 a.text-warning,
 a.text-warning:hover {
- color: #aaaaaa;
+ color: #828892;
 }
 a.text-warning.bg-warning {
  background-color: #ffffff;
@@ -14025,45 +14339,41 @@ div.nbext-enable-btns .btn[disabled],
 div.nbext-enable-btns .btn[disabled]:hover,
 .btn-default.disabled,
 .btn-default[disabled] {
- background: #e8e8e8;
- background-color: #e8e8e8;
+ background: #e2e2e2;
+ background-color: #e2e2e2;
  color: #282828;
 }
 label#Keyword-Filter {
  display: none;
 }
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus {
- color: #1c1c1c;
- background-color: #eeeeee;
-}
 .input-group .nbext-list-btn-add,
 .input-group-btn:last-child > .btn-group > .btn {
- background: #eeeeee;
- background-color: #eeeeee;
- border-color: #eeeeee;
+ background: #e4e4e4;
+ background-color: #e4e4e4;
+ border-color: #e4e4e4;
+ border: 2px solid #e4e4e4;
 }
 .input-group .nbext-list-btn-add:hover,
 .input-group-btn:last-child > .btn-group > .btn:hover {
- background: #e9e9e9;
- background-color: #e9e9e9;
- border-color: #e9e9e9;
+ background: #dfdfdf;
+ background-color: #dfdfdf;
+ border-color: #dfdfdf;
+ border: 2px solid #dfdfdf;
 }
 #notebook-container > div.cell.code_cell.rendered.selected > div.widget-area > div.widget-subarea > div > div.widget_item.btn-group > button.btn.btn-default.dropdown-toggle.widget-combo-carrot-btn {
- background: #eeeeee;
- background-color: #eeeeee;
- border-color: #eeeeee;
+ background: #e4e4e4;
+ background-color: #e4e4e4;
+ border-color: #e4e4e4;
 }
 #notebook-container > div.cell.code_cell.rendered.selected > div.widget-area > div.widget-subarea > div > div.widget_item.btn-group > button.btn.btn-default.dropdown-toggle.widget-combo-carrot-btn:hover {
- background: #e9e9e9;
- background-color: #e9e9e9;
- border-color: #e9e9e9;
+ background: #dfdfdf;
+ background-color: #dfdfdf;
+ border-color: #dfdfdf;
 }
 .ui-widget-content {
- background: #ebebeb;
- background-color: #ebebeb;
- border: 2px solid #ebebeb;
+ background: #e5e5e5;
+ background-color: #e5e5e5;
+ border: 2px solid #e5e5e5;
  color: #303030;
 }
 div.collapsible_headings_toggle {
@@ -14141,13 +14451,13 @@ video {
  margin: 0px;
 }
 .cmd-palette form {
- background: #eeeeee;
- background-color: #eeeeee;
+ background: #e5e5e5;
+ background-color: #e5e5e5;
 }
 .typeahead-field input:last-child,
 .typeahead-hint {
- background: #eeeeee;
- background-color: #eeeeee;
+ background: #e5e5e5;
+ background-color: #e5e5e5;
  z-index: 1;
 }
 .typeahead-field input {
@@ -14161,17 +14471,17 @@ video {
  height: 70px;
 }
 .typeahead-select {
- background-color: #eeeeee;
+ background-color: #e5e5e5;
 }
 body > div.modal.cmd-palette.typeahead-field {
  display: table;
  border-collapse: separate;
- background-color: #fafafa;
+ background-color: #f4f4f4;
 }
 .typeahead-container button {
  font-family: sans-serif;
  font-size: 28pt;
- background-color: #ebebeb;
+ background-color: #e4e4e4;
  border: none;
  display: inline-block;
  line-height: inherit;
@@ -14188,8 +14498,8 @@ body > div.modal.cmd-palette.typeahead-field {
 .typeahead-container button:focus,
 .typeahead-container button:hover {
  color: #2f2f2f;
- background-color: #ff7823;
- border-color: #ff7823;
+ background-color: #dfdfdf;
+ border-color: #e0e0e0;
 }
 .typeahead-list > li.typeahead-group.active > a,
 .typeahead-list > li.typeahead-group > a,
@@ -14221,18 +14531,18 @@ body > div.modal.cmd-palette.typeahead-field {
 .typeahead-list > li > a:focus,
 .typeahead-list > li > a:hover {
  color: #2f2f2f;
- background-color: #fafafa;
- border-color: #fafafa;
+ background-color: #f4f4f4;
+ border-color: #f4f4f4;
 }
 .command-shortcut:before {
  content: "(command)";
  padding-right: 3px;
- color: #aaaaaa;
+ color: #828892;
 }
 .edit-shortcut:before {
  content: "(edit)";
  padding-right: 3px;
- color: #aaaaaa;
+ color: #828892;
 }
 ul.typeahead-list i {
  margin-left: 1px;
@@ -14250,7 +14560,7 @@ ul.typeahead-list {
 div.input.typeahead-hint,
 input.typeahead-hint,
 body > div.modal.cmd-palette.in > div > div > div > form > div > div.typeahead-field > span.typeahead-query > input.typeahead-hint {
- color: #aaaaaa !important;
+ color: #828892 !important;
  background-color: transparent;
  padding: 3px 10px;
 }
@@ -14311,8 +14621,8 @@ span.shortcut_key {
 }
 div#short-key-bindings-intro.well,
 .well {
- background-color: #eeeeee;
- border: 1px solid #eeeeee;
+ background-color: #e4e4e4;
+ border: 1px solid #e4e4e4;
  color: #303030;
  border-radius: 2px;
  -webkit-box-shadow: none;
@@ -14326,7 +14636,7 @@ div#short-key-bindings-intro.well,
 #texteditor-backdrop #texteditor-container .CodeMirror-gutters {
  background: #e0e1e3;
  background-color: #e0e1e3;
- color: #aaaaaa;
+ color: #828892;
 }
 .edit_app #menubar .navbar {
  margin-bottom: 0px;
@@ -14380,7 +14690,7 @@ div#short-key-bindings-intro.well,
  color: #e22978;
 }
 .terminal .xterm-color-8 {
- color: #ff8132;
+ color: #ef5c00;
 }
 .terminal .xterm-color-9 {
  color: #009e07;
@@ -14401,6 +14711,41 @@ div#short-key-bindings-intro.well,
 .terminal:not(.focus) .terminal-cursor {
  outline: 1px solid #ff7823;
  outline-offset: -1px;
+}
+.celltoolbar {
+ font-size: 100%;
+ padding-top: 3px;
+ border-color: transparent;
+ border-bottom: thin solid #828892;
+ background: transparent;
+}
+.cell-tag,
+.tags-input input,
+.tags-input button {
+ color: #303030;
+ background-color: #ffffff;
+ background-image: none;
+ border: 1px solid #303030;
+ border-radius: 1px;
+ box-shadow: none;
+ width: inherit;
+ font-size: inherit;
+ height: 22px;
+ line-height: 22px;
+}
+#notebook-container > div.cell.code_cell.rendered.selected > div.input > div.inner_cell > div.ctb_hideshow.ctb_show > div > div > button,
+#notebook-container > div.input > div.inner_cell > div.ctb_hideshow.ctb_show > div > div > button {
+ font-size: 10pt;
+ color: #303030;
+ background-color: #ffffff;
+ background-image: none;
+ border: 1px solid #303030;
+ border-radius: 1px;
+ box-shadow: none;
+ width: inherit;
+ font-size: inherit;
+ height: 22px;
+ line-height: 22px;
 }
 div#pager #pager-contents {
  background: #ffffff !important;
@@ -14530,6 +14875,14 @@ div.tooltiptext.bigtooltip {
 .cm-s-ipython div.CodeMirror-selected {
  background: #e0e1e3;
 }
+.CodeMirror-gutters {
+ border: none;
+ border-right: 1px solid #e0e1e3 !important;
+ background-color: #e0e1e3 !important;
+ background: #e0e1e3 !important;
+ border-radius: 0px;
+ white-space: nowrap;
+}
 .cm-s-ipython .CodeMirror-gutters {
  background: #e0e1e3;
  border: none;
@@ -14537,7 +14890,7 @@ div.tooltiptext.bigtooltip {
  width: 36px;
 }
 .cm-s-ipython .CodeMirror-linenumber {
- color: #aaaaaa;
+ color: #828892;
 }
 .CodeMirror-sizer {
  margin-left: 40px;
@@ -14553,7 +14906,7 @@ div.CodeMirror-linenumber,
  text-align: right;
 }
 .CodeMirror-linenumber {
- color: #aaaaaa;
+ color: #828892;
 }
 .cm-s-ipython .CodeMirror-cursor {
  border-left: 2px solid #ff711a !important;
@@ -14610,7 +14963,7 @@ div.CodeMirror-linenumber,
  color: #e22978;
 }
 .cm-s-ipython span.cm-link {
- color: #ff8132;
+ color: #ef5c00;
 }
 .cm-s-ipython span.cm-storage {
  color: #055be0;
@@ -14682,10 +15035,13 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
  color: #055be0;
 }
 .cm-s-default .cm-link {
- color: #ff8132;
+ color: #ef5c00;
 }
 .cm-s-default .cm-atom {
  color: #ff8132;
+}
+.cm-s-default .cm-def {
+ color: #e22978;
 }
 .CodeMirror-cursor {
  border-left: 2px solid #ff711a !important;
@@ -14697,6 +15053,22 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
 }
 .cm-s-default .cm-selected {
  background: #e0e1e3;
+}
+.MathJax_Display,
+.MathJax {
+ border: 0 !important;
+ font-size: 100% !important;
+ text-align: center !important;
+ margin: 0em !important;
+ line-height: 2.25 !important;
+}
+.MathJax:focus,
+body :focus .MathJax {
+ display: inline-block !important;
+}
+.MathJax:focus,
+body :focus .MathJax {
+ display: inline-block !important;
 }
 .completions {
  position: absolute;
@@ -14723,24 +15095,11 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
 div#maintoolbar {
  margin-left: 8px !important;
 }
+.toolbar.container {
+ width: 100% !important;
+}
 #header-container {
  display: none !important;
-}
-
-/**********************************
- MathJax Settings and Style Script
-**********************************/
-.MathJax_Display,
-.MathJax nobr>span.math>span {
-    border: 0 !important;
-    font-size: 110% !important;
-    text-align: center !important;
-    margin: 0em !important;
-}
-/* Prevents MathJax from jittering */
-/* cell position when cell is selected */
-.MathJax:focus, body :focus .MathJax {
-    display: inline-block !important;
 }
 
 <script>
@@ -14749,16 +15108,15 @@ div#maintoolbar {
             /*preferredFont: "TeX",*/
             /*availableFonts: ["TeX", "STIX"],*/
             styles: {
-                scale: 110,
+                scale: 100,
                 ".MathJax_Display": {
-                    "font-size": "110%",
+                    "font-size": "100%",
                 }
             }
         }
     });
 </script>
-
-
+    
     </style>
 
 
@@ -14772,9 +15130,7 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}
-
-@media print {
+}@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -14795,7 +15151,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -14819,407 +15175,23 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Table-of-Contents-">Table of Contents <a class="anchor" id="toc" /><a class="anchor-link" href="#Table-of-Contents-">&#182;</a></h2><p>In this tutorial, we will cover the Python functions. The topics include the following basics</p>
-<h3 id="Function-Definition"><a href="#function-definition">Function Definition</a><a class="anchor-link" href="#Function-Definition">&#182;</a></h3><h3 id="Function-Arguments"><a href="#function-arguments">Function Arguments</a><a class="anchor-link" href="#Function-Arguments">&#182;</a></h3><h3 id="Docstrings"><a href="#function-docstrings">Docstrings</a><a class="anchor-link" href="#Docstrings">&#182;</a></h3><h3 id="Synthesis"><a href="#synthesis">Synthesis</a><a class="anchor-link" href="#Synthesis">&#182;</a></h3><p><br/></p>
+<h2 id="Table-of-Contents-">Table of Contents <a class="anchor" id="toc" /><a class="anchor-link" href="#Table-of-Contents-">&#182;</a></h2><p>In this section, we will review ES2015, which brought quite a few new features to javascript.</p>
+<h3 id="Const"><a href="#const">Const</a><a class="anchor-link" href="#Const">&#182;</a></h3><h3 id="Let"><a href="#let">Let</a><a class="anchor-link" href="#Let">&#182;</a></h3><h3 id="Template-String"><a href="#template-string">Template String</a><a class="anchor-link" href="#Template-String">&#182;</a></h3><h3 id="Arrow-Function"><a href="#arrow-function">Arrow Function</a><a class="anchor-link" href="#Arrow-Function">&#182;</a></h3><h3 id="Default-Parameters"><a href="#default-parameters">Default Parameters</a><a class="anchor-link" href="#Default-Parameters">&#182;</a></h3><h3 id="For-Of"><a href="#for-of">For Of</a><a class="anchor-link" href="#For-Of">&#182;</a></h3><h3 id="Rest"><a href="#rest">Rest</a><a class="anchor-link" href="#Rest">&#182;</a></h3><h3 id="Spread"><a href="#spread">Spread</a><a class="anchor-link" href="#Spread">&#182;</a></h3><p><br/></p>
 <hr>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Function-Definition">Function Definition<a class="anchor" id="function-definition" /><a class="anchor-link" href="#Function-Definition">&#182;</a></h3><p>A function is a packaged body of code that we can reuse by calling with the relevant parameters.
-<br/>
-<a href="#toc">[top]</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We've already seen a number of predefined functions in python</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># There are my python built in functions</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
-<span class="nb">int</span><span class="p">(</span><span class="s2">&quot;15&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello world!
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[11]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a username: &quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Enter a username: isaac
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>isaac
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The syntax for defining a function consists of 5 parts:</p>
-<ol>
-<li>def keyword - For Python to interpret the following code as a function</li>
-<li>Name - To refer to when we need to call the function later</li>
-<li>Arguments - Input value(s) that the function takes in</li>
-<li>Body - The code that the function executes</li>
-<li>Return value - The value that the function returns to the user when the function terminates
-<br/></li>
-</ol>
-<p>Let us examine the syntax further, using an example function that returns the first element of a list:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">first_element</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="c1"># invoke the function</span>
-<span class="n">movies</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;Avatar&#39;</span><span class="p">,</span> <span class="s1">&#39;James Cameron&#39;</span><span class="p">,</span> <span class="s1">&#39;Color&#39;</span><span class="p">,</span> <span class="s1">&#39;178&#39;</span><span class="p">,</span> <span class="s1">&#39;CCH Pounder&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;2009&#39;</span><span class="p">],</span> 
-          <span class="p">[</span><span class="s2">&quot;Pirates of the Caribbean: At World&#39;s End&quot;</span><span class="p">,</span> <span class="s1">&#39;Gore Verbinski&#39;</span><span class="p">,</span> <span class="s1">&#39;Color&#39;</span><span class="p">,</span> <span class="s1">&#39;169&#39;</span><span class="p">,</span> <span class="s1">&#39;Johnny Depp&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;2007&#39;</span><span class="p">],</span> 
-          <span class="p">[</span><span class="s1">&#39;Spectre&#39;</span><span class="p">,</span> <span class="s1">&#39;Sam Mendes&#39;</span><span class="p">,</span> <span class="s1">&#39;Color&#39;</span><span class="p">,</span> <span class="s1">&#39;148&#39;</span><span class="p">,</span> <span class="s1">&#39;Christoph Waltz&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">,</span> <span class="s1">&#39;2015&#39;</span><span class="p">],</span> 
-          <span class="p">[</span><span class="s1">&#39;The Dark Knight Rises&#39;</span><span class="p">,</span> <span class="s1">&#39;Christopher Nolan&#39;</span><span class="p">,</span> <span class="s1">&#39;Color&#39;</span><span class="p">,</span> <span class="s1">&#39;164&#39;</span><span class="p">,</span> <span class="s1">&#39;Tom Hardy&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;2012&#39;</span><span class="p">]]</span>
-<span class="n">first_element</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[14]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;Avatar&#39;,
- &#39;James Cameron&#39;,
- &#39;Color&#39;,
- &#39;178&#39;,
- &#39;CCH Pounder&#39;,
- &#39;English&#39;,
- &#39;USA&#39;,
- &#39;2009&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Function-Arguments-">Function Arguments <a class="anchor" id="function-arguments" /><a class="anchor-link" href="#Function-Arguments-">&#182;</a></h3><p>Adding arguments involves adding variables in the "()" of the function definition. Those variables are accessible only inside the functions and cannot be called outside the function body. This is a very good feature of Python comparing to the hoisting mess in Javascritp
-<br/>
-<a href="#toc">[top]</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">students</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">def</span> <span class="nf">add_student</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-    <span class="n">students</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{a}</span><span class="s2"> is added to the students database&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="n">name</span><span class="p">))</span>
-<span class="n">add_student</span><span class="p">(</span><span class="s2">&quot;Isaac&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Isaac
-Isaac is added to the students database
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>However, we cannot call name outside the function</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-16-18697449d7c4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>name
-
-<span class="ansi-red-fg">NameError</span>: name &#39;name&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here let's clarify the difference between parameter and argument:</p>
-<ul>
-<li>Parameters are defined when we create a function: e.g. name</li>
-<li>Arguments are values passed in the function when it is invoked e.g. "Isaac"</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Take-multiple-parameters">Take multiple parameters<a class="anchor-link" href="#Take-multiple-parameters">&#182;</a></h4><p>Function can take multiple parameters</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">raise_to_power</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Rasie value1 to the power of value2&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">value1</span> <span class="o">**</span> <span class="n">value2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raise_to_power</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[23]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1073741824</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Set up default parameters</span>
-<span class="k">def</span> <span class="nf">raise_to_power_default</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Rasie value1 to the power of value2, the default would be square&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">value1</span> <span class="o">**</span> <span class="n">value2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">raise_to_power_default</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">raise_to_power_default</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>49
-5764801
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Return-multiple-values">Return multiple values<a class="anchor-link" href="#Return-multiple-values">&#182;</a></h4><p>Function can also return mutliple values, in a tuple</p>
+<h3 id="Const-">Const <a class="anchor" id="const" /><a class="anchor-link" href="#Const-">&#182;</a></h3><p>Const works similar to var. It creates constant, whose value cannot be redeclared
+<br/></p>
 
 </div>
 </div>
@@ -15229,11 +15201,8 @@ Isaac is added to the students database
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">raise_both</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Raise value1 to the power of value2 and vice versa&quot;&quot;&quot;</span>
-    <span class="n">result1</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">**</span> <span class="n">value2</span>
-    <span class="n">result2</span> <span class="o">=</span> <span class="n">value2</span> <span class="o">**</span> <span class="n">value1</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">result1</span><span class="p">,</span> <span class="n">result2</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">car</span> <span class="o">=</span> <span class="s2">&quot;Tesla&quot;</span>
+<span class="nx">car</span> <span class="o">=</span> <span class="s2">&quot;BMW&quot;</span>
 </pre></div>
 
 </div>
@@ -15243,81 +15212,98 @@ Isaac is added to the students database
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Return a tuple</span>
-<span class="n">raise_both</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">car1</span> <span class="o">=</span> <span class="s2">&quot;GM&quot;</span>
+<span class="nx">car1</span> <span class="o">=</span> <span class="s2">&quot;Volvo&quot;</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[27]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(81, 64)</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Unpack a tuple return</span>
-<span class="n">power1</span><span class="p">,</span> <span class="n">power2</span> <span class="o">=</span> <span class="n">raise_both</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">power1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">power2</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">car1</span> <span class="o">=</span> <span class="s2">&quot;Vplvo&quot;</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>15625
-7776
-</pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Docstrings-">Docstrings <a class="anchor" id="function-docstrings" /><a class="anchor-link" href="#Docstrings-">&#182;</a></h3><ul>
-<li>Docstring describe what your function does. </li>
-<li>They serve as documentation for your function. </li>
-<li>Docstrings are placed in the immediate line after the function header. </li>
-<li>They are in between triple double quotes """
+<p>How about const array?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">16</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">numbers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">numbers</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Const object can mutate if it's an object, but cannot be delcared again
 <br/>
-<a href="#toc">[top]</a></li>
+<a href="#toc">[top]</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Let-">Let <a class="anchor" id="let" /><a class="anchor-link" href="#Let-">&#182;</a></h3><ul>
+<li>Variables created by let can be reassigned but cannot be redeclared</li>
+<li>let create a brand new kind of scope, called block scope</li>
+<li>let variables hoist as well, however it will create a TDZ (temporal dead zone)</li>
 </ul>
 
 </div>
@@ -15325,12 +15311,14 @@ Isaac is added to the students database
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return the square of a value&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">value</span> <span class="o">**</span> <span class="mi">2</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">superhero</span> <span class="o">=</span> <span class="s2">&quot;Thor&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">superhero</span> <span class="o">===</span> <span class="s2">&quot;Thor&quot;</span><span class="p">){</span>
+    <span class="kd">let</span> <span class="nx">weapon</span> <span class="o">=</span> <span class="s2">&quot;Hammer&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">weapon</span>
 </pre></div>
 
 </div>
@@ -15338,60 +15326,588 @@ Isaac is added to the students database
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">villan</span> <span class="o">=</span> <span class="s2">&quot;Joker&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">villan</span> <span class="o">===</span> <span class="s2">&quot;Joker&quot;</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">tool</span> <span class="o">=</span> <span class="s2">&quot;Poker&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">tool</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Synthesis-">Synthesis <a class="anchor" id="synthesis" /><a class="anchor-link" href="#Synthesis-">&#182;</a></h3><p>For this synthesis project, we will load a tweets data (with the help of pandas) and build a function to count the number of each language
-<br/>
-<a href="#toc">[top]</a></p>
+<p>Use case for let, print 0 to 4 in 1 s</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;tweets.csv&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">count_language</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return a dictionary with counts of </span>
-<span class="sd">    occurrences as value for each key.&quot;&quot;&quot;</span>
-    <span class="n">lang_count</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">lang_count</span><span class="p">:</span>
-            <span class="n">lang_count</span><span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">lang_count</span><span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">lang_count</span>
-<span class="n">count_language</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">lang</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// Wrong solution</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="p">},</span><span class="mi">1000</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// Should use let instead</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="p">},</span><span class="mi">1000</span><span class="p">)</span>
+<span class="p">}</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[41]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;en&#39;: 97, &#39;et&#39;: 1, &#39;und&#39;: 2}</pre>
 </div>
-
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#toc">[top]</a></p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Template-String-">Template String <a class="anchor" id="template-string" /><a class="anchor-link" href="#Template-String-">&#182;</a></h3><ul>
+<li>Template String is a convenient way to dynamically combine strings</li>
+</ul>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">firstName</span> <span class="o">=</span> <span class="s2">&quot;Isaac&quot;</span>
+<span class="nx">lastName</span> <span class="o">=</span> <span class="s2">&quot;Zhou&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">firstName</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">lastName</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#toc">[top]</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Arrow-Function-">Arrow Function <a class="anchor" id="arrow-function" /><a class="anchor-link" href="#Arrow-Function-">&#182;</a></h3><ul>
+<li>Replace the keyword "function" with =&gt;</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// ES5</span>
+<span class="kd">var</span> <span class="nx">power</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">power</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// ES6</span>
+<span class="kd">var</span> <span class="nx">power1</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span>
+<span class="nx">power1</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Something to note about the arrow function</strong></p>
+<ul>
+<li>Can put arrow functions on one line</li>
+<li>but must omit the return keyword as well as curly braces</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// ES5 refactor the below with arrow functions</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">value</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="p">})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// ES6 Arrow function</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="nx">value</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// ES5, refactor below doubleAndFilter function</span>
+<span class="kd">function</span> <span class="nx">doubleAndFilter</span><span class="p">(</span><span class="nx">arr</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+        <span class="k">return</span> <span class="nx">value</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+    <span class="p">}).</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+        <span class="k">return</span> <span class="nx">value</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">===</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+<span class="nx">doubleAndFilter</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">35</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// ES6 Arrow function</span>
+<span class="nx">doubleAndFilter2</span> <span class="o">=</span> <span class="nx">arr</span> <span class="p">=&gt;</span> <span class="nx">arr</span>
+    <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="nx">value</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="nx">value</span><span class="o">%</span><span class="mi">3</span> <span class="o">===</span><span class="mi">0</span><span class="p">);</span>
+<span class="nx">doubleAndFilter2</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">35</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Arrow function is nice, however it's not working exactly the same as regular function</p>
+<ul>
+<li>Arrow functions don't get their own "this" keyword</li>
+<li>Inside of an arrow function, the keyword this has its original meaning from the enclosing context</li>
+<li>The fact that arrow functions don't have their own this keyword can be helpful - just need to understand when you might NOT want that!</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// ES5 we need to use bind for asynchronous function</span>
+<span class="kd">var</span> <span class="nx">hero</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Batman&quot;</span><span class="p">,</span>
+    <span class="nx">sayHi</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot; said hi!&quot;</span><span class="p">)</span>
+        <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span> <span class="mi">2000</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">hero</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// Can take advantage of arrow function to refactor the code</span>
+<span class="kd">var</span> <span class="nx">hero2</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Superman&quot;</span><span class="p">,</span>
+    <span class="nx">sayHi</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot; said hi!&quot;</span><span class="p">),</span> <span class="mi">2000</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">hero2</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Arrow functions don't have their own arguments either</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">outer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">innerFunction</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">arguments</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">outer</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])([</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span> 
+<span class="c1">// will only print out the arguments in the first parenthesis</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>Arrow Function Shoud never be uased as methods in objects, since we will get incorrect value of the keyword this</strong></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">instructor</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Isaac&quot;</span><span class="p">,</span>
+    <span class="nx">sayHi</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="sb">`Hello </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span>
+<span class="p">}</span>
+<span class="nx">instructor</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#toc">[top]</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Default-Parameters-">Default Parameters <a class="anchor" id="default-parameters" /><a class="anchor-link" href="#Default-Parameters-">&#182;</a></h3><p>In ES5, when we define a function with parameters, if we don't provide any arguments while invoking the function, it will create NaN</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="nx">add</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In ES6, we can define default parameters similar to Python</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">add1</span><span class="p">(</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">30</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span> <span class="c1">//will not work in the notebook here</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#toc">[top]</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For...of-">For...of <a class="anchor" id="for-of" /><a class="anchor-link" href="#For...of-">&#182;</a></h3><ul>
+<li>A new type of for loop, unlike for...in loop which returns the key, for...of loop return the value</li>
+<li>Can be only used in the iterators, e.g. array not object</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">idx</span> <span class="k">in</span> <span class="nx">arr</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">idx</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// The results might not be that helpful sometimes</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// ES5</span>
+<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">idx</span> <span class="k">in</span> <span class="nx">arr</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">idx</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// Alternatively, can refactor with for of loop</span>
+<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">val</span> <span class="k">of</span> <span class="nx">arr</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">val</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#toc">[top]</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Rest-">Rest <a class="anchor" id="rest" /><a class="anchor-link" href="#Rest-">&#182;</a></h3><ul>
+<li>The rest operator always returns an array</li>
+<li>Is called the rest operator "only" when it is a parameter to a function</li>
+<li>Is accessed without the ... in a function</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">printArguments</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,...</span><span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">printArguments</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1">// Notebook can&#39;t print, but it should print</span>
+<span class="c1">// 1</span>
+<span class="c1">// 2</span>
+<span class="c1">// [3,4,5]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#toc">[top]</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Spread-">Spread <a class="anchor" id="spread" /><a class="anchor-link" href="#Spread-">&#182;</a></h3><ul>
+<li>Used on arrays to spread each value out (as a comma separated value)</li>
+<li>Useful when you have an array, but what you are working with expects comman separated values</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// ES5</span>
+<span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">arr3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">combined</span> <span class="o">=</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">arr2</span><span class="p">).</span><span class="nx">concat</span><span class="p">(</span><span class="nx">arr3</span><span class="p">);</span>
+<span class="nx">combined</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// ES6</span>
+<span class="kd">var</span> <span class="nx">combined2</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">arr1</span><span class="p">,</span> <span class="p">...</span><span class="nx">arr2</span><span class="p">,</span> <span class="p">...</span><span class="nx">arr3</span><span class="p">];</span>
+<span class="nx">combined2</span> <span class="c1">//Notebook can&#39;t support this either</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="c1">// Math.max is expecting comman separated values</span>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span>
+<span class="c1">// ES5</span>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arr</span><span class="p">);</span>
+<span class="c1">// ES6</span>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">arr</span><span class="p">);</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#toc">[top]</a></p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
@@ -15407,13 +15923,9 @@ Isaac is added to the students database
       <ul class="pager blog-pager">
         
           <li class="previous">
-            <a href="http://www.primerpy.com/post/js/the-keyword-this/" data-toggle="tooltip" data-placement="top" title="Javascript keyword &#34;this&#34;">&larr; Previous Post</a>
+            <a href="http://www.primerpy.com/post/python/python-function/" data-toggle="tooltip" data-placement="top" title="Python Function">&larr; Previous Post</a>
           </li>
         
-        
-          <li class="next">
-            <a href="http://www.primerpy.com/post/js/es2015/" data-toggle="tooltip" data-placement="top" title="ES2015">Next Post &rarr;</a>
-          </li>
         
       </ul>
 
