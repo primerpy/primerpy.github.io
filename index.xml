@@ -107,14 +107,14 @@ In the example below:
     </item>
     
     <item>
-      <title>About me</title>
+      <title>About PrimerPy</title>
       <link>http://www.primerpy.com/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
       <guid>http://www.primerpy.com/page/about/</guid>
-      <description>My name is Isaac Zhou. I love data and coding. This website contains the tutorials/notes for a couple of programming languages:
- Python Javascript R SQL  Two of my favorite editors emacs and jupyter notebook are used to create contents. I used to use Pelican for site generation but recently I migrated to Hugo for its speed and simpler workflow.
-my other sites I have two other site ACE big data is more project based and covers more advanced topics in Data Science; Isaac Zhou is my personal blog.</description>
+      <description>PrimerPy Primerpy provides a primer on python and related data science topics. It covers all the prerequisites for Deep Learning, Machine Learning, and Artificial Intelligence. It is designated for tech stacks and programming languages used in data science.
+So what are those?
+Python  Python is a clear winner in data science. We cover not only the native Python features, such as loops, functions and objects, but also important libraries such as Numpy, Pandas, Matplotlib, Bokeh, scikit-learn, statsmodels and sqlalchemy etc.</description>
     </item>
     
   </channel>
