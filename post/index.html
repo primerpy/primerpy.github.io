@@ -5,13 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Posts</title>
-  <meta property="og:title" content="Posts" />
-  <meta name="twitter:title" content="Posts" />
+  <title>PrimerPy</title>
+  <meta property="og:title" content="PrimerPy" />
+  <meta name="twitter:title" content="PrimerPy" />
+  <meta name="description" content="PrimerPy This site includes all the prerequisites for Deep Learning, Machine Learning, and Data Science. It is designated to show the stacks and programming languages used in data science.
+So what are those?
+Python  Python is a clear winner in data science. We cover not only the native Python features, such as loops, functions and objects, but also important libraries such as Numpy, Pandas, Matplotlib, Bokeh, scikit-learn, statsmodels and sqlalchemy etc.">
+  <meta property="og:description" content="PrimerPy This site includes all the prerequisites for Deep Learning, Machine Learning, and Data Science. It is designated to show the stacks and programming languages used in data science.
+So what are those?
+Python  Python is a clear winner in data science. We cover not only the native Python features, such as loops, functions and objects, but also important libraries such as Numpy, Pandas, Matplotlib, Bokeh, scikit-learn, statsmodels and sqlalchemy etc.">
+  <meta name="twitter:description" content="PrimerPy This site includes all the prerequisites for Deep Learning, Machine Learning, and Data Science. It is designated to show the stacks and programming languages used in data science.
+So what are …">
   <meta name="author" content="Isaac Zhou"/>
-  <link href='http://www.primerpy.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="http://www.primerpy.com/img/avatar-icon.png" />
-  <meta name="twitter:image" content="http://www.primerpy.com/img/avatar-icon.png" />
+  <link href='http://www.primerpy.com/img/pi-white.png' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://www.primerpy.com/img/icon-light.png" />
+  <meta name="twitter:image" content="http://www.primerpy.com/img/icon-light.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@username" />
   <meta name="twitter:creator" content="@username" />
@@ -21,495 +29,21 @@
 
   <meta name="generator" content="Hugo 0.30.2" />
   <link rel="canonical" href="http://www.primerpy.com/post/" />
-  <link rel="alternate" href="http://www.primerpy.com/index.xml" type="application/rss+xml" title="PrimerPy">
+  <link rel="alternate" href="http://www.primerpy.com/post/index.xml" type="application/rss+xml" title="PrimerPy">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="http://www.primerpy.com/css/main.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://www.primerpy.com/css/highlighting.css" />
   <link rel="stylesheet" href="http://www.primerpy.com/css/pygment_highlights.css" />
   <link rel="stylesheet" href="http://www.primerpy.com/css/highlight.min.css" />
-
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-103009539-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
-</head>
-
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://www.primerpy.com/">PrimerPy</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">Python</a>
-              <div class="navlinks-children">
-                
-                  <a href="http://www.primerpy.com/tags/basic-python">Basic Python</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">Javascript</a>
-              <div class="navlinks-children">
-                
-                  <a href="http://www.primerpy.com/tags/advanced-javascript">Advanced JS</a>
-                
-                  <a href="http://www.primerpy.com/tags/d3">D3</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">R</a>
-              <div class="navlinks-children">
-                
-                  <a href="http://www.primerpy.com/tags/basic-r">Basic R</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">SQL</a>
-              <div class="navlinks-children">
-                
-                  <a href="http://www.primerpy.com/tags/sql-select">SELECT</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li>
-              <a title="About" href="http://www.primerpy.com/page/about/">About</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="Tags" href="http://www.primerpy.com/tags">Tags</a>
-            </li>
-          
-        
-
-        
-
-        
-          <li>
-            <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-              <span class="hidden-sm hidden-md hidden-lg">Search</span> <span id="searchGlyph" class="glyphicon glyphicon-search"></span>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        
-          <a title="PrimerPy" href="http://www.primerpy.com/">
-            <img class="avatar-img" src="http://www.primerpy.com/img/avatar-icon.png" alt="PrimerPy" />
-          </a>
-        
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
-
-  <div id="modalSearch" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Search PrimerPy</h4>
-        </div>
-        <div class="modal-body">
-          <gcse:search></gcse:search>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-    
-  <header class="header-section ">
-    <div class="intro-header no-img">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>Posts</h1>
-              <hr class="small">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-    
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-        <div class="posts-list">
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/js/es2015/">
-                <h2 class="post-title">ES2015</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    What&#39;s new with ES6
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on November 6, 2017
-              </p>
-              <div class="post-entry">
-                
-                  ES6 has brought a huge number of updates to the Javascript languages. Some of them are extremely handy such as arrow functions. However, we also need to pay extra attention to some of the nitty gritty nuisances. For example, arrow functions are nice and succinct however it doesn't have its own this or arguments keywords, which could be useful for some cases but the coder need to really understand the context.
-                  <a href="http://www.primerpy.com/post/js/es2015/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.primerpy.com/tags/advanced-javascript">advanced-javascript</a>&nbsp;
-                  
-                </span>
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/python/python-function/">
-                <h2 class="post-title">Python Function</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    Use function to avoid repetitiveness
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on November 5, 2017
-              </p>
-              <div class="post-entry">
-                
-                  Function is a powerful concept in any programming languages. It's very useful to avoid repetitive coding or WET (Write Everything Twice+) coding style. Instead we should promote DRY (Don't Repeat Yourself) style. In this tutorial, we will only cover the basics about the Python Functions. How to define a function, parameters (single, multiple, optional), return multiple values, write proper docstrings to document the function. At the end of the project, I also provided a synthesis exercise to show how to build a function and use it conveniently in a more real world scenario.
-                  <a href="http://www.primerpy.com/post/python/python-function/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.primerpy.com/tags/python">Python</a>&nbsp;
-                  
-                    #<a href="http://www.primerpy.com/tags/basic-python">basic-python</a>&nbsp;
-                  
-                </span>
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/js/the-keyword-this/">
-                <h2 class="post-title">Javascript keyword &#34;this&#34;</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    Examine the keyword &#34;this&#34; and how to use it
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on November 4, 2017
-              </p>
-              <div class="post-entry">
-                
-                  "this" is a reserved keyword in Javscript. It is usually determined by how a function is called ("execution context"). It can't be set by assignment during execution, and it may be different each time the function is called. Whenever a javascript function is run, two js keywords are given to that function: "arguments" and "this". "this" can be determined using four rules: Global, Implicit, Explicit and New. We also discuss how to use apply, call and bind functions to apply the explicit rules.
-                  <a href="http://www.primerpy.com/post/js/the-keyword-this/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.primerpy.com/tags/advanced-javascript">advanced-javascript</a>&nbsp;
-                  
-                </span>
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/python/python-fundamentals/">
-                <h2 class="post-title">Python Fundamentals</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    All the python basics you need to get familiar with
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on November 4, 2017
-              </p>
-              <div class="post-entry">
-                
-                  In this tutorial, we will learn all the basics to start with Python. Topics covered here includes data types, lists, loops, dictionary etc. We will also take a peek at some more advanced techniques such as list comprehension and dictionary comprehension. Although there are a number of libraries that can make a Pythonist's life even easier, have a solid foundation would be a key to understand and learn more advanced topics.
-                  <a href="http://www.primerpy.com/post/python/python-fundamentals/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.primerpy.com/tags/python">Python</a>&nbsp;
-                  
-                    #<a href="http://www.primerpy.com/tags/basic-python">basic-python</a>&nbsp;
-                  
-                </span>
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/js/d3-visualization-embedded-in-jupyter-notebook/">
-                <h2 class="post-title">D3 Embedded with Jupyter Notebook</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    Use Jupyter notebook to draw D3
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on November 3, 2017
-              </p>
-              <div class="post-entry">
-                
-                  In this tutorial, I will embed D3 object into Jupyter Notebook. It's not recommended to write D3 or javascript in general with Jupyter notebook, but I could see some benefits from a literate programming perspective. I can see the results right away instead of rendering the whole html page or use Blockbuilder, which is actually pretty neat. I would definitely use blockbuilder on the fly or learn from others' works. Another benefit of using Jupyter notebook is to conveniently use Python to generate data and assign it to the D3 object.
-                  <a href="http://www.primerpy.com/post/js/d3-visualization-embedded-in-jupyter-notebook/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.primerpy.com/tags/javascript">javascript</a>&nbsp;
-                  
-                    #<a href="http://www.primerpy.com/tags/d3">D3</a>&nbsp;
-                  
-                    #<a href="http://www.primerpy.com/tags/visualization">Visualization</a>&nbsp;
-                  
-                </span>
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/js/enter-append/">
-                <h2 class="post-title">D3 Visualization Enter-Append method</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    D3 Use Enter Append to add elements
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on November 3, 2017
-              </p>
-              <div class="post-entry">
-                
-                  D3-Visualization-Enter-Append What if we don't have elements predefined in svg? What should we do to add/match data with DOM element? We can use enter.append() method  Untitled2  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.
-                  <a href="http://www.primerpy.com/post/js/enter-append/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.primerpy.com/tags/javascript">javascript</a>&nbsp;
-                  
-                    #<a href="http://www.primerpy.com/tags/d3">D3</a>&nbsp;
-                  
-                    #<a href="http://www.primerpy.com/tags/visualization">Visualization</a>&nbsp;
-                  
-                </span>
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/js/advanced-array-methods/">
-                <h2 class="post-title">Advanced Javascript Array Methods</h2>
-    
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on November 2, 2017
-              </p>
-              <div class="post-entry">
-                
-                  forEach  Iterates through an array Runs a callback function on each value in the array always returns &ldquo;undefined&rdquo;  var arr = [1,2,3,5] arr.forEach(function(d,i,arr){ console.log(d,i); });   How does forEach work  var forEach = (arr, callback) =&gt; { for(var i = 0; i &lt; arr.length; i++) { callback(arr[i],i,arr); } }   Using forEach in a function  var halfValues = (arr) =&gt; { let newArr = []; arr.
-                  <a href="http://www.primerpy.com/post/js/advanced-array-methods/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.primerpy.com/tags/advanced-javascript">advanced-javascript</a>&nbsp;
-                  
-                </span>
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/js/js-closure/">
-                <h2 class="post-title">JS Closure</h2>
-    
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on November 2, 2017
-              </p>
-              <div class="post-entry">
-                
-                  Definition  A closure is a function that makes use of variables defined in outer functions that have previously returned We have to &ldquo;return&rdquo; the inner function for this to work We can either call the inner function right away by using an extra () or we can store the result of the function in a variable Closure only exists when an inner function makes use of variables defined from an outer function that has returned.
-                  <a href="http://www.primerpy.com/post/js/js-closure/" class="post-read-more">[Read More]</a>
-                
-              </div>
-    
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.primerpy.com/tags/advanced-javascript">advanced-javascript</a>&nbsp;
-                  
-                </span>
-              
-    
-            </article>
-          
-            <article class="post-preview">
-              <a href="http://www.primerpy.com/post/others/2017-03-20-photoswipe-gallery-sample/">
-                <h2 class="post-title">Photoswipe Gallery Sample</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    Making a Gallery
-                  </h3>
-                
-              </a>
-    
-              <p class="post-meta">
-                Posted on March 20, 2017
-              </p>
-              <div class="post-entry">
-                
-                  <p>Beautiful Hugo adds a few custom shortcodes created by <a href="https://www.liwen.id.au/heg/">Li-Wen Yip</a> and <a href="https://github.com/GjjvdBurg/HugoPhotoSwipe">Gert-Jan van den Berg</a> for making galleries with <a href="http://photoswipe.com">PhotoSwipe</a> .</p>
-
-<p>
-
-<div class="gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
-	  
-  
-<link rel="stylesheet" href="http://www.primerpy.com/css/hugo-easy-gallery.css" />
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/img/hexagon-thumb.jpg');">
-      <img itemprop="thumbnail" src="http://www.primerpy.com/img/hexagon-thumb.jpg" />
-    </div>
-    <a href="http://www.primerpy.com/img/hexagon.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-  
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/img/sphere-thumb.jpg');">
-      <img itemprop="thumbnail" src="http://www.primerpy.com/img/sphere-thumb.jpg" alt="Sphere"/>
-    </div>
-      <figcaption>
-          <p>Sphere</p>
-      </figcaption>
-    <a href="http://www.primerpy.com/img/sphere.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-  
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/img/triangle-thumb.jpg');">
-      <img itemprop="thumbnail" src="http://www.primerpy.com/img/triangle-thumb.jpg" alt="This is a long comment about a triangle"/>
-    </div>
-      <figcaption>
-          <p>Triangle</p>
-      </figcaption>
-    <a href="http://www.primerpy.com/img/triangle.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-</div>
-
-
-
-
-  
-
-
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="http://www.primerpy.com/js/load-photoswipe.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
 
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -555,70 +89,453 @@ ga('send', 'pageview');
     </div>
     </div>
 </div>
-</p>
 
-<p></p>
-                  <a href="http://www.primerpy.com/post/others/2017-03-20-photoswipe-gallery-sample/" class="post-read-more">[Read More]</a>
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://www.primerpy.com/">PrimerPy</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Flow &amp; Focus</a>
+              <div class="navlinks-children">
+                
+                  <a href="/tags/data-analysis">Data Analysis</a>
+                
+                  <a href="/tags/visualization">Visualization</a>
                 
               </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="PrimerPy" href="http://www.primerpy.com/">
+            <img class="avatar-img" src="http://www.primerpy.com/img/icon-light.png" alt="PrimerPy" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
     
-              
-                <span class="post-meta">
-                  
-                    #<a href="http://www.primerpy.com/tags/example">example</a>&nbsp;
-                  
-                    #<a href="http://www.primerpy.com/tags/photoswipe">photoswipe</a>&nbsp;
-                  
-                </span>
-              
+  <header class="header-section ">
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1></h1>
+              <hr class="small">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
     
-            </article>
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+          <div class="well">
+            
+
+<h1 id="primerpy">PrimerPy</h1>
+
+<p>This site includes all the prerequisites for Deep Learning, Machine Learning, and Data Science. It is designated to show the stacks and programming languages used in data science.</p>
+
+<p>So what are those?</p>
+
+<h3 id="python-http-www-primerpy-com-tags-python"><a href="http://www.primerpy.com/tags/python/">Python</a></h3>
+
+<blockquote>
+<p>Python is a clear winner in data science. We cover not only the native Python features, such as loops, functions and objects, but also important libraries such as Numpy, Pandas, Matplotlib, Bokeh, scikit-learn, statsmodels and sqlalchemy etc. However, we will not discuss libraries such as Tensorflow or Keras. They are included in my other website <strong><a href="http://www.acebigdata.com">Acebigdata</a></strong>, which is for more advanced real world data science applications and projects.</p>
+</blockquote>
+
+<h3 id="javascript-http-www-primerpy-com-tags-javascript"><a href="http://www.primerpy.com/tags/Javascript/">Javascript</a></h3>
+
+<blockquote>
+<p>As a Data Scientist, one of the biggest challenges I face is to convert my research and work to a product, particularly for the visualization part. Although we have libraries such as decades old matplotlib (&hellip;uh), promising-yet-not-there Bokeh, plotly (can&rsquo;t say I&rsquo;m a big fan) etc, none of these can compete with D3 and its derivatives. Also with latest technologies and updates such as React and ES2015, it&rsquo;s exciting to revigorate Javascript now.</p>
+</blockquote>
+
+<h3 id="r-http-www-primerpy-com-tags-r"><a href="http://www.primerpy.com/tags/R/">R</a></h3>
+
+<blockquote>
+<p>Compared to Python, I found R a little bit more popular among academicians. Still, it&rsquo;s a powerful and great language to learn, particularly some libraries are excellent, e.g. ggplot2, tidyr&hellip; Plus, with R Markdown, R is able to create some really nice reporting and websites.</p>
+</blockquote>
+
+<h3 id="sql-http-www-primerpy-com-tags-sql"><a href="http://www.primerpy.com/tags/SQL/">SQL</a></h3>
+
+<blockquote>
+<p>Dah! Why are there so many SQL-like scripting languages to stream data from NoSQL? There&rsquo;s a reason. Just learn it.</p>
+</blockquote>
+
+          </div>
+        
+        <div class="posts-list">
           
             <article class="post-preview">
-              <a href="http://www.primerpy.com/post/others/2017-03-07-bigimg-sample/">
-                <h2 class="post-title">Big Image Sample</h2>
-    
-                
-                  <h3 class="post-subtitle">
-                    Using Multiple Images
-                  </h3>
+              <a href="http://www.primerpy.com/post/python/multiple-plots-prep/">
+                <h2 class="post-title">Prep &amp; Review</h2>
+
                 
               </a>
-    
+
               <p class="post-meta">
-                Posted on March 7, 2017
+                Posted on November 8, 2017
               </p>
               <div class="post-entry">
                 
-                  <p>The image banners at the top of the page are refered to as &ldquo;bigimg&rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.</p>
-
-<p></p>
-                  <a href="http://www.primerpy.com/post/others/2017-03-07-bigimg-sample/" class="post-read-more">[Read More]</a>
+                  First, let&rsquo;s review how to create single chart. We&rsquo;ll use unemployment data from US Bureau of Labor Statistics. Here are the steps
+ Use pandas to load a csv file to a DataFrame Use Pandas.to_datetime to convert the DATE column into a Series of datetime values Create a line chart that visualize the unemployment from 1948:  x-values should be the first 12 values in the DATE column y-values should be the first 12 values in the VALUE column  Formatting the chart  use pyplot.
+                  <a href="http://www.primerpy.com/post/python/multiple-plots-prep/" class="post-read-more">[Read More]</a>
                 
               </div>
-    
+
               
                 <span class="post-meta">
                   
-                    #<a href="http://www.primerpy.com/tags/example">example</a>&nbsp;
+                    #<a href="http://www.primerpy.com/tags/mutiple/">mutiple</a>&nbsp;
                   
-                    #<a href="http://www.primerpy.com/tags/bigimg">bigimg</a>&nbsp;
+                    #<a href="http://www.primerpy.com/tags/python/">python</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/visualization/">visualization</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/matplotlib/">matplotlib</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/multiple/">multiple</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/prep/">prep</a>&nbsp;
                   
                 </span>
               
-    
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/python/binary-addition/">
+                <h2 class="post-title">Binary Addition</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on November 11, 2017
+              </p>
+              <div class="post-entry">
+                
+                  We can add binary numbers together, just like we can with base 10 numbers
+In the example below:
+ a is in base 10 &ndash; because we have 10 possible digits, the highest value we can represent with one digit is 9 When we want to represent a value one higher, we need to add another digit. a now has two digits &ndash; we incremented the invisible leading digit, which was 0 and is now 1, and set the last digit back to zero.
+                  <a href="http://www.primerpy.com/post/python/binary-addition/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/python/">python</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/algorithms/">algorithms</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/js/es2015/">
+                <h2 class="post-title">ES2015</h2>
+
+                
+                  <h3 class="post-subtitle">
+                    What&#39;s new with ES6
+                  </h3>
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on November 6, 2017
+              </p>
+              <div class="post-entry">
+                
+                  ES6 has brought a huge number of updates to the Javascript languages. Some of them are extremely handy such as arrow functions. However, we also need to pay extra attention to some of the nitty gritty nuisances. For example, arrow functions are nice and succinct however it doesn't have its own this or arguments keywords, which could be useful for some cases but the coder need to really understand the context.
+                  <a href="http://www.primerpy.com/post/js/es2015/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/advanced-javascript/">advanced-javascript</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/python/python-function/">
+                <h2 class="post-title">Python Function</h2>
+
+                
+                  <h3 class="post-subtitle">
+                    Use function to avoid repetitiveness
+                  </h3>
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on November 5, 2017
+              </p>
+              <div class="post-entry">
+                
+                  Function is a powerful concept in any programming languages. It's very useful to avoid repetitive coding or WET (Write Everything Twice+) coding style. Instead we should promote DRY (Don't Repeat Yourself) style. In this tutorial, we will only cover the basics about the Python Functions. How to define a function, parameters (single, multiple, optional), return multiple values, write proper docstrings to document the function. At the end of the project, I also provided a synthesis exercise to show how to build a function and use it conveniently in a more real world scenario.
+                  <a href="http://www.primerpy.com/post/python/python-function/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/python/">Python</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/basic-python/">basic-python</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/js/the-keyword-this/">
+                <h2 class="post-title">Javascript keyword &#34;this&#34;</h2>
+
+                
+                  <h3 class="post-subtitle">
+                    Examine the keyword &#34;this&#34; and how to use it
+                  </h3>
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on November 4, 2017
+              </p>
+              <div class="post-entry">
+                
+                  "this" is a reserved keyword in Javscript. It is usually determined by how a function is called ("execution context"). It can't be set by assignment during execution, and it may be different each time the function is called. Whenever a javascript function is run, two js keywords are given to that function: "arguments" and "this". "this" can be determined using four rules: Global, Implicit, Explicit and New. We also discuss how to use apply, call and bind functions to apply the explicit rules.
+                  <a href="http://www.primerpy.com/post/js/the-keyword-this/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/advanced-javascript/">advanced-javascript</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/python/python-fundamentals/">
+                <h2 class="post-title">Python Fundamentals</h2>
+
+                
+                  <h3 class="post-subtitle">
+                    All the python basics you need to get familiar with
+                  </h3>
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on November 4, 2017
+              </p>
+              <div class="post-entry">
+                
+                  In this tutorial, we will learn all the basics to start with Python. Topics covered here includes data types, lists, loops, dictionary etc. We will also take a peek at some more advanced techniques such as list comprehension and dictionary comprehension. Although there are a number of libraries that can make a Pythonist's life even easier, have a solid foundation would be a key to understand and learn more advanced topics.
+                  <a href="http://www.primerpy.com/post/python/python-fundamentals/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/python/">Python</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/basic-python/">basic-python</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/js/d3-visualization-embedded-in-jupyter-notebook/">
+                <h2 class="post-title">D3 Embedded with Jupyter Notebook</h2>
+
+                
+                  <h3 class="post-subtitle">
+                    Use Jupyter notebook to draw D3
+                  </h3>
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on November 3, 2017
+              </p>
+              <div class="post-entry">
+                
+                  In this tutorial, I will embed D3 object into Jupyter Notebook. It's not recommended to write D3 or javascript in general with Jupyter notebook, but I could see some benefits from a literate programming perspective. I can see the results right away instead of rendering the whole html page or use Blockbuilder, which is actually pretty neat. I would definitely use blockbuilder on the fly or learn from others' works. Another benefit of using Jupyter notebook is to conveniently use Python to generate data and assign it to the D3 object.
+                  <a href="http://www.primerpy.com/post/js/d3-visualization-embedded-in-jupyter-notebook/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/javascript/">javascript</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/d3/">D3</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/visualization/">Visualization</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/js/enter-append/">
+                <h2 class="post-title">D3 Visualization Enter-Append method</h2>
+
+                
+                  <h3 class="post-subtitle">
+                    D3 Use Enter Append to add elements
+                  </h3>
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on November 3, 2017
+              </p>
+              <div class="post-entry">
+                
+                  D3-Visualization-Enter-Append What if we don't have elements predefined in svg? What should we do to add/match data with DOM element? We can use enter.append() method  Untitled2  /*! * * Twitter Bootstrap * */ /*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */ /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; } audio, canvas, progress, video { display: inline-block; vertical-align: baseline; } audio:not([controls]) { display: none; height: 0; } [hidden], template { display: none; } a { background-color: transparent; } a:active, a:hover { outline: 0; } abbr[title] { border-bottom: 1px dotted; } b, strong { font-weight: bold; } dfn { font-style: italic; } h1 { font-size: 2em; margin: 0.
+                  <a href="http://www.primerpy.com/post/js/enter-append/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/javascript/">javascript</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/d3/">D3</a>&nbsp;
+                  
+                    #<a href="http://www.primerpy.com/tags/visualization/">Visualization</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/js/advanced-array-methods/">
+                <h2 class="post-title">Advanced Javascript Array Methods</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on November 2, 2017
+              </p>
+              <div class="post-entry">
+                
+                  forEach  Iterates through an array Runs a callback function on each value in the array always returns &ldquo;undefined&rdquo;  var arr = [1,2,3,5] arr.forEach(function(d,i,arr){ console.log(d,i); });   How does forEach work  var forEach = (arr, callback) =&gt; { for(var i = 0; i &lt; arr.length; i++) { callback(arr[i],i,arr); } }   Using forEach in a function  var halfValues = (arr) =&gt; { let newArr = []; arr.
+                  <a href="http://www.primerpy.com/post/js/advanced-array-methods/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/advanced-javascript/">advanced-javascript</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://www.primerpy.com/post/js/js-closure/">
+                <h2 class="post-title">JS Closure</h2>
+
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on November 2, 2017
+              </p>
+              <div class="post-entry">
+                
+                  Definition  A closure is a function that makes use of variables defined in outer functions that have previously returned We have to &ldquo;return&rdquo; the inner function for this to work We can either call the inner function right away by using an extra () or we can store the result of the function in a variable Closure only exists when an inner function makes use of variables defined from an outer function that has returned.
+                  <a href="http://www.primerpy.com/post/js/js-closure/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="http://www.primerpy.com/tags/advanced-javascript/">advanced-javascript</a>&nbsp;
+                  
+                </span>
+              
+
             </article>
           
         </div>
-        
-          <ul class="pager main-pager">
-            
-            
-              <li class="next">
-                <a href="http://www.primerpy.com/post/page/2">Older Posts &rarr;</a>
-              </li>
-            
-          </ul>
         
       </div>
     </div>
@@ -672,7 +589,7 @@ ga('send', 'pageview');
               </li>
           
           <li>
-            <a href="http://www.primerpy.com/index.xml" title="RSS">
+            <a href="http://www.primerpy.com/post/index.xml" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -682,7 +599,12 @@ ga('send', 'pageview');
           
         </ul>
         <p class="credits copyright text-muted">
-          Isaac Zhou
+          
+            
+              Isaac Zhou
+            
+          
+
           &nbsp;&bull;&nbsp;
           2017
 
@@ -692,10 +614,10 @@ ga('send', 'pageview');
           
         </p>
         
-        
-        
-        
-        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.30.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
       </div>
     </div>
   </div>
@@ -707,23 +629,12 @@ ga('send', 'pageview');
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="http://www.primerpy.com/js/main.js"></script>
 <script src="http://www.primerpy.com/js/highlight.min.js"></script>
-<script> hljs.initHighlightingOnLoad(); </script>
-<script> renderMathInElement(document.body); </script>
+<script> hljs.initHighlightingOnLoad(); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+<script src="http://www.primerpy.com/js/load-photoswipe.js"></script>
 
 
-
-
-<script>
-  (function() {
-    var cx = '000580855040544163791%3Arl5nzawcqq8';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
 
 
   </body>

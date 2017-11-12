@@ -5,6 +5,7 @@
     <link>http://www.primerpy.com/tags/</link>
     <description>Recent content in Tags on PrimerPy</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
     <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
     <lastBuildDate>Mon, 06 Nov 2017 00:00:00 +0000</lastBuildDate>
@@ -22,29 +23,20 @@
     </item>
     
     <item>
+      <title>Algorithms</title>
+      <link>http://www.primerpy.com/tags/algorithms/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/algorithms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Basic Python</title>
       <link>http://www.primerpy.com/tags/basic-python/</link>
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
       <guid>http://www.primerpy.com/tags/basic-python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bigimg</title>
-      <link>http://www.primerpy.com/tags/bigimg/</link>
-      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/tags/bigimg/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Code</title>
-      <link>http://www.primerpy.com/tags/code/</link>
-      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
-      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/tags/code/</guid>
       <description></description>
     </item>
     
@@ -58,15 +50,6 @@
     </item>
     
     <item>
-      <title>Example</title>
-      <link>http://www.primerpy.com/tags/example/</link>
-      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
-      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/tags/example/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Javascript</title>
       <link>http://www.primerpy.com/tags/javascript/</link>
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
@@ -76,36 +59,45 @@
     </item>
     
     <item>
-      <title>Markdown</title>
-      <link>http://www.primerpy.com/tags/markdown/</link>
-      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
+      <title>Matplotlib</title>
+      <link>http://www.primerpy.com/tags/matplotlib/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 -0500</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/tags/markdown/</guid>
+      <guid>http://www.primerpy.com/tags/matplotlib/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Math</title>
-      <link>http://www.primerpy.com/tags/math/</link>
-      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
+      <title>Multiple</title>
+      <link>http://www.primerpy.com/tags/multiple/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 -0500</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/tags/math/</guid>
+      <guid>http://www.primerpy.com/tags/multiple/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Photoswipe</title>
-      <link>http://www.primerpy.com/tags/photoswipe/</link>
-      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      <title>Mutiple</title>
+      <link>http://www.primerpy.com/tags/mutiple/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 -0500</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
-      <guid>http://www.primerpy.com/tags/photoswipe/</guid>
+      <guid>http://www.primerpy.com/tags/mutiple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prep</title>
+      <link>http://www.primerpy.com/tags/prep/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 -0500</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/tags/prep/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
       <link>http://www.primerpy.com/tags/python/</link>
-      <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 -0500</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
       <guid>http://www.primerpy.com/tags/python/</guid>
       <description></description>
@@ -114,7 +106,7 @@
     <item>
       <title>Visualization</title>
       <link>http://www.primerpy.com/tags/visualization/</link>
-      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 -0500</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
       <guid>http://www.primerpy.com/tags/visualization/</guid>
       <description></description>

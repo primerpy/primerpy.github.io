@@ -5,6 +5,7 @@
     <link>http://www.primerpy.com/categories/</link>
     <description>Recent content in Categories on PrimerPy</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
     <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
     
@@ -23,7 +24,7 @@
     <item>
       <title>Python</title>
       <link>http://www.primerpy.com/categories/python/</link>
-      <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 -0500</pubDate>
       <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
       <guid>http://www.primerpy.com/categories/python/</guid>
       <description></description>
