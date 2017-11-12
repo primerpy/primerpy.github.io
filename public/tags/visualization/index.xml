@@ -5,12 +5,23 @@
     <link>http://www.primerpy.com/tags/visualization/</link>
     <description>Recent content in Visualization on PrimerPy</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <managingEditor>isaaczhou85@gmail.com (Isaac Zhou)</managingEditor>
     <webMaster>isaaczhou85@gmail.com (Isaac Zhou)</webMaster>
-    <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Nov 2017 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="http://www.primerpy.com/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Prep &amp; Review</title>
+      <link>http://www.primerpy.com/post/python/multiple-plots-prep/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 -0500</pubDate>
+      <author>isaaczhou85@gmail.com (Isaac Zhou)</author>
+      <guid>http://www.primerpy.com/post/python/multiple-plots-prep/</guid>
+      <description>First, let&amp;rsquo;s review how to create single chart. We&amp;rsquo;ll use unemployment data from US Bureau of Labor Statistics. Here are the steps
+ Use pandas to load a csv file to a DataFrame Use Pandas.to_datetime to convert the DATE column into a Series of datetime values Create a line chart that visualize the unemployment from 1948:  x-values should be the first 12 values in the DATE column y-values should be the first 12 values in the VALUE column  Formatting the chart  use pyplot.</description>
+    </item>
     
     <item>
       <title>D3 Embedded with Jupyter Notebook</title>

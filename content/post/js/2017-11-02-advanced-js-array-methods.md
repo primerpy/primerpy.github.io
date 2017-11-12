@@ -5,6 +5,7 @@ date: "2017-11-02"
 tags: ["advanced-javascript"]
 ---
 
+
 ## forEach
 
 1.  Iterates through an array

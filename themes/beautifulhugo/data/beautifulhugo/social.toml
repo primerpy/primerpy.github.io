@@ -12,21 +12,21 @@ icon = "fa-facebook"
 
 [[social_icons]]
 id = "googleplus"
-url = "https://www.plus.google.com/%s"
+url = "https://plus.google.com/%s"
 title = "Google+"
 icon = "fa-google-plus"
-
-[[social_icons]]
-id = "gitlab"
-url = "https://gitlab.com/%s"
-title = "GitLab"
-icon = "fa-gitlab"
 
 [[social_icons]]
 id = "github"
 url = "https://github.com/%s"
 title = "GitHub"
 icon = "fa-github"
+
+[[social_icons]]
+id = "gitlab"
+url = "https://gitlab.com/%s"
+title = "GitLab"
+icon = "fa-gitlab"
 
 [[social_icons]]
 id = "twitter"
@@ -100,3 +100,26 @@ url = "https://itch.io/profile/%s"
 title = "Itch.io"
 icon = "fa-gamepad"
 
+[[social_icons]]
+id = "keybase"
+url = "https://keybase.io/%s"
+title = "Keybase"
+icon = "fa-key"
+
+[[social_icons]]
+id = "vk"
+url = "https://vk.com/%s"
+title = "VK"
+icon = "fa-vk"
+
+[[social_icons]]
+id = "paypal"
+url = "https://paypal.me/%s"
+title = "PayPal"
+icon = "fa-paypal"
+
+[[social_icons]]
+id = "telegram"
+url = "https://telegram.me/%s"
+title = "Telegram"
+icon = "fa-telegram"
