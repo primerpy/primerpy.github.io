@@ -9,9 +9,9 @@ pygmentCodeFences = true
 #googleAnalytics = "UA-103059971-1"
 
 [Params]
-  subtitle = "Build a beautiful and simple website in minutes"
-  logo = "./img/icon-light.png"
-  favicon = "./img/pi-white.png"
+  subtitle = "Primer on Python and Data Science"
+  logo = "./img/py.png"
+  favicon = "./img/py.png"
   dateFormat = "January 2, 2006"
   commit = false
   rss = true
@@ -38,21 +38,39 @@ pygmentCodeFences = true
   linkedin = "username"
 
 [[menu.main]]
-    identifier = "flow-focus"
-    name = "Flow & Focus"
+    identifier = "focus"
+    name = "Focus"
     weight = 1
 
 [[menu.main]]
-    parent = "flow-focus"
+    parent = "focus"
     name = "Data Analysis"
     url = "/tags/data-analysis"
-    weight = 1
+    weight = 10
 
 [[menu.main]]
-    parent = "flow-focus"
+    parent = "focus"
     name = "Visualization"
     url = "/tags/visualization"
+    weight = 11
+
+[[menu.main]]
+    identifier = "flow"
+    name = "Flow"
     weight = 2
+    url = "/tags/flow"       
+
+[[menu.main]]
+    parent = "flow"
+    name = "Emacs"
+    url = "/tags/emacs"
+    weight = 20
+
+[[menu.main]]
+    parent = "flow"
+    name = "Python"
+    url = "/tags/python"
+    weight = 21
 
 [[menu.main]]
     name = "About"
