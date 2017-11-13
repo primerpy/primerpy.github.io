@@ -6,10 +6,10 @@ theme = "beautifulhugo"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 #disqusShortname = "XXX"
-#googleAnalytics = "UA-103059971-1"
+googleAnalytics = "UA-103009539-1"
 
 [Params]
-  subtitle = "Primer on Python and Data Science"
+  subtitle = "Primer on Data Science Coding"
   logo = "./img/py.png"
   favicon = "./img/py.png"
   dateFormat = "January 2, 2006"
