@@ -22,7 +22,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PrimerPy" />
 
-  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="generator" content="Hugo 0.53" />
   <link rel="canonical" href="http://www.primerpy.com/post/js/es2015/" />
   <link rel="alternate" href="" type="application/rss+xml" title="PrimerPy">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -85,12 +85,16 @@
     </div>
 </div>
 
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-103009539-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-103009539-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </head>
 
@@ -216,7 +220,8 @@ ga('send', 'pageview');
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        ES6 has brought a huge number of updates to the Javascript languages. Some of them are extremely handy such as arrow functions. However, we also need to pay extra attention to some of the nitty gritty nuisances. For example, arrow functions are nice and succinct however it doesn't have its own this or arguments keywords, which could be useful for some cases but the coder need to really understand the context.
+        
+ES6 has brought a huge number of updates to the Javascript languages. Some of them are extremely handy such as arrow functions. However, we also need to pay extra attention to some of the nitty gritty nuisances. For example, arrow functions are nice and succinct however it doesn't have its own this or arguments keywords, which could be useful for some cases but the coder need to really understand the context.
 
 <!DOCTYPE html>
 <html>
@@ -16021,7 +16026,7 @@ div#notebook {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.30.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.53</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
